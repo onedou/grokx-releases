@@ -50,6 +50,7 @@ html[lang="en"] .hero-accent{font-family:var(--serif);font-style:italic;font-wei
 .panel-intro{display:flex;flex-direction:column;align-items:flex-start}
 h2{font-size:clamp(1.65rem,3vw,2.25rem);letter-spacing:-.04em;line-height:1.2;margin:0}
 .panel-intro p{font-size:1.12rem;max-width:25rem;margin:.75rem 0 1.5rem}
+#download-fallback{margin:.25rem 0 .75rem;line-height:1.55}
 .history{color:var(--soft);font-size:.88rem;line-height:1.6}
 .history{display:flex;justify-content:flex-end;flex-wrap:wrap;gap:.6rem 1rem;margin:1rem 0 0}
 .support-link{color:var(--step);font-weight:650}
@@ -383,14 +384,15 @@ return notes.filter(note =&gt; note.title.toLowerCase().includes(needle));</code
   </section>
   <section class="downloads" id="downloads" aria-labelledby="download-title">
     <div class="panel-intro">
-      <h2 id="download-title"><span data-en="Download">下载</span> GrokX 0.28.1</h2>
+      <h2 id="download-title"><span data-en="Download">下载</span> GrokX<span id="download-version"></span></h2>
       <p data-en="Choose the installer for your system and processor. Before starting a session, install a supported CLI and follow its instructions to sign in or configure a model provider.">按操作系统和处理器架构选择安装包。开始会话前，请先安装至少一个受支持的 CLI，并按其指引登录或配置模型服务。</p>
     </div>
     <div>
-    <ul>
-      <li><a class="download" href="https://github.com/onedou/grokx-releases/releases/download/v0.28.1/GrokX_0.28.1_universal.dmg"><strong data-en="macOS Universal">macOS 通用版</strong><span class="detail"><span data-en="Apple silicon and Intel Macs">Apple 芯片与 Intel Mac</span> · DMG · 13.6&nbsp;MB</span><span class="action"><span data-en="Download">下载</span> <span aria-hidden="true">↓</span></span></a></li>
-      <li><a class="download" href="https://github.com/onedou/grokx-releases/releases/download/v0.28.1/GrokX_0.28.1_x64-setup.exe"><strong>Windows x64</strong><span class="detail"><span data-en="Intel and AMD PCs">Intel 与 AMD 电脑</span> · EXE · 5.0&nbsp;MB</span><span class="action"><span data-en="Download">下载</span> <span aria-hidden="true">↓</span></span></a></li>
-      <li><a class="download" href="https://github.com/onedou/grokx-releases/releases/download/v0.28.1/GrokX_0.28.1_arm64-setup.exe"><strong>Windows ARM64</strong><span class="detail"><span data-en="ARM64 PCs">ARM64 电脑</span> · EXE · 4.5&nbsp;MB</span><span class="action"><span data-en="Download">下载</span> <span aria-hidden="true">↓</span></span></a></li>
+    <p id="download-fallback"><a href="https://github.com/onedou/grokx-releases/releases/latest" data-en="View installers on GitHub ↗">前往 GitHub 查看安装包 ↗</a></p>
+    <ul id="installer-list" hidden>
+      <li><a class="download" data-download-platform="macOS"><strong data-en="macOS Universal">macOS 通用版</strong><span class="detail"><span data-en="Apple silicon and Intel Macs">Apple 芯片与 Intel Mac</span> · DMG<span class="download-size"></span></span><span class="action"><span data-en="Download">下载</span> <span aria-hidden="true">↓</span></span></a></li>
+      <li><a class="download" data-download-platform="windowsX64"><strong>Windows x64</strong><span class="detail"><span data-en="Intel and AMD PCs">Intel 与 AMD 电脑</span> · EXE<span class="download-size"></span></span><span class="action"><span data-en="Download">下载</span> <span aria-hidden="true">↓</span></span></a></li>
+      <li><a class="download" data-download-platform="windowsArm64"><strong>Windows ARM64</strong><span class="detail"><span data-en="ARM64 PCs">ARM64 电脑</span> · EXE<span class="download-size"></span></span><span class="action"><span data-en="Download">下载</span> <span aria-hidden="true">↓</span></span></a></li>
     </ul>
     <p class="history"><a class="support-link" href="#support" data-en="Support GrokX ↓">支持 GrokX ↓</a><a href="changelog.html" data-en="Version history →">版本更新记录 →</a></p>
     </div>
@@ -532,6 +534,71 @@ return notes.filter(note =&gt; note.title.toLowerCase().includes(needle));</code
     return finish;
   }
 
+  (() => {
+    const repository = 'onedou/grokx-releases';
+    const rawManifest = `https://raw.githubusercontent.com/${repository}/refs/heads/main/version.json`;
+    const releasePage = `https://github.com/${repository}/releases/download`;
+    const suffixes = { macOS: 'universal.dmg', windowsX64: 'x64-setup.exe', windowsArm64: 'arm64-setup.exe' };
+    const list = document.querySelector('#installer-list');
+    const links = [...list.querySelectorAll('[data-download-platform]')];
+
+    async function fetchJson(url) {
+      const controller = new AbortController();
+      const timeout = setTimeout(() => controller.abort(), 5000);
+      try {
+        const response = await fetch(url, { cache: 'no-store', signal: controller.signal });
+        if (!response.ok) throw new Error('Release request failed');
+        return await response.json();
+      } finally {
+        clearTimeout(timeout);
+      }
+    }
+
+    async function readManifest() {
+      for (const url of [rawManifest, 'version.json']) {
+        try {
+          const manifest = await fetchJson(url);
+          if (typeof manifest?.version !== 'string' || !/^\d+\.\d+\.\d+$/.test(manifest.version)) continue;
+          const version = manifest.version;
+          const valid = links.every(({ dataset }) => {
+            const platform = dataset.downloadPlatform;
+            return manifest.downloads?.[platform] ===
+              `${releasePage}/v${version}/GrokX_${version}_${suffixes[platform]}`;
+          });
+          if (valid) return manifest;
+        } catch {
+          // Try the copy served by GitHub Pages, then keep the GitHub Releases link.
+        }
+      }
+      return null;
+    }
+
+    async function loadDownloads() {
+      const manifest = await readManifest();
+      if (!manifest) return;
+      const { version, downloads } = manifest;
+      document.querySelector('#download-version').textContent = ' ' + version;
+      for (const link of links) link.href = downloads[link.dataset.downloadPlatform];
+      list.hidden = false;
+      document.querySelector('#download-fallback').hidden = true;
+
+      try {
+        const release = await fetchJson(`https://api.github.com/repos/${repository}/releases/tags/v${version}`);
+        if (release?.tag_name !== 'v' + version || !Array.isArray(release.assets)) return;
+        for (const link of links) {
+          const asset = release.assets.find(item => item.browser_download_url === link.href);
+          if (Number.isFinite(asset?.size) && asset.size > 0) {
+            link.querySelector('.download-size').textContent = ' · ' + (asset.size / 1_000_000).toFixed(1) + '\u00a0MB';
+          }
+        }
+      } catch {
+        // Installer links remain available when asset sizes cannot be loaded.
+      }
+    }
+
+    loadDownloads();
+  })();
+
   const downloadDialog = document.querySelector('.download-dialog');
   if (typeof downloadDialog.showModal === 'function') {
     const continueDownload = downloadDialog.querySelector('.continue-download');
@@ -539,7 +606,7 @@ return notes.filter(note =&gt; note.title.toLowerCase().includes(needle));</code
     const supportCodes = document.querySelector('#support .support-options');
 
     document.querySelector('.downloads').addEventListener('click', (event) => {
-      const link = event.target.closest('a.download');
+      const link = event.target.closest('a.download[href]');
       if (!link || event.defaultPrevented || event.button !== 0 ||
           event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
 
