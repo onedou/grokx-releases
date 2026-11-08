@@ -78,6 +78,11 @@ nav a:hover,footer a:hover{text-decoration:underline}
 .hero-composition{display:grid;grid-template-columns:minmax(0,2.25fr) minmax(0,1fr);align-items:end;gap:clamp(1rem,3vw,2.5rem);padding-bottom:clamp(1.8rem,4vw,3.25rem)}
 .hero h1{position:relative;z-index:1;margin:0;font-size:clamp(3rem,7.35vw,6.3rem);letter-spacing:-.055em;line-height:1.04;font-weight:760}
 .hero-line,.hero-accent{display:block}
+@media(prefers-reduced-motion:no-preference){
+  .typing-rest{visibility:hidden}
+  .typing-cursor{position:relative}
+  .typing-cursor::after{content:"";position:absolute;inset-inline-start:.035em;inset-block-end:.1em;width:2px;height:.78em;background:currentColor}
+}
 .hero-accent{padding-inline-start:clamp(1rem,5vw,4.1rem);margin-top:.13em;font-family:var(--serif);font-weight:600;color:var(--step)}
 html[lang="en"] .hero h1{font-size:clamp(2.65rem,6.45vw,5.55rem)}
 html[lang="en"] .hero-accent{font-style:italic;font-weight:400}
@@ -264,14 +269,73 @@ footer{border-top:1px solid var(--line);padding:1.2rem 0 2rem;color:var(--soft);
     const initial = saved === 'en' || saved === 'zh-CN' ? saved :
       /^zh(?:-|$)/i.test(navigator.language) ? 'zh-CN' : 'en';
     setLanguage(initial);
+    const finishTyping = typeHeroTitle();
     button.hidden = false;
 
     button.addEventListener('click', () => {
+      finishTyping?.();
       const language = root.lang === 'en' ? 'zh-CN' : 'en';
       setLanguage(language);
       try { localStorage.setItem(storageKey, language); } catch {}
     });
   })();
+
+  function typeHeroTitle() {
+    const motion = matchMedia('(prefers-reduced-motion: no-preference)');
+    if (!motion.matches) return;
+
+    const title = document.querySelector('.hero h1');
+    const lines = Array.from(title.children, (line) => {
+      const text = line.textContent;
+      const typed = document.createTextNode('');
+      const rest = document.createElement('span');
+      rest.className = 'typing-rest';
+      rest.textContent = text;
+      line.replaceChildren(typed, rest);
+      line.setAttribute('aria-hidden', 'true');
+      return { line, text, letters: Array.from(text), typed, rest };
+    });
+    title.setAttribute('aria-label', lines.map(({ text }) => text).join(' '));
+
+    const cursor = document.createElement('span');
+    cursor.className = 'typing-cursor';
+    const count = lines.reduce((sum, { letters }) => sum + letters.length, 0);
+    const cadence = Math.min(65, 850 / count);
+    let row = 0;
+    let index = 0;
+    let timer;
+    let finished = false;
+
+    function finish() {
+      if (finished) return;
+      finished = true;
+      clearTimeout(timer);
+      motion.removeEventListener?.('change', finish);
+      for (const { line, text } of lines) {
+        line.textContent = text;
+        line.removeAttribute('aria-hidden');
+      }
+      title.removeAttribute('aria-label');
+    }
+
+    function typeNext() {
+      const { line, letters, typed, rest } = lines[row];
+      if (!cursor.isConnected || cursor.parentNode !== line) rest.before(cursor);
+      if (index === letters.length) {
+        row++;
+        index = 0;
+        timer = setTimeout(row === lines.length ? finish : typeNext, 140);
+        return;
+      }
+      typed.appendData(letters[index++]);
+      rest.textContent = letters.slice(index).join('');
+      timer = setTimeout(typeNext, cadence);
+    }
+
+    motion.addEventListener?.('change', finish);
+    typeNext();
+    return finish;
+  }
 
   if ('IntersectionObserver' in window && matchMedia('(prefers-reduced-motion: no-preference)').matches) {
     const observer = new IntersectionObserver((entries) => {
