@@ -3,23 +3,53 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="下载 GrokX，了解如何安装 CLI、打开项目并开始会话。">
+<meta name="description" content="下载 GrokX，了解如何安装 CLI、打开项目并开始会话。" data-en-content="Download GrokX and learn how to install a CLI, open a project, and start a session.">
 <link rel="icon" href="grokx-icon.png">
 
-<title>GrokX · 下载与使用指南</title>
+<title data-en="GrokX · Downloads and Quick Start">GrokX · 下载与使用指南</title>
+<script>
+  (() => {
+    const dayStart = 7;
+    const nightStart = 19;
+    let timer;
+
+    function updateTheme() {
+      const now = new Date();
+      const hour = now.getHours();
+      const isDay = hour >= dayStart && hour < nightStart;
+      document.documentElement.dataset.theme = isDay ? 'light' : 'dark';
+
+      const next = new Date(now);
+      next.setHours(isDay ? nightStart : dayStart, 0, 0, 0);
+      if (hour >= nightStart) next.setDate(next.getDate() + 1);
+      clearTimeout(timer);
+      timer = setTimeout(updateTheme, next - now);
+    }
+
+    updateTheme();
+    addEventListener('pageshow', updateTheme);
+    document.addEventListener('visibilitychange', () => {
+      if (!document.hidden) updateTheme();
+    });
+  })();
+</script>
 <style>
 @font-face{font-family:SortsMillGoudy;src:url("https://statics.kimi.ai/neo-design-static/p-font/SortsMillGoudy.ttf") format("truetype");font-display:swap}
-:root{color-scheme:light;--ink:#22211d;--soft:#514b42;--paper:#f2efe7;--sand:#e5dccd;--line:#c8bdac;--clay:#ba684b;--sans:system-ui,"PingFang SC","Microsoft YaHei",sans-serif;--serif:SortsMillGoudy,"Songti SC","Noto Serif CJK SC",SimSun,Georgia,serif;font-family:var(--sans)}
+:root{color-scheme:light;--ink:#22211d;--soft:#514b42;--paper:#f2efe7;--sand:#e5dccd;--line:#c8bdac;--clay:#ba684b;--illustration-ink:#27241e;--focus:#93492e;--button-hover:#39352e;--row-hover:#22211d09;--shadow:#22211d22;--step:#874932;--sans:system-ui,"PingFang SC","Microsoft YaHei",sans-serif;--serif:SortsMillGoudy,"Songti SC","Noto Serif CJK SC",SimSun,Georgia,serif;font-family:var(--sans)}
+html[data-theme="dark"]{color-scheme:dark;--ink:#f0e9dc;--soft:#cec3b4;--paper:#211f1b;--sand:#302b24;--line:#615447;--clay:#de9675;--illustration-ink:#eee2d2;--focus:#e7a78b;--button-hover:#d8cdbd;--row-hover:#f0e9dc12;--shadow:#0005;--step:#e4a589}
 *{box-sizing:border-box}
 body{margin:0;background:var(--paper);color:var(--ink)}
 .shell{width:min(1160px,calc(100% - 112px));margin-inline:auto}
 a{color:inherit;text-underline-offset:.25em}
-a:focus-visible,.troubleshooting summary:focus-visible{outline:2px solid #93492e;outline-offset:5px}
+a:focus-visible,.language-toggle:focus-visible,.troubleshooting summary:focus-visible{outline:2px solid var(--focus);outline-offset:5px}
 nav,footer{display:flex;justify-content:space-between;align-items:center;gap:1rem}
 nav{min-height:82px}
 nav div{display:flex;align-items:center;gap:clamp(1rem,3vw,2.2rem)}
 nav a,footer a{text-decoration:none;font-size:.92rem}
 nav a:hover,footer a:hover{text-decoration:underline}
+.language-toggle{font:inherit;font-size:.9rem;color:inherit;background:none;border:1px solid var(--line);border-radius:6px;padding:.38rem .6rem;cursor:pointer}
+.language-toggle:hover{background:var(--row-hover)}
+html[lang="en"] h1{font-size:clamp(2.35rem,4.7vw,4.35rem);text-wrap:balance}
 .wordmark{display:inline-flex;align-items:center;gap:.4rem;font-weight:780;letter-spacing:-.04em;font-size:1.5rem}
 .wordmark img{display:block;width:32px;height:32px}
 .button{display:inline-block;background:var(--ink);color:var(--paper);padding:.65rem .95rem;border-radius:7px;text-decoration:none}
@@ -50,18 +80,18 @@ li:last-child .download{padding-bottom:.2rem}
 .guide{padding:clamp(3.75rem,9vw,7.5rem) 0}
 .steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(1.4rem,4vw,3rem);margin-top:2rem}
 .steps article{border-top:1px solid var(--line);padding-top:.8rem}
-.step-no{color:#874932;font-size:.8rem;font-variant-numeric:tabular-nums}
+.step-no{color:var(--step);font-size:.8rem;font-variant-numeric:tabular-nums}
 h3{font-size:1.1rem;margin:.65rem 0 .45rem}
 .steps p,.note{margin:0;font-size:1.04rem}
 .note{max-width:52rem;margin-top:2rem}
 footer{border-top:1px solid var(--line);padding:1.2rem 0 2rem;color:var(--soft);font-size:.9rem}
 @media(max-width:720px){.shell{width:calc(100% - 40px)}nav{min-height:68px}.hero{grid-template-columns:1fr;gap:1.5rem;padding:3rem 0}.art{width:min(54%,215px);justify-self:end}.downloads,.steps{grid-template-columns:1fr}.downloads{gap:1.8rem}.steps{gap:1.3rem}}
-@media(max-width:360px){nav div{gap:.65rem}nav a{font-size:.8rem}}
+@media(max-width:520px){nav{flex-wrap:wrap;padding:.8rem 0;row-gap:.65rem}nav div{margin-left:auto;gap:clamp(.55rem,2.2vw,1rem)}nav a,.language-toggle{font-size:.8rem}}
 .download:focus-visible strong{text-decoration:underline}
-.button:hover,.button:focus-visible{background:#39352e;text-decoration:none}
-.download:hover,.download:focus-visible{background:#22211d09;border-radius:6px}
+.button:hover,.button:focus-visible{background:var(--button-hover);text-decoration:none}
+.download:hover,.download:focus-visible{background:var(--row-hover);border-radius:6px}
 #downloads,#guide{scroll-margin-top:1.25rem}
-.action span{display:inline-block}
+.action [aria-hidden]{display:inline-block}
 @media(prefers-reduced-motion:no-preference){
   .art .ink-lines path{stroke-dasharray:1;animation:draw-ink 920ms cubic-bezier(.3,.05,.35,1) both}
   .art .ink-lines path:nth-child(2){animation-delay:180ms}
@@ -73,16 +103,16 @@ footer{border-top:1px solid var(--line);padding:1.2rem 0 2rem;color:var(--soft);
   .art .ink-leaves path:nth-child(4){animation-delay:780ms}
   html{scroll-behavior:smooth}
   .button{transition:background-color 180ms ease,transform 180ms ease,box-shadow 180ms ease}
-  .button:focus-visible{transform:translateY(-2px);box-shadow:0 5px 12px #22211d22}
+  .button:focus-visible{transform:translateY(-2px);box-shadow:0 5px 12px var(--shadow)}
   .download{transition:background-color 180ms ease}
-  .action span{transition:transform 180ms ease}
-  .download:focus-visible .action span{transform:translateY(3px)}
+  .action [aria-hidden]{transition:transform 180ms ease}
+  .download:focus-visible .action [aria-hidden]{transform:translateY(3px)}
   @media(hover:hover){
-    .button:hover{transform:translateY(-2px);box-shadow:0 5px 12px #22211d22}
-    .download:hover .action span{transform:translateY(3px)}
+    .button:hover{transform:translateY(-2px);box-shadow:0 5px 12px var(--shadow)}
+    .download:hover .action [aria-hidden]{transform:translateY(3px)}
   }
   .button:active{transform:translateY(1px);box-shadow:none}
-  .download:active .action span{transform:translateY(5px)}
+  .download:active .action [aria-hidden]{transform:translateY(5px)}
   .section-enter{animation:section-enter 440ms cubic-bezier(.2,.65,.3,1)}
   .section-enter:focus-within{animation:none}
 }
@@ -92,24 +122,24 @@ footer{border-top:1px solid var(--line);padding:1.2rem 0 2rem;color:var(--soft);
 </style>
 </head>
 <body>
-<nav class="shell" aria-label="主导航">
+<nav class="shell" aria-label="主导航" data-en-label="Main navigation">
   <span class="wordmark"><img src="grokx-icon.png" width="32" height="32" alt="">GrokX</span>
-  <div><a href="#guide">使用指南</a><a href="https://github.com/onedou/grokx-releases">GitHub ↗</a><a class="button" href="#downloads">下载</a></div>
+  <div><a href="#guide" data-en="Quick Start">使用指南</a><a href="https://github.com/onedou/grokx-releases">GitHub ↗</a><a class="button" href="#downloads" data-en="Download">下载</a><button class="language-toggle" type="button" hidden></button></div>
 </nav>
 <main class="shell">
   <header class="hero">
     <div>
-      <h1>一个桌面，<br>多种编程助手。</h1>
-      <p class="lead">用 GrokX 按项目管理会话，在聊天中查看文件改动和命令输出，并处理权限请求。</p>
-      <p class="compatibility">支持 Grok Build、OpenCode、CodeBuddy Code 和 Google Antigravity CLI。</p>
+      <h1><span data-en="One desktop.">一个桌面，</span><br><span data-en="Many coding agents.">多种编程助手。</span></h1>
+      <p class="lead" data-en="Organize sessions by project. Review file changes, command output, and permission requests right in the chat.">用 GrokX 按项目管理会话，在聊天中查看文件改动和命令输出，并处理权限请求。</p>
+      <p class="compatibility" data-en="Works with Grok Build, OpenCode, CodeBuddy Code, and Google Antigravity CLI.">支持 Grok Build、OpenCode、CodeBuddy Code 和 Google Antigravity CLI。</p>
     </div>
     <svg class="art" viewBox="0 0 340 296" aria-hidden="true">
       <g class="ink-lines" fill="none" stroke-linecap="round" stroke-linejoin="round">
-        <path pathLength="1" d="M162 141c-36-23-75-32-121-24 6 31 11 67 11 103 41-7 79-1 115 21 41-28 75-34 119-28-1-37 4-70 13-99-49-8-92 3-133 26-4 36-3 66 1 101" stroke="#27241e" stroke-width="5.5"/>
-        <path pathLength="1" d="M65 149c26-3 50 2 74 13m-71 8c26-3 47 1 69 11m55-18c23-12 47-17 72-16m-71 37c24-12 46-16 65-15M38 135c-7 32-6 67-3 102 44-7 90-4 132 22 36-25 81-34 129-28" stroke="#27241e" stroke-width="3.4"/>
-        <path pathLength="1" d="M168 134c-1-28 1-61 9-93m-8 67c-14-15-29-24-48-31m51 13c15-19 31-30 50-36m-49 17c-6-14-13-26-24-35" stroke="#ba684b" stroke-width="6"/>
+        <path pathLength="1" d="M162 141c-36-23-75-32-121-24 6 31 11 67 11 103 41-7 79-1 115 21 41-28 75-34 119-28-1-37 4-70 13-99-49-8-92 3-133 26-4 36-3 66 1 101" stroke="var(--illustration-ink)" stroke-width="5.5"/>
+        <path pathLength="1" d="M65 149c26-3 50 2 74 13m-71 8c26-3 47 1 69 11m55-18c23-12 47-17 72-16m-71 37c24-12 46-16 65-15M38 135c-7 32-6 67-3 102 44-7 90-4 132 22 36-25 81-34 129-28" stroke="var(--illustration-ink)" stroke-width="3.4"/>
+        <path pathLength="1" d="M168 134c-1-28 1-61 9-93m-8 67c-14-15-29-24-48-31m51 13c15-19 31-30 50-36m-49 17c-6-14-13-26-24-35" stroke="var(--clay)" stroke-width="6"/>
       </g>
-      <g class="ink-leaves" fill="#ba684b">
+      <g class="ink-leaves" fill="var(--clay)">
         <path d="M174 48c-9-9-8-20 0-27 7-6 15-3 16 6 1 9-7 18-16 21z"/>
         <path d="M151 43c-15 0-26-7-26-17 1-9 10-10 17-4 7 5 8 12 9 21z"/>
         <path d="M121 82c-12 4-27 0-29-10-2-8 8-11 16-8 8 2 12 9 13 18z"/>
@@ -119,35 +149,73 @@ footer{border-top:1px solid var(--line);padding:1.2rem 0 2rem;color:var(--soft);
   </header>
   <section class="downloads" id="downloads" aria-labelledby="download-title">
     <div class="panel-intro">
-      <h2 id="download-title">下载 GrokX 0.17.0</h2>
-      <p>按操作系统和处理器架构选择安装包。开始会话前，请先安装至少一个受支持的 CLI，并按其指引登录或配置模型服务。</p>
+      <h2 id="download-title"><span data-en="Download">下载</span> GrokX 0.17.0</h2>
+      <p data-en="Choose the installer for your system and processor. Before starting a session, install a supported CLI and follow its instructions to sign in or configure a model provider.">按操作系统和处理器架构选择安装包。开始会话前，请先安装至少一个受支持的 CLI，并按其指引登录或配置模型服务。</p>
     </div>
     <div>
     <ul>
-      <li><a class="download" href="https://github.com/onedou/grokx-releases/releases/download/v0.17.0/GrokX_0.17.0_universal.dmg"><strong>macOS 通用版</strong><span class="detail">Apple 芯片与 Intel Mac · DMG · 11.9&nbsp;MB</span><span class="action">下载 <span aria-hidden="true">↓</span></span></a></li>
-      <li><a class="download" href="https://github.com/onedou/grokx-releases/releases/download/v0.17.0/GrokX_0.17.0_x64-setup.exe"><strong>Windows x64</strong><span class="detail">Intel 与 AMD 电脑 · EXE · 4.4&nbsp;MB</span><span class="action">下载 <span aria-hidden="true">↓</span></span></a></li>
-      <li><a class="download" href="https://github.com/onedou/grokx-releases/releases/download/v0.17.0/GrokX_0.17.0_arm64-setup.exe"><strong>Windows ARM64</strong><span class="detail">ARM64 电脑 · EXE · 4.0&nbsp;MB</span><span class="action">下载 <span aria-hidden="true">↓</span></span></a></li>
+      <li><a class="download" href="https://github.com/onedou/grokx-releases/releases/download/v0.17.0/GrokX_0.17.0_universal.dmg"><strong data-en="macOS Universal">macOS 通用版</strong><span class="detail"><span data-en="Apple silicon and Intel Macs">Apple 芯片与 Intel Mac</span> · DMG · 11.9&nbsp;MB</span><span class="action"><span data-en="Download">下载</span> <span aria-hidden="true">↓</span></span></a></li>
+      <li><a class="download" href="https://github.com/onedou/grokx-releases/releases/download/v0.17.0/GrokX_0.17.0_x64-setup.exe"><strong>Windows x64</strong><span class="detail"><span data-en="Intel and AMD PCs">Intel 与 AMD 电脑</span> · EXE · 4.4&nbsp;MB</span><span class="action"><span data-en="Download">下载</span> <span aria-hidden="true">↓</span></span></a></li>
+      <li><a class="download" href="https://github.com/onedou/grokx-releases/releases/download/v0.17.0/GrokX_0.17.0_arm64-setup.exe"><strong>Windows ARM64</strong><span class="detail"><span data-en="ARM64 PCs">ARM64 电脑</span> · EXE · 4.0&nbsp;MB</span><span class="action"><span data-en="Download">下载</span> <span aria-hidden="true">↓</span></span></a></li>
     </ul>
-    <p class="history"><a href="https://github.com/onedou/grokx-releases/releases">浏览历史版本 ↗</a></p>
+    <p class="history"><a href="https://github.com/onedou/grokx-releases/releases" data-en="Browse previous releases ↗">浏览历史版本 ↗</a></p>
     </div>
   </section>
   <section class="guide" id="guide" aria-labelledby="guide-title">
-    <h2 id="guide-title">第一次使用 GrokX</h2>
+    <h2 id="guide-title" data-en="Get started with GrokX">第一次使用 GrokX</h2>
     <div class="steps">
-      <article><span class="step-no">01</span><h3>安装桌面客户端</h3><p>macOS 用户打开 DMG，把 GrokX 拖入「应用程序」。Windows 用户按处理器架构选择 EXE，再运行安装程序。</p></article>
-      <article><span class="step-no">02</span><h3>准备一个编程 CLI</h3><p>在终端安装 <a href="https://x.ai/cli">Grok Build</a>、<a href="https://dev.opencode.ai/v2/docs">OpenCode</a>、<a href="https://www.codebuddy.cn/cli/">CodeBuddy Code</a> 或 <a href="https://antigravity.google/docs/cli/overview">Antigravity CLI</a>。按所选工具的指引登录或配置模型服务，再打开 GrokX。</p></article>
-      <article><span class="step-no">03</span><h3>打开项目，开始会话</h3><p>选择本地项目目录并新建会话。发送第一条消息前，选择要使用的 CLI。助手请求执行命令或修改文件时，可在会话中查看权限提示并决定是否允许。</p></article>
+      <article><span class="step-no">01</span><h3 data-en="Install the desktop app">安装桌面客户端</h3><p data-en="On macOS, open the DMG and drag GrokX to Applications. On Windows, choose the EXE for your processor and run the installer.">macOS 用户打开 DMG，把 GrokX 拖入「应用程序」。Windows 用户按处理器架构选择 EXE，再运行安装程序。</p></article>
+      <article><span class="step-no">02</span><h3 data-en="Set up a coding CLI">准备一个编程 CLI</h3><p><span data-en="In your terminal, install">在终端安装</span> <a href="https://x.ai/cli">Grok Build</a><span data-en=", ">、</span><a href="https://dev.opencode.ai/v2/docs">OpenCode</a><span data-en=", ">、</span><a href="https://www.codebuddy.cn/cli/">CodeBuddy Code</a><span data-en=", or "> 或 </span><a href="https://antigravity.google/docs/cli/overview">Antigravity CLI</a><span data-en=". Follow its instructions to sign in or configure a model provider, then open GrokX.">。按所选工具的指引登录或配置模型服务，再打开 GrokX。</span></p></article>
+      <article><span class="step-no">03</span><h3 data-en="Open a project and start a session">打开项目，开始会话</h3><p data-en="Open a local project folder and start a new session. Choose a CLI before sending your first message. If the agent asks to run a command or edit files, review the request in the chat and decide whether to allow it.">选择本地项目目录并新建会话。发送第一条消息前，选择要使用的 CLI。助手请求执行命令或修改文件时，可在会话中查看权限提示并决定是否允许。</p></article>
     </div>
-    <p class="note">GrokX 通过 ACP 与本机 CLI 通信。模型、账号和用量由所选 CLI 及其模型服务决定。</p>
+    <p class="note" data-en="GrokX connects to your local CLI using ACP. Available models, accounts, and usage depend on the CLI and its model provider.">GrokX 通过 ACP 与本机 CLI 通信。模型、账号和用量由所选 CLI 及其模型服务决定。</p>
     <details class="troubleshooting">
-      <summary>找不到 CLI？</summary>
-      <p>先在终端确认对应命令能运行，例如 <code>grok --version</code>。如果终端也找不到命令，请检查 CLI 是否已安装，以及它的目录是否已加入系统 PATH。安装或调整 PATH 后，完全退出并重新打开 GrokX。</p>
-      <p>如果能找到 CLI，但会话提示需要登录，请在终端完成认证。例如，Grok Build 可以运行 <code>grok login</code>。</p>
+      <summary data-en="Can’t find your CLI?">找不到 CLI？</summary>
+      <p><span data-en="First, check whether the command runs in your terminal. For example, try">先在终端确认对应命令能运行，例如</span> <code>grok --version</code><span data-en=". If the terminal can’t find it, check that the CLI is installed and its directory is on your PATH. After installing it or changing PATH, quit and reopen GrokX.">。如果终端也找不到命令，请检查 CLI 是否已安装，以及它的目录是否已加入系统 PATH。安装或调整 PATH 后，完全退出并重新打开 GrokX。</span></p>
+      <p><span data-en="If your CLI is detected but the session asks you to sign in, authenticate in the terminal. For Grok Build, run">如果能找到 CLI，但会话提示需要登录，请在终端完成认证。例如，Grok Build 可以运行</span> <code>grok login</code><span data-en=".">。</span></p>
     </details>
   </section>
 </main>
-<footer class="shell"><span>GrokX</span><a href="https://github.com/onedou/grokx-releases/releases">历史版本 ↗</a></footer>
+<footer class="shell"><span>GrokX</span><a href="https://github.com/onedou/grokx-releases/releases" data-en="Previous releases ↗">历史版本 ↗</a></footer>
 <script>
+  (() => {
+    const root = document.documentElement;
+    const button = document.querySelector('.language-toggle');
+    const storageKey = 'grokx-language';
+    const translations = Array.from(document.querySelectorAll('[data-en], [data-en-label], [data-en-content]'), (element) => {
+      const attribute = element.hasAttribute('data-en-label') ? 'aria-label' :
+        element.hasAttribute('data-en-content') ? 'content' : null;
+      const zh = attribute ? element.getAttribute(attribute) : element.textContent;
+      const en = element.dataset.enLabel ?? element.dataset.enContent ?? element.dataset.en;
+      return { element, attribute, zh, en };
+    });
+
+    function setLanguage(language) {
+      root.lang = language;
+      const english = language === 'en';
+      for (const { element, attribute, zh, en } of translations) {
+        const text = english ? en : zh;
+        if (attribute) element.setAttribute(attribute, text);
+        else element.textContent = text;
+      }
+      button.textContent = english ? '中文' : 'English';
+      button.lang = english ? 'zh-CN' : 'en';
+    }
+
+    let saved;
+    try { saved = localStorage.getItem(storageKey); } catch {}
+    const initial = saved === 'en' || saved === 'zh-CN' ? saved :
+      /^zh(?:-|$)/i.test(navigator.language) ? 'zh-CN' : 'en';
+    setLanguage(initial);
+    button.hidden = false;
+
+    button.addEventListener('click', () => {
+      const language = root.lang === 'en' ? 'zh-CN' : 'en';
+      setLanguage(language);
+      try { localStorage.setItem(storageKey, language); } catch {}
+    });
+  })();
+
   if ('IntersectionObserver' in window && matchMedia('(prefers-reduced-motion: no-preference)').matches) {
     const observer = new IntersectionObserver((entries) => {
       for (const entry of entries) {
