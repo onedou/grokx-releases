@@ -11,8 +11,8 @@
 <script src="preferences.js"></script>
 <link rel="stylesheet" href="site.css">
 <!-- The workspace markup and stylesheet must update together. -->
-<link rel="stylesheet" href="preview.896356ccbb0f.css">
-<script src="preview.js" defer></script>
+<link rel="stylesheet" href="preview.4d5db978c42a.css">
+<script src="preview.3f9834905d82.js" defer></script>
 <style>
 /* LXGW WenKai TC Light from Google Fonts, subset to the homepage heading. See fonts/OFL-LXGW-WenKai-TC.txt. */
 @font-face{font-family:"GrokX WenKai";src:url("fonts/wenkai-tc-heading.woff2") format("woff2");font-style:normal;font-weight:300;font-display:swap}
@@ -189,22 +189,34 @@ h3{font-size:1.1rem;margin:.65rem 0 .45rem}
         <button type="button" data-preview-scene="chat" aria-controls="preview-chat" aria-pressed="true" data-en="Session">项目会话</button>
         <button type="button" data-preview-scene="diff" aria-controls="preview-diff" aria-pressed="false" data-en="File changes">文件改动</button>
         <button type="button" data-preview-scene="approval" aria-controls="preview-approval" aria-pressed="false" data-en="Permissions">权限审批</button>
+        <button type="button" data-preview-scene="bots" aria-controls="preview-bots" aria-pressed="false">Bots</button>
       </div>
     </div>
     <div class="preview-window">
       <aside class="preview-project">
         <span class="preview-lights" aria-hidden="true"><i></i><i></i><i></i></span>
         <strong class="preview-brand">GrokX</strong>
-        <div class="preview-sidebar-controls" aria-hidden="true">
-          <div class="preview-mode"><span data-en="Chats">对话</span><span>Bots</span></div>
-          <div class="preview-new"><span><b>＋</b> <span data-en="New chat">新会话</span></span><span>⌘N</span></div>
+        <div class="preview-sidebar-controls">
+          <div class="preview-mode" hidden>
+            <button type="button" data-preview-mode="chat" aria-pressed="true" data-en="Chats">对话</button>
+            <button type="button" data-preview-mode="bots" aria-pressed="false">Bots</button>
+          </div>
+          <div class="preview-new" aria-hidden="true"><span><b>＋</b> <span data-en="New chat">新会话</span></span><span>⌘N</span></div>
+          <div class="preview-new preview-new-bot" aria-hidden="true" hidden><span><b>＋</b> <span data-en="New Bot">新建 Bot</span></span><span>⌘N</span></div>
         </div>
-        <p class="preview-side-label" data-en="Projects">项目</p>
-        <strong class="preview-project-name"><span aria-hidden="true">⌄</span> notes-app</strong>
-        <ul class="preview-sessions" aria-label="项目会话" data-en-label="Project sessions">
-          <li class="preview-session is-current"><span class="preview-agent">OC</span><strong data-en="Fix note search">修复笔记搜索</strong></li>
-          <li class="preview-session"><span class="preview-agent">CX</span><span data-en="Improve keyboard shortcuts">优化快捷键</span></li>
-          <li class="preview-session"><span class="preview-agent">CB</span><span data-en="Review import flow">检查导入流程</span></li>
+        <div class="preview-project-chat">
+          <p class="preview-side-label" data-en="Projects">项目</p>
+          <strong class="preview-project-name"><span aria-hidden="true">⌄</span> notes-app</strong>
+          <ul class="preview-sessions" aria-label="项目会话" data-en-label="Project sessions">
+            <li class="preview-session is-current"><span class="preview-agent">OC</span><strong data-en="Fix note search">修复笔记搜索</strong></li>
+            <li class="preview-session"><span class="preview-agent">CX</span><span data-en="Improve keyboard shortcuts">优化快捷键</span></li>
+            <li class="preview-session"><span class="preview-agent">CB</span><span data-en="Review import flow">检查导入流程</span></li>
+          </ul>
+        </div>
+        <ul class="preview-bot-list" aria-label="Bot 列表" data-en-label="Bots" hidden>
+          <li><button type="button" data-preview-bot="assistant" aria-pressed="true"><span class="preview-bot-avatar is-assistant" aria-hidden="true"><i></i><i></i></span><span><strong data-en="Assistant">助理</strong><small data-en="Development assistant">研发助理</small></span></button></li>
+          <li><button type="button" data-preview-bot="designer" aria-pressed="false"><span class="preview-bot-avatar is-designer" aria-hidden="true"><i></i><i></i></span><span><strong data-en="Designer">设计师</strong><small data-en="Interface designer">界面设计师</small></span></button></li>
+          <li><button type="button" data-preview-bot="engineer" aria-pressed="false"><span class="preview-bot-avatar is-engineer" aria-hidden="true"><i></i><i></i></span><span><strong data-en="Engineer">程序员</strong><small data-en="Software engineer">开发工程师</small></span></button></li>
         </ul>
         <div class="preview-side-footer" aria-hidden="true"><span>⊞ <span data-en="Extensions">扩展中心</span></span><span>›</span></div>
       </aside>
@@ -213,6 +225,25 @@ h3{font-size:1.1rem;margin:.65rem 0 .45rem}
           <strong data-en="Fix note search">修复笔记搜索</strong>
           <span class="preview-path">· notes-app</span>
           <span class="preview-location" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.5 6a1.5 1.5 0 0 1 1.5-1.5h4l2 2h6A1.5 1.5 0 0 1 17.5 8v6a1.5 1.5 0 0 1-1.5 1.5H4A1.5 1.5 0 0 1 2.5 14z"/></svg><span data-en="Open location">打开位置</span> ⌄</span>
+        </div>
+        <div class="preview-bot-header" hidden>
+          <div class="preview-bot-header-row">
+            <div class="preview-bot-profile" data-bot-profile="assistant">
+              <span class="preview-bot-avatar is-assistant" aria-hidden="true"><i></i><i></i></span><div><strong data-en="Assistant">助理</strong><small data-en="Development assistant">研发助理</small></div>
+            </div>
+            <div class="preview-bot-profile" data-bot-profile="designer" hidden>
+              <span class="preview-bot-avatar is-designer" aria-hidden="true"><i></i><i></i></span><div><strong data-en="Designer">设计师</strong><small data-en="Interface designer">界面设计师</small></div>
+            </div>
+            <div class="preview-bot-profile" data-bot-profile="engineer" hidden>
+              <span class="preview-bot-avatar is-engineer" aria-hidden="true"><i></i><i></i></span><div><strong data-en="Engineer">程序员</strong><small data-en="Software engineer">开发工程师</small></div>
+            </div>
+            <span class="preview-idle" data-en="Idle">空闲</span>
+          </div>
+          <div class="preview-bot-tabs" role="group" aria-label="Bot 视图" data-en-label="Bot views">
+            <button type="button" data-preview-bot-view="conversation" aria-pressed="true" data-en="Chat">对话</button>
+            <button type="button" data-preview-bot-view="memory" aria-pressed="false" data-en="Memory">记忆</button>
+            <button type="button" data-preview-bot-view="settings" aria-pressed="false" data-en="Settings">设置</button>
+          </div>
         </div>
         <div class="preview-panel" id="preview-chat" data-preview-panel="chat">
           <p class="preview-message" data-en="Typing a space in search hides all my notes. Can you fix it?">搜索框里输入空格，所有笔记就不见了。帮我修一下？</p>
@@ -260,11 +291,62 @@ return notes.filter(note =&gt; note.title.toLowerCase().includes(needle));</code
             </div>
           </div>
         </div>
+        <div class="preview-panel" id="preview-bots" data-preview-panel="bots" hidden>
+          <div class="preview-bot-thread" data-bot-thread="assistant">
+            <div data-bot-view="conversation">
+              <p class="preview-message" data-en="Summarize what still needs review for the new search field.">汇总一下新版搜索框还需要确认什么。</p>
+              <div class="preview-bot-card"><span class="preview-bot-transfer" data-en="To Designer">发给设计师</span><p data-en="Please review the empty search hint for clarity.">请检查空搜索提示，看看文案是否清楚。</p></div>
+              <div class="preview-bot-card"><span class="preview-bot-transfer" data-en="From Designer">来自设计师</span><p data-en="Use “Enter a keyword to search notes” and keep the current layout.">建议用「输入关键词搜索笔记」，同时保留现有布局。</p></div>
+              <p data-en="Design feedback is in. The engineer can update the copy next.">已收到设计建议。接下来可以把文案交给程序员实现。</p>
+            </div>
+            <div class="preview-bot-info" data-bot-view="memory" hidden>
+              <h3 data-en="Memory">记忆</h3>
+              <p data-en="Summarize progress first, then list decisions that need a human.">先汇总进展，再列出需要人确认的事项。</p>
+            </div>
+            <div class="preview-bot-info" data-bot-view="settings" hidden>
+              <dl><dt data-en="Role">角色</dt><dd data-en="Development assistant">研发助理</dd><dt data-en="CLI">使用的 CLI</dt><dd>Codex</dd></dl>
+            </div>
+          </div>
+          <div class="preview-bot-thread" data-bot-thread="designer" hidden>
+            <div data-bot-view="conversation">
+              <p class="preview-message" data-en="Review the empty state in note search.">看看笔记搜索框的空状态提示。</p>
+              <div class="preview-bot-card"><span class="preview-bot-transfer" data-en="From Assistant">来自助理</span><p data-en="Check the hint text and keep the current layout.">请检查提示文案，保留现有布局。</p></div>
+              <div class="preview-bot-card"><span class="preview-bot-transfer" data-en="To Assistant">发给助理</span><p data-en="I suggest “Enter a keyword to search notes.”">建议改为「输入关键词搜索笔记」。</p></div>
+              <p data-en="I’d keep the existing input styling and avoid adding more visual elements.">我会沿用现有的输入框样式，避免引入额外视觉元素。</p>
+            </div>
+            <div class="preview-bot-info" data-bot-view="memory" hidden>
+              <h3 data-en="Memory">记忆</h3>
+              <p data-en="Reuse existing components and specify empty and error states.">优先使用现有组件，写清空状态和错误状态。</p>
+            </div>
+            <div class="preview-bot-info" data-bot-view="settings" hidden>
+              <dl><dt data-en="Role">角色</dt><dd data-en="Interface designer">界面设计师</dd><dt data-en="CLI">使用的 CLI</dt><dd>OpenCode</dd></dl>
+            </div>
+          </div>
+          <div class="preview-bot-thread" data-bot-thread="engineer" hidden>
+            <div data-bot-view="conversation">
+              <p class="preview-message" data-en="Update the approved search hint in both languages.">把确认过的搜索提示更新到中英文资源。</p>
+              <div class="preview-bot-card"><span class="preview-bot-transfer" data-en="From Assistant">来自助理</span><p data-en="The hint is approved. Please update both languages.">新提示文案已确认，请同步两种语言。</p></div>
+              <div class="preview-bot-card"><span class="preview-bot-transfer" data-en="To Assistant">发给助理</span><p data-en="Both locale files are updated. Search behavior is unchanged.">已更新中英文资源，搜索逻辑没有改动。</p></div>
+              <p data-en="Next, check that the hint remains readable in a narrow window.">下一步是检查提示在窄窗口下是否完整可读。</p>
+            </div>
+            <div class="preview-bot-info" data-bot-view="memory" hidden>
+              <h3 data-en="Memory">记忆</h3>
+              <p data-en="Keep changes scoped and check both languages before submitting.">改动集中在当前需求，提交前核对中英文。</p>
+            </div>
+            <div class="preview-bot-info" data-bot-view="settings" hidden>
+              <dl><dt data-en="Role">角色</dt><dd data-en="Software engineer">开发工程师</dd><dt data-en="CLI">使用的 CLI</dt><dd>CodeBuddy</dd></dl>
+            </div>
+          </div>
+        </div>
         <div class="preview-composer" aria-hidden="true">
-          <p data-en="Ask OpenCode to change something…">让 OpenCode 修改点什么…</p>
+          <p class="preview-composer-chat" data-en="Ask OpenCode to change something…">让 OpenCode 修改点什么…</p>
+          <p class="preview-composer-bots" data-en="Send a message to the Bot…" hidden>发消息给 Bot…</p>
           <div class="preview-composer-bar">
             <span class="preview-attach">＋</span>
-            <span>OpenCode ⌄</span>
+            <span class="preview-chat-engine">OpenCode ⌄</span>
+            <span data-bot-engine="assistant" hidden>Codex ⌄</span>
+            <span data-bot-engine="designer" hidden>OpenCode ⌄</span>
+            <span data-bot-engine="engineer" hidden>CodeBuddy ⌄</span>
             <span class="preview-composer-project">notes-app</span>
             <code>⎇ main</code>
             <span class="preview-policy"><i></i><span data-en="Approval: Ask">审批：询问</span> ⌄</span>
