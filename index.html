@@ -11,9 +11,21 @@
   (() => {
     const dayStart = 7;
     const nightStart = 19;
+    const storageKey = 'grokx-theme-mode';
+    let mode = 'auto';
     let timer;
+    try {
+      const saved = localStorage.getItem(storageKey);
+      if (saved === 'light' || saved === 'dark') mode = saved;
+    } catch {}
 
     function updateTheme() {
+      clearTimeout(timer);
+      if (mode !== 'auto') {
+        document.documentElement.dataset.theme = mode;
+        return;
+      }
+
       const now = new Date();
       const hour = now.getHours();
       const isDay = hour >= dayStart && hour < nightStart;
@@ -22,11 +34,20 @@
       const next = new Date(now);
       next.setHours(isDay ? nightStart : dayStart, 0, 0, 0);
       if (hour >= nightStart) next.setDate(next.getDate() + 1);
-      clearTimeout(timer);
       timer = setTimeout(updateTheme, next - now);
     }
 
     updateTheme();
+    document.addEventListener('DOMContentLoaded', () => {
+      const select = document.querySelector('.theme-select');
+      select.value = mode;
+      select.hidden = false;
+      select.addEventListener('change', () => {
+        mode = select.value;
+        updateTheme();
+        try { localStorage.setItem(storageKey, mode); } catch {}
+      });
+    });
     addEventListener('pageshow', updateTheme);
     document.addEventListener('visibilitychange', () => {
       if (!document.hidden) updateTheme();
@@ -41,14 +62,15 @@ html[data-theme="dark"]{color-scheme:dark;--ink:#f0e9dc;--soft:#cec3b4;--paper:#
 body{margin:0;background:var(--paper);color:var(--ink)}
 .shell{width:min(1160px,calc(100% - 112px));margin-inline:auto}
 a{color:inherit;text-underline-offset:.25em}
-a:focus-visible,.language-toggle:focus-visible,.troubleshooting summary:focus-visible{outline:2px solid var(--focus);outline-offset:5px}
+a:focus-visible,.language-toggle:focus-visible,.theme-select:focus-visible,.troubleshooting summary:focus-visible{outline:2px solid var(--focus);outline-offset:5px}
 nav,footer{display:flex;justify-content:space-between;align-items:center;gap:1rem}
 nav{min-height:82px}
 nav div{display:flex;align-items:center;gap:clamp(1rem,3vw,2.2rem)}
 nav a,footer a{text-decoration:none;font-size:.92rem}
 nav a:hover,footer a:hover{text-decoration:underline}
-.language-toggle{font:inherit;font-size:.9rem;color:inherit;background:none;border:1px solid var(--line);border-radius:6px;padding:.38rem .6rem;cursor:pointer}
-.language-toggle:hover{background:var(--row-hover)}
+.language-toggle,.theme-select{font:inherit;font-size:.9rem;color:inherit;background:none;border:1px solid var(--line);border-radius:6px;padding:.38rem .6rem;cursor:pointer}
+.language-toggle:hover,.theme-select:hover{background:var(--row-hover)}
+.theme-select{background:var(--paper);max-width:100%}
 html[lang="en"] h1{font-size:clamp(2.35rem,4.7vw,4.35rem);text-wrap:balance}
 .wordmark{display:inline-flex;align-items:center;gap:.4rem;font-weight:780;letter-spacing:-.04em;font-size:1.5rem}
 .wordmark img{display:block;width:32px;height:32px}
@@ -86,7 +108,7 @@ h3{font-size:1.1rem;margin:.65rem 0 .45rem}
 .note{max-width:52rem;margin-top:2rem}
 footer{border-top:1px solid var(--line);padding:1.2rem 0 2rem;color:var(--soft);font-size:.9rem}
 @media(max-width:720px){.shell{width:calc(100% - 40px)}nav{min-height:68px}.hero{grid-template-columns:1fr;gap:1.5rem;padding:3rem 0}.art{width:min(54%,215px);justify-self:end}.downloads,.steps{grid-template-columns:1fr}.downloads{gap:1.8rem}.steps{gap:1.3rem}}
-@media(max-width:520px){nav{flex-wrap:wrap;padding:.8rem 0;row-gap:.65rem}nav div{margin-left:auto;gap:clamp(.55rem,2.2vw,1rem)}nav a,.language-toggle{font-size:.8rem}}
+@media(max-width:520px){nav{flex-wrap:wrap;padding:.8rem 0;row-gap:.65rem}nav div{max-width:100%;margin-left:auto;flex-wrap:wrap;justify-content:flex-end;gap:clamp(.55rem,2.2vw,1rem)}nav a,.language-toggle,.theme-select{font-size:.8rem}}
 .download:focus-visible strong{text-decoration:underline}
 .button:hover,.button:focus-visible{background:var(--button-hover);text-decoration:none}
 .download:hover,.download:focus-visible{background:var(--row-hover);border-radius:6px}
@@ -124,7 +146,13 @@ footer{border-top:1px solid var(--line);padding:1.2rem 0 2rem;color:var(--soft);
 <body>
 <nav class="shell" aria-label="主导航" data-en-label="Main navigation">
   <span class="wordmark"><img src="grokx-icon.png" width="32" height="32" alt="">GrokX</span>
-  <div><a href="#guide" data-en="Quick Start">使用指南</a><a href="https://github.com/onedou/grokx-releases">GitHub ↗</a><a class="button" href="#downloads" data-en="Download">下载</a><button class="language-toggle" type="button" hidden></button></div>
+  <div><a href="#guide" data-en="Quick Start">使用指南</a><a href="https://github.com/onedou/grokx-releases">GitHub ↗</a><a class="button" href="#downloads" data-en="Download">下载</a><button class="language-toggle" type="button" hidden></button>
+    <select class="theme-select" aria-label="显示主题" data-en-label="Color theme" hidden>
+      <option value="auto" data-en="Auto">自动</option>
+      <option value="light" data-en="Light">亮色</option>
+      <option value="dark" data-en="Dark">暗色</option>
+    </select>
+  </div>
 </nav>
 <main class="shell">
   <header class="hero">
