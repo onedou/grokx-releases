@@ -3,69 +3,96 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="GrokX 是面向 macOS 和 Windows 的 AI 编程助手桌面客户端。">
+<meta name="description" content="下载 GrokX，了解如何安装 CLI、打开项目并开始会话。">
 <link rel="icon" href="grokx-icon.png">
-<title>GrokX — 桌面客户端</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap">
+<title>GrokX · 下载与使用指南</title>
 <style>
-:root {
-  color-scheme: light;
-  --paper: #fafaf8;
-  --ink: #202126;
-  --muted: #595e66;
-  --line: #dedfdf;
-  --blue: #145abe;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
-}
-* { box-sizing: border-box; }
-body { margin: 0; background: var(--paper); color: var(--ink); }
-.shell { width: min(100% - 48px, 920px); margin-inline: auto; }
-a { color: inherit; text-underline-offset: .25em; }
-a:focus-visible { outline: 2px solid var(--blue); outline-offset: 5px; border-radius: 2px; }
-nav, footer { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
-nav { height: 72px; border-bottom: 1px solid var(--line); }
-.wordmark { font-size: 20px; font-weight: 700; letter-spacing: -.045em; }
-nav a, footer a { text-decoration: none; }
-nav a:hover, footer a:hover { text-decoration: underline; }
-.hero { padding: clamp(54px, 8vw, 100px) 0 clamp(52px, 8vw, 92px); text-align: center; }
-.hero img { display: block; margin: 0 auto 9px; width: 104px; height: 104px; }
-h1 { font-size: clamp(64px, 11vw, 108px); line-height: .98; letter-spacing: -.055em; margin: 0 0 22px; }
-.tagline { font-size: clamp(19px, 3vw, 25px); font-weight: 600; margin: 0 0 12px; }
-.compatibility { max-width: 38em; margin: auto; color: var(--muted); line-height: 1.8; text-wrap: pretty; }
-.downloads { width: min(100%, 650px); margin-inline: auto; }
-.section-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 13px; }
-h2 { margin: 0; font-size: 20px; }
-.version { font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
-ul { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
-li { border-bottom: 1px solid var(--line); }
-.download { display: grid; grid-template-columns: 1fr auto; gap: 3px 16px; align-items: center; padding: 15px 12px; text-decoration: none; transition: background .15s; }
-.download:hover { background: #eef1f5; }
-.download strong { font-size: 17px; }
-.detail { grid-row: 2; color: var(--muted); font-size: 13px; line-height: 1.5; }
-.action { grid-column: 2; grid-row: 1 / 3; color: var(--blue); font-weight: 600; font-size: 14px; white-space: nowrap; }
-footer { margin-top: clamp(52px, 8vw, 86px); padding: 19px 0 26px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; }
-@media (max-width: 460px) { .shell { width: calc(100% - 36px); } .hero img { width: 88px; height: 88px; } .download { padding-inline: 4px; } }
-@media (prefers-reduced-motion: reduce) { .download { transition: none; } }
+@font-face{font-family:SortsMillGoudy;src:url("https://statics.kimi.ai/neo-design-static/p-font/SortsMillGoudy.ttf") format("truetype");font-display:swap}
+@font-face{font-family:汇文明朝体;src:url("https://statics.kimi.ai/neo-design-static/p-font/%E6%B1%87%E6%96%87%E6%98%8E%E6%9C%9D%E4%BD%93.ttf") format("truetype");font-display:swap}
+:root{color-scheme:light;--ink:#2B2924;--soft:#4B463E;--moss:#505746;--line:#B8AB98;--paper:#E8DFCF;font-family:SortsMillGoudy,汇文明朝体,"Songti SC",SimSun,serif}
+*{box-sizing:border-box}
+body{margin:0;color:var(--ink);background:var(--paper) url("paper.svg") repeat}
+.shell{width:min(1100px,86%);margin-inline:auto}
+a{color:inherit;text-underline-offset:.28em}
+a:focus-visible{outline:2px solid var(--moss);outline-offset:5px}
+nav,footer{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;padding:1.2rem 0}
+nav{border-bottom:1px solid var(--line)}
+nav div{display:flex;gap:clamp(.8rem,4vw,2.1rem)}
+nav a,footer a{text-decoration:none}
+nav a:hover,footer a:hover,.action:hover{text-decoration:underline}
+.wordmark,h1,.folio,.step-no{font-family:"Cormorant Garamond",Georgia,serif}
+.wordmark{font-size:1.6rem;font-weight:600}
+.hero{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));align-items:center;gap:1rem;padding:clamp(4rem,9vw,8rem) 0 clamp(3.5rem,8vw,7rem)}
+.intro{grid-column:1 / 8}
+.folio{color:var(--moss);letter-spacing:.12em;font-size:1rem;font-weight:600}
+h1{font-size:clamp(5rem,14vw,11rem);line-height:.94;letter-spacing:-.02em;font-weight:500;margin:.06em 0 .15em}
+.tagline{font-size:clamp(1.4rem,3vw,2.15rem);margin:0 0 .6rem}
+.lead,p{color:var(--soft);line-height:1.75}
+.lead{max-width:29rem;margin:0 0 1.3rem}
+.hero a{color:var(--moss)}
+.ink{grid-column:8 / 13;width:100%;align-self:end;transform:translateY(1rem)}
+.section-head{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding-bottom:.7rem}
+h2{font-weight:400;font-size:clamp(1.6rem,3vw,2.1rem);margin:0}
+.version,.detail,footer{color:var(--soft);font-size:.92rem}
+ul{list-style:none;padding:0;margin:0;border-top:1px solid var(--line)}
+li{border-bottom:1px solid var(--line)}
+.download{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:.2rem 1rem;text-decoration:none;padding:1.05rem .45rem}
+.download strong{font-size:1.2rem;font-weight:400}
+.download:hover{background:#F4EFE566}
+.detail{grid-row:2}
+.action{grid-column:2;grid-row:1 / 3;color:var(--moss);white-space:nowrap}
+.guide{padding:clamp(3.5rem,8vw,7rem) 0}
+.guide h2{margin-top:.2rem}
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(1.3rem,4vw,3rem);margin-top:1.7rem}
+.step-no{font-size:1.35rem;color:var(--moss)}
+h3{font-size:1.2rem;font-weight:400;margin:.4rem 0}
+.steps p{margin:0}
+.note{max-width:45rem;border-top:1px solid var(--line);margin:2rem 0 0;padding-top:1rem}
+footer{border-top:1px solid var(--line)}
+@media(max-width:660px){.hero{grid-template-columns:1fr;gap:1rem}.intro,.ink{grid-column:1}.ink{width:min(63%,250px);justify-self:end;transform:none;margin-top:.4rem}.steps{grid-template-columns:1fr}.download{padding-inline:0}}
 </style>
 </head>
 <body>
 <nav class="shell" aria-label="主导航">
   <span class="wordmark">GrokX</span>
-  <a href="https://github.com/onedou/grokx-releases">GitHub ↗</a>
+  <div><a href="#guide">使用指南</a><a href="https://github.com/onedou/grokx-releases">GitHub ↗</a></div>
 </nav>
 <main class="shell">
   <header class="hero">
-    <img src="grokx-icon.png" alt="" width="104" height="104">
-    <h1>GrokX</h1>
-    <p class="tagline">AI 编程助手的桌面客户端</p>
-    <p class="compatibility">支持 Grok Build、OpenCode、CodeBuddy Code 和 Google Antigravity CLI，按项目管理会话。</p>
+    <div class="intro">
+      <span class="folio">DESKTOP EDITION</span>
+      <h1>GrokX</h1>
+      <p class="tagline">AI 编程助手的桌面客户端</p>
+      <p class="lead">在一个窗口里管理项目和会话。支持 Grok Build、OpenCode、CodeBuddy Code 和 Google Antigravity CLI。</p>
+      <a href="#downloads">选择安装包 ↓</a>
+    </div>
+    <svg class="ink" viewBox="0 0 390 250" aria-hidden="true">
+      <defs><filter id="brush" x="-12%" y="-20%" width="124%" height="140%"><feTurbulence baseFrequency=".075 .19" numOctaves="3" seed="27" result="grain"/><feDisplacementMap in="SourceGraphic" in2="grain" scale="10" xChannelSelector="R" yChannelSelector="G"/></filter></defs>
+      <g filter="url(#brush)" fill="#2B2924" transform="rotate(-9 195 125)">
+        <path opacity=".92" d="M21 165C74 131 130 102 187 80c57-23 114-34 167-38l-24 13 29-4-31 12 19-3c-50 15-99 38-150 61-54 24-108 47-164 61l14-12-26 8 16-12z"/>
+        <path opacity=".30" d="M39 179c105-27 166-76 282-109l-25 14C199 124 135 164 39 179zm22 11c108-32 180-73 241-90-69 28-158 74-241 90z"/>
+        <path opacity=".46" d="M48 143c70-36 142-61 206-78-67 26-136 52-206 78z"/>
+      </g>
+    </svg>
   </header>
   <section class="downloads" aria-labelledby="downloads">
     <div class="section-head"><h2 id="downloads">下载安装包</h2><span class="version">当前版本 0.17.0</span></div>
     <ul>
-      <li><a class="download" href="https://github.com/onedou/grokx-releases/releases/download/v0.17.0/GrokX_0.17.0_universal.dmg"><strong>macOS 通用版</strong><span class="detail">Apple 芯片与 Intel Mac · DMG · 11.9 MB</span><span class="action" aria-hidden="true">下载 ↓</span></a></li>
-      <li><a class="download" href="https://github.com/onedou/grokx-releases/releases/download/v0.17.0/GrokX_0.17.0_x64-setup.exe"><strong>Windows x64</strong><span class="detail">Intel 与 AMD 电脑 · EXE · 4.4 MB</span><span class="action" aria-hidden="true">下载 ↓</span></a></li>
-      <li><a class="download" href="https://github.com/onedou/grokx-releases/releases/download/v0.17.0/GrokX_0.17.0_arm64-setup.exe"><strong>Windows ARM64</strong><span class="detail">ARM64 电脑 · EXE · 4.0 MB</span><span class="action" aria-hidden="true">下载 ↓</span></a></li>
+      <li><a class="download" href="https://github.com/onedou/grokx-releases/releases/download/v0.17.0/GrokX_0.17.0_universal.dmg"><strong>macOS 通用版</strong><span class="detail">Apple 芯片与 Intel Mac · DMG · 11.9&nbsp;MB</span><span class="action" aria-hidden="true">下载 ↓</span></a></li>
+      <li><a class="download" href="https://github.com/onedou/grokx-releases/releases/download/v0.17.0/GrokX_0.17.0_x64-setup.exe"><strong>Windows x64</strong><span class="detail">Intel 与 AMD 电脑 · EXE · 4.4&nbsp;MB</span><span class="action" aria-hidden="true">下载 ↓</span></a></li>
+      <li><a class="download" href="https://github.com/onedou/grokx-releases/releases/download/v0.17.0/GrokX_0.17.0_arm64-setup.exe"><strong>Windows ARM64</strong><span class="detail">ARM64 电脑 · EXE · 4.0&nbsp;MB</span><span class="action" aria-hidden="true">下载 ↓</span></a></li>
     </ul>
+  </section>
+  <section class="guide" id="guide" aria-labelledby="guide-title">
+    <span class="folio">QUICK START</span>
+    <h2 id="guide-title">第一次使用 GrokX</h2>
+    <div class="steps">
+      <article><span class="step-no">01</span><h3>安装桌面客户端</h3><p>macOS 用户打开 DMG，把 GrokX 拖入「应用程序」。Windows 用户按处理器架构选择 EXE，再运行安装程序。</p></article>
+      <article><span class="step-no">02</span><h3>准备一个编程 CLI</h3><p>在终端安装 <a href="https://x.ai/cli">Grok Build</a>、<a href="https://dev.opencode.ai/v2/docs">OpenCode</a>、<a href="https://www.codebuddy.cn/cli/">CodeBuddy Code</a> 或 <a href="https://antigravity.google/docs/cli/overview">Antigravity CLI</a>。按所选工具的指引登录或配置模型服务，再打开 GrokX。</p></article>
+      <article><span class="step-no">03</span><h3>打开项目，开始会话</h3><p>选择本地项目目录并新建会话。发送第一条消息前，选择要使用的 CLI。助手请求执行命令或修改文件时，可在会话中查看权限提示并决定是否允许。</p></article>
+    </div>
+    <p class="note">GrokX 通过 ACP 与本机 CLI 通信。模型、账号和用量由所选 CLI 及其模型服务决定。若应用提示找不到 CLI，先在终端确认该命令能运行，再重新打开 GrokX。</p>
   </section>
 </main>
 <footer class="shell"><span>GrokX</span><a href="https://github.com/onedou/grokx-releases/releases">历史版本 ↗</a></footer>
