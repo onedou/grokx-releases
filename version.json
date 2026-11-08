@@ -1,14 +1,14 @@
 {
-  "version": "0.28.1",
+  "version": "0.28.2",
   "date": "2026-11-08",
   "notes": {
-    "zh-CN": "OpenCode 的推理档位现在对任何模型都能选择，选中后真正生效；新建或恢复会话不再重置已选档位。",
-    "en": "OpenCode reasoning levels can now be chosen for every model and actually apply; creating or resuming a session no longer resets the chosen level."
+    "zh-CN": "首页推荐提示词不再显示成 JSON 片段；OpenCode 模型没有推理强度时，菜单会明确说明。",
+    "en": "Home starter prompts no longer show up as JSON fragments; the model menu now says so when an OpenCode model has no reasoning levels."
   },
   "downloads": {
-    "macOS": "https://github.com/onedou/grokx-releases/releases/download/v0.28.1/GrokX_0.28.1_universal.dmg",
-    "windowsX64": "https://github.com/onedou/grokx-releases/releases/download/v0.28.1/GrokX_0.28.1_x64-setup.exe",
-    "windowsArm64": "https://github.com/onedou/grokx-releases/releases/download/v0.28.1/GrokX_0.28.1_arm64-setup.exe"
+    "macOS": "https://github.com/onedou/grokx-releases/releases/download/v0.28.2/GrokX_0.28.2_universal.dmg",
+    "windowsX64": "https://github.com/onedou/grokx-releases/releases/download/v0.28.2/GrokX_0.28.2_x64-setup.exe",
+    "windowsArm64": "https://github.com/onedou/grokx-releases/releases/download/v0.28.2/GrokX_0.28.2_arm64-setup.exe"
   },
   "site": "https://grokx.bel.org.cn"
 }
