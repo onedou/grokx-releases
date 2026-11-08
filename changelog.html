@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="查看 GrokX 的版本变更和历史安装包。" data-en-content="Browse GrokX release notes and previous installers.">
+<link rel="icon" href="grokx-icon.png">
+<title data-en="GrokX · Changelog">GrokX · 版本更新记录</title>
+<script src="preferences.js"></script>
+<link rel="stylesheet" href="site.css">
+<style>
+.archive{max-width:960px;padding:clamp(3rem,8vw,7rem) 0 clamp(3rem,7vw,5rem)}
+.archive-header{margin-bottom:clamp(2.4rem,5vw,4rem)}
+.archive h1{margin:0 0 .8rem;font-size:clamp(2.6rem,6.5vw,5.2rem);letter-spacing:-.06em;line-height:1.07}
+.archive-header p,.releases p{margin:0;font-family:var(--serif);color:var(--soft);line-height:1.65}
+.archive-header p{font-size:clamp(1.15rem,2vw,1.4rem)}
+.releases{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.releases li{display:grid;grid-template-columns:8rem minmax(0,1fr) auto;align-items:baseline;gap:.45rem clamp(1rem,4vw,3rem);padding:1.3rem 0;border-bottom:1px solid var(--line);scroll-margin-top:1rem}
+.release-version h2{margin:0;font-size:1.38rem;letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+.latest{display:block;margin-top:.25rem;color:var(--step);font-size:.75rem;font-weight:650}
+.release-link{white-space:nowrap;text-decoration:none;font-size:.9rem;font-weight:650}
+.release-link:hover{text-decoration:underline}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+@media(max-width:600px){
+  .releases li{grid-template-columns:1fr auto}
+  .releases p{grid-row:2;grid-column:1/-1}
+  .release-link{grid-row:1;grid-column:2}
+}
+</style>
+</head>
+<body>
+<nav class="shell" aria-label="主导航" data-en-label="Main navigation">
+  <a class="wordmark-link" href="./"><span class="wordmark"><img src="grokx-icon.png" width="32" height="32" alt="">GrokX</span></a>
+  <div>
+    <a href="./#downloads" data-en="Download">下载</a>
+    <a href="./#guide" data-en="Quick Start">使用指南</a>
+    <button class="language-toggle" type="button" hidden></button>
+    <select class="theme-select" aria-label="显示主题" data-en-label="Color theme" hidden>
+      <option value="auto" data-en="Auto">自动</option>
+      <option value="light" data-en="Light">亮色</option>
+      <option value="dark" data-en="Dark">暗色</option>
+    </select>
+  </div>
+</nav>
+<main class="shell archive">
+  <header class="archive-header">
+    <h1 data-en="Changelog">版本更新记录</h1>
+    <p data-en="See what changed in each public release of GrokX, from newest to oldest.">从新到旧查看 GrokX 各公开版本的改动和安装包。</p>
+  </header>
+  <ol class="releases">
+      <li id="v0.17.0">
+        <div class="release-version">
+          <h2>v0.17.0</h2>
+          <span class="latest" data-en="Latest">最新发布</span>
+        </div>
+        <p data-en="Added support for Google Antigravity CLI (agy).">新增 Google Antigravity CLI（agy）支持。</p>
+        <a class="release-link" href="https://github.com/onedou/grokx-releases/releases/tag/v0.17.0"><span data-en="Installers">安装包</span> <span class="sr-only">v0.17.0</span><span aria-hidden="true">↗</span></a>
+      </li>
+      <li id="v0.16.9">
+        <div class="release-version">
+          <h2>v0.16.9</h2>
+        </div>
+        <p data-en="Bot message cards now use a dot that matches the avatar color.">Bot 消息卡片改用与头像同色的圆点标识。</p>
+        <a class="release-link" href="https://github.com/onedou/grokx-releases/releases/tag/v0.16.9"><span data-en="Installers">安装包</span> <span class="sr-only">v0.16.9</span><span aria-hidden="true">↗</span></a>
+      </li>
+      <li id="v0.16.8">
+        <div class="release-version">
+          <h2>v0.16.8</h2>
+        </div>
+        <p data-en="Incoming bot messages show the sender’s name and hide the raw message envelope.">收到的 Bot 消息显示发送者姓名，聊天中不再显示原始消息信封。</p>
+        <a class="release-link" href="https://github.com/onedou/grokx-releases/releases/tag/v0.16.8"><span data-en="Installers">安装包</span> <span class="sr-only">v0.16.8</span><span aria-hidden="true">↗</span></a>
+      </li>
+      <li id="v0.16.7">
+        <div class="release-version">
+          <h2>v0.16.7</h2>
+        </div>
+        <p data-en="Messages between bots are now displayed as readable cards.">Bot 之间的消息改用可读的卡片展示。</p>
+        <a class="release-link" href="https://github.com/onedou/grokx-releases/releases/tag/v0.16.7"><span data-en="Installers">安装包</span> <span class="sr-only">v0.16.7</span><span aria-hidden="true">↗</span></a>
+      </li>
+      <li id="v0.16.6">
+        <div class="release-version">
+          <h2>v0.16.6</h2>
+        </div>
+        <p data-en="macOS now uses a single universal installer for Apple silicon and Intel Macs.">macOS 使用同一个通用安装包，支持 Apple 芯片和 Intel Mac。</p>
+        <a class="release-link" href="https://github.com/onedou/grokx-releases/releases/tag/v0.16.6"><span data-en="Installers">安装包</span> <span class="sr-only">v0.16.6</span><span aria-hidden="true">↗</span></a>
+      </li>
+      <li id="v0.16.5">
+        <div class="release-version">
+          <h2>v0.16.5</h2>
+        </div>
+        <p data-en="Restored messaging between bots and fixed issues with resending context and dropped CodeBuddy replies.">恢复 Bot 之间互发消息，修复上下文重发和 CodeBuddy 回复被丢弃的问题。</p>
+        <a class="release-link" href="https://github.com/onedou/grokx-releases/releases/tag/v0.16.5"><span data-en="Installers">安装包</span> <span class="sr-only">v0.16.5</span><span aria-hidden="true">↗</span></a>
+      </li>
+      <li id="v0.16.4">
+        <div class="release-version">
+          <h2>v0.16.4</h2>
+        </div>
+        <p data-en="Fixed unresponsive Windows window controls and removed an extra context menu.">修复 Windows 窗口按钮失效，并去掉多余的右键菜单。</p>
+        <a class="release-link" href="https://github.com/onedou/grokx-releases/releases/tag/v0.16.4"><span data-en="Installers">安装包</span> <span class="sr-only">v0.16.4</span><span aria-hidden="true">↗</span></a>
+      </li>
+      <li id="v0.16.3">
+        <div class="release-version">
+          <h2>v0.16.3</h2>
+        </div>
+        <p data-en="Moved the Windows sidebar toggle into the title bar and raised the sidebar logo.">Windows 的侧栏折叠按钮移入标题栏，侧栏标志上移。</p>
+        <a class="release-link" href="https://github.com/onedou/grokx-releases/releases/tag/v0.16.3"><span data-en="Installers">安装包</span> <span class="sr-only">v0.16.3</span><span aria-hidden="true">↗</span></a>
+      </li>
+      <li id="v0.16.2">
+        <div class="release-version">
+          <h2>v0.16.2</h2>
+        </div>
+        <p data-en="Introduced a custom menu bar and card layout on Windows and fixed a CodeBuddy startup issue.">Windows 新增自绘菜单栏和卡片式内容区，修复 CodeBuddy 无法启动的问题。</p>
+        <a class="release-link" href="https://github.com/onedou/grokx-releases/releases/tag/v0.16.2"><span data-en="Installers">安装包</span> <span class="sr-only">v0.16.2</span><span aria-hidden="true">↗</span></a>
+      </li>
+      <li id="v0.16.1">
+        <div class="release-version">
+          <h2>v0.16.1</h2>
+        </div>
+        <p data-en="Switched Windows to a frameless window and introduced a universal macOS installer.">Windows 改用无边框窗口，macOS 引入通用安装包。</p>
+        <a class="release-link" href="https://github.com/onedou/grokx-releases/releases/tag/v0.16.1"><span data-en="Installers">安装包</span> <span class="sr-only">v0.16.1</span><span aria-hidden="true">↗</span></a>
+      </li>
+      <li id="v0.16.0">
+        <div class="release-version">
+          <h2>v0.16.0</h2>
+        </div>
+        <p data-en="Introduced Windows installers with the same interface as the macOS app.">提供 Windows 安装包，界面与 macOS 版保持一致。</p>
+        <a class="release-link" href="https://github.com/onedou/grokx-releases/releases/tag/v0.16.0"><span data-en="Installers">安装包</span> <span class="sr-only">v0.16.0</span><span aria-hidden="true">↗</span></a>
+      </li>
+  </ol>
+</main>
+<footer class="shell"><span>GrokX</span><a href="https://github.com/onedou/grokx-releases/releases" data-en="GitHub Releases ↗">GitHub 发布页 ↗</a></footer>
+</body>
+</html>

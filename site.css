@@ -1,0 +1,24 @@
+@font-face{font-family:SortsMillGoudy;src:url("https://statics.kimi.ai/neo-design-static/p-font/SortsMillGoudy.ttf") format("truetype");font-display:swap}
+:root{color-scheme:light;--ink:#22211d;--soft:#514b42;--paper:#f2efe7;--sand:#e5dccd;--line:#c8bdac;--clay:#ba684b;--illustration-ink:#27241e;--focus:#93492e;--button-hover:#39352e;--row-hover:#22211d09;--shadow:#22211d22;--step:#874932;--sans:system-ui,"PingFang SC","Microsoft YaHei",sans-serif;--serif:SortsMillGoudy,"Songti SC","Noto Serif CJK SC",SimSun,Georgia,serif;font-family:var(--sans)}
+html[data-theme="dark"]{color-scheme:dark;--ink:#f0e9dc;--soft:#cec3b4;--paper:#211f1b;--sand:#302b24;--line:#615447;--clay:#de9675;--illustration-ink:#eee2d2;--focus:#e7a78b;--button-hover:#d8cdbd;--row-hover:#f0e9dc12;--shadow:#0005;--step:#e4a589}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink)}
+.shell{width:min(1160px,calc(100% - 112px));margin-inline:auto}
+a{color:inherit;text-underline-offset:.25em}
+a:focus-visible,.language-toggle:focus-visible,.theme-select:focus-visible,.troubleshooting summary:focus-visible{outline:2px solid var(--focus);outline-offset:5px}
+nav,footer{display:flex;justify-content:space-between;align-items:center;gap:1rem}
+nav{min-height:82px}
+nav div{display:flex;align-items:center;gap:clamp(1rem,3vw,2.2rem)}
+nav a,footer a{text-decoration:none;font-size:.92rem}
+nav a:hover,footer a:hover{text-decoration:underline}
+.language-toggle,.theme-select{font:inherit;font-size:.9rem;color:inherit;background:none;border:1px solid var(--line);border-radius:6px;padding:.38rem .6rem;cursor:pointer}
+.language-toggle:hover,.theme-select:hover{background:var(--row-hover)}
+.theme-select{background:var(--paper);max-width:100%}
+.wordmark{display:inline-flex;align-items:center;gap:.4rem;font-weight:780;letter-spacing:-.04em;font-size:1.5rem}
+.wordmark img{display:block;width:32px;height:32px}
+.button{display:inline-block;background:var(--ink);color:var(--paper);padding:.65rem .95rem;border-radius:7px;text-decoration:none}
+footer{border-top:1px solid var(--line);padding:1.2rem 0 2rem;color:var(--soft);font-size:.9rem}
+.wordmark-link{text-decoration:none}
+@media(max-width:850px){nav{flex-wrap:wrap;padding:.8rem 0;row-gap:.65rem}nav div{max-width:100%;margin-left:auto;flex-wrap:wrap;justify-content:flex-end}}
+@media(max-width:720px){.shell{width:calc(100% - 40px)}nav{min-height:68px}}
+@media(max-width:520px){nav div{gap:clamp(.55rem,2.2vw,1rem)}nav a,.language-toggle,.theme-select{font-size:.8rem}}
