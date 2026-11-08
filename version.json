@@ -1,0 +1,14 @@
+{
+  "version": "0.24.1",
+  "date": "2026-11-08",
+  "notes": {
+    "zh-CN": "CodeBuddy 按模型显示可用推理档位，并调整了首页浏览器按钮间距。",
+    "en": "CodeBuddy shows each model's own reasoning effort levels, and the home browser button spacing is tightened."
+  },
+  "downloads": {
+    "macOS": "https://github.com/onedou/grokx-releases/releases/download/v0.24.1/GrokX_0.24.1_universal.dmg",
+    "windowsX64": "https://github.com/onedou/grokx-releases/releases/download/v0.24.1/GrokX_0.24.1_x64-setup.exe",
+    "windowsArm64": "https://github.com/onedou/grokx-releases/releases/download/v0.24.1/GrokX_0.24.1_arm64-setup.exe"
+  },
+  "site": "https://grokx.bel.org.cn"
+}
