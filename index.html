@@ -14,7 +14,7 @@
 body{margin:0;background:var(--paper);color:var(--ink)}
 .shell{width:min(1160px,calc(100% - 112px));margin-inline:auto}
 a{color:inherit;text-underline-offset:.25em}
-a:focus-visible{outline:2px solid #93492e;outline-offset:5px}
+a:focus-visible,.troubleshooting summary:focus-visible{outline:2px solid #93492e;outline-offset:5px}
 nav,footer{display:flex;justify-content:space-between;align-items:center;gap:1rem}
 nav{min-height:82px}
 nav div{display:flex;align-items:center;gap:clamp(1rem,3vw,2.2rem)}
@@ -58,6 +58,9 @@ footer{border-top:1px solid var(--line);padding:1.2rem 0 2rem;color:var(--soft);
 @media(max-width:720px){.shell{width:calc(100% - 40px)}nav{min-height:68px}.hero{grid-template-columns:1fr;gap:1.5rem;padding:3rem 0}.art{width:min(54%,215px);justify-self:end}.downloads,.steps{grid-template-columns:1fr}.downloads{gap:1.8rem}.steps{gap:1.3rem}}
 @media(max-width:360px){nav div{gap:.65rem}nav a{font-size:.8rem}}
 .download:focus-visible strong{text-decoration:underline}
+.button:hover,.button:focus-visible{background:#39352e;text-decoration:none}
+.download:hover,.download:focus-visible{background:#22211d09;border-radius:6px}
+#downloads,#guide{scroll-margin-top:1.25rem}
 .action span{display:inline-block}
 @media(prefers-reduced-motion:no-preference){
   .art .ink-lines path{stroke-dasharray:1;animation:draw-ink 920ms cubic-bezier(.3,.05,.35,1) both}
@@ -68,9 +71,22 @@ footer{border-top:1px solid var(--line);padding:1.2rem 0 2rem;color:var(--soft);
   .art .ink-leaves path:nth-child(2){animation-delay:820ms}
   .art .ink-leaves path:nth-child(3){animation-delay:660ms}
   .art .ink-leaves path:nth-child(4){animation-delay:780ms}
+  html{scroll-behavior:smooth}
+  .button{transition:background-color 180ms ease,transform 180ms ease,box-shadow 180ms ease}
+  .button:focus-visible{transform:translateY(-2px);box-shadow:0 5px 12px #22211d22}
+  .download{transition:background-color 180ms ease}
   .action span{transition:transform 180ms ease}
-  .download:hover .action span,.download:focus-visible .action span{transform:translateY(3px)}
+  .download:focus-visible .action span{transform:translateY(3px)}
+  @media(hover:hover){
+    .button:hover{transform:translateY(-2px);box-shadow:0 5px 12px #22211d22}
+    .download:hover .action span{transform:translateY(3px)}
+  }
+  .button:active{transform:translateY(1px);box-shadow:none}
+  .download:active .action span{transform:translateY(5px)}
+  .section-enter{animation:section-enter 440ms cubic-bezier(.2,.65,.3,1)}
+  .section-enter:focus-within{animation:none}
 }
+@keyframes section-enter{from{opacity:.8;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
 @keyframes draw-ink{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
 @keyframes settle-leaf{from{opacity:0;transform:scale(.78)}to{opacity:1;transform:scale(1)}}
 </style>
@@ -131,5 +147,20 @@ footer{border-top:1px solid var(--line);padding:1.2rem 0 2rem;color:var(--soft);
   </section>
 </main>
 <footer class="shell"><span>GrokX</span><a href="https://github.com/onedou/grokx-releases/releases">历史版本 ↗</a></footer>
+<script>
+  if ('IntersectionObserver' in window && matchMedia('(prefers-reduced-motion: no-preference)').matches) {
+    const observer = new IntersectionObserver((entries) => {
+      for (const entry of entries) {
+        if (!entry.isIntersecting) continue;
+        observer.unobserve(entry.target);
+        entry.target.classList.add('section-enter');
+      }
+    }, { rootMargin: '0px 0px -32px 0px' });
+
+    for (const section of document.querySelectorAll('#downloads, #guide')) {
+      observer.observe(section);
+    }
+  }
+</script>
 </body>
 </html>
