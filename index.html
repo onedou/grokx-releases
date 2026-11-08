@@ -168,10 +168,7 @@ h3{font-size:1.1rem;margin:.65rem 0 .45rem}
       </div>
     </div>
     <div class="hero-notes">
-      <div>
-        <p class="lead" data-en="Organize sessions by project. Review file changes, command output, and permission requests right in the chat.">用 GrokX 按项目管理会话，在聊天中查看文件改动和命令输出，并处理权限请求。</p>
-        <p class="preview-caption"><a class="support-link" href="#preview" data-en="Try the interactive demo ↓">试用互动演示 ↓</a></p>
-      </div>
+      <p class="lead" data-en="Organize sessions by project. Review file changes, command output, and permission requests right in the chat.">用 GrokX 按项目管理会话，在聊天中查看文件改动和命令输出，并处理权限请求。</p>
       <div class="hero-tools">
         <p data-en="Supported CLIs">支持的 CLI</p>
         <ul>
@@ -185,31 +182,47 @@ h3{font-size:1.1rem;margin:.65rem 0 .45rem}
   <section id="preview" aria-labelledby="preview-title">
     <div class="preview-heading">
       <div>
-        <h2 id="preview-title" data-en="Try a GrokX session">体验一次 GrokX 会话</h2>
-        <p data-en="Follow a small bug fix from the first message to reviewing changes and approving a command.">从一条修复请求开始，看看如何查看代码改动、审批命令。</p>
+        <h2 id="preview-title" data-en="GrokX workspace">GrokX 工作区</h2>
       </div>
-      <div class="preview-switcher" role="group" aria-label="演示场景" data-en-label="Demo scenes" hidden>
+      <div class="preview-switcher" role="group" aria-label="会话视图" data-en-label="Session views" hidden>
         <button type="button" data-preview-scene="chat" aria-controls="preview-chat" aria-pressed="true" data-en="Session">项目会话</button>
         <button type="button" data-preview-scene="diff" aria-controls="preview-diff" aria-pressed="false" data-en="File changes">文件改动</button>
         <button type="button" data-preview-scene="approval" aria-controls="preview-approval" aria-pressed="false" data-en="Permissions">权限审批</button>
       </div>
     </div>
     <div class="preview-window">
-      <div class="preview-chrome">
+      <aside class="preview-project">
         <span class="preview-lights" aria-hidden="true"><i></i><i></i><i></i></span>
-        <strong>GrokX</strong>
-        <code>main</code>
-      </div>
+        <strong class="preview-brand">GrokX</strong>
+        <div class="preview-sidebar-controls" aria-hidden="true">
+          <div class="preview-mode"><span data-en="Chats">对话</span><span>Bots</span></div>
+          <div class="preview-new"><span><b>＋</b> <span data-en="New chat">新会话</span></span><span>⌘N</span></div>
+        </div>
+        <p class="preview-side-label" data-en="Projects">项目</p>
+        <strong class="preview-project-name"><span aria-hidden="true">⌄</span> notes-app</strong>
+        <ul class="preview-sessions" aria-label="项目会话" data-en-label="Project sessions">
+          <li class="preview-session is-current"><span class="preview-agent">OC</span><strong data-en="Fix note search">修复笔记搜索</strong></li>
+          <li class="preview-session"><span class="preview-agent">CX</span><span data-en="Improve keyboard shortcuts">优化快捷键</span></li>
+          <li class="preview-session"><span class="preview-agent">CB</span><span data-en="Review import flow">检查导入流程</span></li>
+        </ul>
+        <div class="preview-side-footer" aria-hidden="true"><span>⊞ <span data-en="Extensions">扩展中心</span></span><span>›</span></div>
+      </aside>
       <div class="preview-body">
-        <div class="preview-project">
-          <p data-en="Project">项目</p>
-          <strong>notes-app</strong>
-          <span class="preview-session" data-en="Fix note search">修复笔记搜索</span>
-          <p class="preview-engine">Grok Build</p>
+        <div class="preview-chrome">
+          <strong data-en="Fix note search">修复笔记搜索</strong>
+          <span class="preview-path">· notes-app</span>
+          <span class="preview-location" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.5 6a1.5 1.5 0 0 1 1.5-1.5h4l2 2h6A1.5 1.5 0 0 1 17.5 8v6a1.5 1.5 0 0 1-1.5 1.5H4A1.5 1.5 0 0 1 2.5 14z"/></svg><span data-en="Open location">打开位置</span> ⌄</span>
         </div>
         <div class="preview-panel" id="preview-chat" data-preview-panel="chat">
           <p class="preview-message" data-en="Typing a space in search hides all my notes. Can you fix it?">搜索框里输入空格，所有笔记就不见了。帮我修一下？</p>
-          <p data-en="I’ll check how the search handles whitespace.">我先看看搜索是怎么处理空格的。</p>
+          <details class="preview-thought">
+            <summary data-en="Thinking">思考</summary>
+            <p data-en="I’ll check how the search handles whitespace.">我先看看搜索是怎么处理空格的。</p>
+          </details>
+          <details class="preview-tool">
+            <summary><span data-en="Ran command">已执行</span> <code>rg -n 'query' src/search.ts</code></summary>
+            <pre><code>4: const needle = query.toLowerCase();</code></pre>
+          </details>
           <details class="preview-tool">
             <summary><span data-en="Read file">读取文件</span> <code>src/search.ts</code></summary>
             <pre><code>const needle = query.toLowerCase();
@@ -246,9 +259,20 @@ return notes.filter(note =&gt; note.title.toLowerCase().includes(needle));</code
             </div>
           </div>
         </div>
+        <div class="preview-composer" aria-hidden="true">
+          <p data-en="Ask OpenCode to change something…">让 OpenCode 修改点什么…</p>
+          <div class="preview-composer-bar">
+            <span class="preview-attach">＋</span>
+            <span>OpenCode ⌄</span>
+            <span class="preview-composer-project">notes-app</span>
+            <code>⎇ main</code>
+            <span class="preview-policy"><i></i><span data-en="Approval: Ask">审批：询问</span> ⌄</span>
+            <span class="preview-send">↑</span>
+          </div>
+        </div>
       </div>
     </div>
-    <p class="preview-caption" data-en="Interactive example with sample data. The preview doesn’t run commands or access your files.">互动示例使用虚构数据，不会执行命令或访问你的文件。</p>
+    <p class="preview-caption" data-en="Sample conversation. No commands run and no local files are accessed.">示例会话，不会执行命令或访问本地文件。</p>
   </section>
   <section class="downloads" id="downloads" aria-labelledby="download-title">
     <div class="panel-intro">
