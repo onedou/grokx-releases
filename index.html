@@ -42,7 +42,8 @@ html[lang="en"] .hero-accent{font-family:var(--serif);font-style:italic;font-wei
 h2{font-size:clamp(1.65rem,3vw,2.25rem);letter-spacing:-.04em;line-height:1.2;margin:0}
 .panel-intro p{font-size:1.12rem;max-width:25rem;margin:.75rem 0 1.5rem}
 .history{color:var(--soft);font-size:.88rem;line-height:1.6}
-.history{margin:1rem 0 0;text-align:right}
+.history{display:flex;justify-content:flex-end;flex-wrap:wrap;gap:.6rem 1rem;margin:1rem 0 0}
+.support-link{color:var(--step);font-weight:650}
 .troubleshooting{max-width:52rem;margin-top:1.4rem;padding-top:1rem;border-top:1px solid var(--line)}
 .troubleshooting summary{cursor:pointer;font-weight:600}
 .troubleshooting p{font-family:var(--serif);color:var(--soft);line-height:1.65}
@@ -56,14 +57,28 @@ li:last-child .download{padding-bottom:.2rem}
 .detail{grid-row:2;color:var(--soft);font-size:.83rem}
 .action{grid-column:2;grid-row:1 / 3;font-size:.9rem;font-weight:650;white-space:nowrap}
 .guide{padding:clamp(3.75rem,9vw,7.5rem) 0}
-.support{border-top:1px solid var(--line);padding:1.2rem 0 1.5rem}
-.support summary{width:fit-content;cursor:pointer;font-weight:650}
-.support summary:focus-visible{outline:2px solid var(--focus);outline-offset:5px}
-.support-body{display:grid;grid-template-columns:215px minmax(0,22rem);gap:1.2rem;align-items:center;margin:1.2rem 0 .2rem}
-.support-body img{display:block;width:100%;height:auto;background:#fff}
-.support-body p{margin:0 0 .75rem;color:var(--soft);line-height:1.6}
-.support-body a{font-size:.9rem}
-@media(max-width:480px){.support-body{grid-template-columns:minmax(0,1fr)}.support-body img{max-width:215px}}
+.support{border-top:1px solid var(--line);padding:clamp(2rem,5vw,3.5rem) 0 clamp(2.3rem,5vw,4rem)}
+.support-body{margin:1.2rem 0 .2rem}
+.support-body p{max-width:38rem;margin:0 0 1.25rem;color:var(--soft);line-height:1.6}
+.support-options{display:grid;grid-template-columns:repeat(2,minmax(0,215px));gap:1.4rem 2rem}
+.support-options figure{margin:0}
+.support-options img{display:block;width:100%;height:auto;background:#fff}
+.support-options figcaption{margin:.65rem 0 .25rem;font-weight:650}
+.support-options a{font-size:.9rem}
+@media(max-width:540px){.support-options{grid-template-columns:minmax(0,215px)}}
+.download-dialog{width:min(34rem,calc(100% - 2rem));max-height:calc(100dvh - 2rem);overflow:auto;padding:clamp(1rem,4vw,2rem);border:1px solid var(--line);border-radius:15px;background:var(--paper);color:var(--ink)}
+.download-dialog::backdrop{background:#18151099}
+.download-dialog header{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem}
+.download-dialog h2{font-size:clamp(1.35rem,4vw,1.8rem)}
+.download-dialog p{color:var(--soft);line-height:1.5;margin:.6rem 0 1rem}
+.download-dialog form{margin:0}
+.dialog-close{border:0;background:transparent;color:inherit;font:inherit;font-size:1.5rem;line-height:1;cursor:pointer;padding:0 .2rem .25rem}
+.dialog-close:focus-visible{outline:2px solid var(--focus);outline-offset:3px}
+.dialog-codes .support-options{grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(.75rem,4vw,1.25rem)}
+.dialog-codes .support-options img{max-width:215px}
+.dialog-codes .support-options a{font-size:.8rem;overflow-wrap:anywhere}
+.dialog-actions{display:flex;justify-content:flex-end;margin-top:1.25rem}
+
 .steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(1.4rem,4vw,3rem);margin-top:2rem}
 .steps article{border-top:1px solid var(--line);padding-top:.8rem}
 .step-visual{display:flex;align-items:flex-start;gap:clamp(.8rem,2vw,1.5rem);margin:.15rem 0 .65rem}
@@ -88,7 +103,7 @@ h3{font-size:1.1rem;margin:.65rem 0 .45rem}
 .download:focus-visible strong{text-decoration:underline}
 .button:hover,.button:focus-visible{background:var(--button-hover);text-decoration:none}
 .download:hover,.download:focus-visible{background:var(--row-hover);border-radius:6px}
-#downloads,#guide{scroll-margin-top:1.25rem}
+#downloads,#guide,#support{scroll-margin-top:1.25rem}
 .action [aria-hidden]{display:inline-block}
 @media(prefers-reduced-motion:no-preference){
   .art .ink-lines path{stroke-dasharray:1;animation:draw-ink 920ms cubic-bezier(.3,.05,.35,1) both}
@@ -173,7 +188,7 @@ h3{font-size:1.1rem;margin:.65rem 0 .45rem}
       <li><a class="download" href="https://github.com/onedou/grokx-releases/releases/download/v0.24.1/GrokX_0.24.1_x64-setup.exe"><strong>Windows x64</strong><span class="detail"><span data-en="Intel and AMD PCs">Intel 与 AMD 电脑</span> · EXE · 4.9&nbsp;MB</span><span class="action"><span data-en="Download">下载</span> <span aria-hidden="true">↓</span></span></a></li>
       <li><a class="download" href="https://github.com/onedou/grokx-releases/releases/download/v0.24.1/GrokX_0.24.1_arm64-setup.exe"><strong>Windows ARM64</strong><span class="detail"><span data-en="ARM64 PCs">ARM64 电脑</span> · EXE · 4.4&nbsp;MB</span><span class="action"><span data-en="Download">下载</span> <span aria-hidden="true">↓</span></span></a></li>
     </ul>
-    <p class="history"><a href="changelog.html" data-en="Version history →">版本更新记录 →</a></p>
+    <p class="history"><a class="support-link" href="#support" data-en="Support GrokX ↓">支持 GrokX ↓</a><a href="changelog.html" data-en="Version history →">版本更新记录 →</a></p>
     </div>
   </section>
   <section class="guide" id="guide" aria-labelledby="guide-title">
@@ -217,17 +232,38 @@ h3{font-size:1.1rem;margin:.65rem 0 .45rem}
       <p><span data-en="If your CLI is detected but the session asks you to sign in, authenticate in the terminal. For Grok Build, run">如果能找到 CLI，但会话提示需要登录，请在终端完成认证。例如，Grok Build 可以运行</span> <code>grok login</code><span data-en=".">。</span></p>
     </details>
   </section>
-  <details class="support" id="support">
-    <summary data-en="Support GrokX">支持 GrokX</summary>
+  <section class="support" id="support" aria-labelledby="support-title">
+    <h2 id="support-title" data-en="Support GrokX">支持 GrokX</h2>
     <div class="support-body">
-      <img src="wechat-support.png" width="215" height="215" alt="" loading="lazy">
-      <div>
-        <p data-en="Scan this QR code with WeChat to support GrokX. On a phone, save the image and open it with WeChat’s scanner.">用微信扫一扫支持 GrokX。如果正在用手机浏览，可以先保存二维码，再用微信扫一扫从相册选取。</p>
-        <a href="wechat-support.png" download data-en="Save WeChat payment QR code ↓">保存微信收款码 ↓</a>
+      <p data-en="Scan with WeChat or Alipay to support GrokX. On a phone, save the QR code and scan it from your photo library in the app.">用微信或支付宝扫一扫支持 GrokX。手机浏览时，可以先保存二维码，再在对应应用的扫一扫里从相册选取。</p>
+      <div class="support-options">
+        <figure>
+          <img src="wechat-support.png" width="215" height="215" alt="" loading="lazy">
+          <figcaption data-en="WeChat Pay">微信支付</figcaption>
+          <a href="wechat-support.png" download data-en="Save WeChat payment QR code ↓">保存微信收款码 ↓</a>
+        </figure>
+        <figure>
+          <img src="alipay-support.png" width="215" height="215" alt="" loading="lazy">
+          <figcaption data-en="Alipay">支付宝</figcaption>
+          <a href="alipay-support.png" download data-en="Save Alipay payment QR code ↓">保存支付宝收款码 ↓</a>
+        </figure>
       </div>
     </div>
-  </details>
+  </section>
 </main>
+<dialog class="download-dialog" aria-labelledby="download-dialog-title" aria-describedby="download-dialog-note">
+  <header>
+    <h2 id="download-dialog-title" data-en="Support GrokX">支持 GrokX</h2>
+    <form method="dialog">
+      <button class="dialog-close" aria-label="关闭" data-en-label="Close" type="submit">×</button>
+    </form>
+  </header>
+  <p id="download-dialog-note" data-en="If GrokX helps you, you can support it with WeChat Pay or Alipay. Donations are optional.">如果 GrokX 对你有帮助，欢迎用微信或支付宝支持。捐赠完全自愿。</p>
+  <div class="dialog-codes"></div>
+  <div class="dialog-actions">
+    <a class="button continue-download" data-en="Continue download" autofocus>继续下载</a>
+  </div>
+</dialog>
 <footer class="shell"><span>GrokX</span><a href="changelog.html" data-en="Changelog →">更新记录 →</a></footer>
 <script>
   document.addEventListener('DOMContentLoaded', () => {
@@ -290,6 +326,25 @@ h3{font-size:1.1rem;margin:.65rem 0 .45rem}
     motion.addEventListener?.('change', finish);
     typeNext();
     return finish;
+  }
+
+  const downloadDialog = document.querySelector('.download-dialog');
+  if (typeof downloadDialog.showModal === 'function') {
+    const continueDownload = downloadDialog.querySelector('.continue-download');
+    const dialogCodes = downloadDialog.querySelector('.dialog-codes');
+    const supportCodes = document.querySelector('#support .support-options');
+
+    document.querySelector('.downloads').addEventListener('click', (event) => {
+      const link = event.target.closest('a.download');
+      if (!link || event.defaultPrevented || event.button !== 0 ||
+          event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+
+      dialogCodes.replaceChildren(supportCodes.cloneNode(true));
+      continueDownload.href = link.href;
+      downloadDialog.showModal();
+      event.preventDefault();
+    });
+    continueDownload.addEventListener('click', () => downloadDialog.close());
   }
 
   if ('IntersectionObserver' in window && matchMedia('(prefers-reduced-motion: no-preference)').matches) {
