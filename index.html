@@ -5,11 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="下载 GrokX，了解如何安装 CLI、打开项目并开始会话。" data-en-content="Download GrokX and learn how to install a CLI, open a project, and start a session.">
 <link rel="icon" href="grokx-icon.png">
+<link rel="preload" href="fonts/wenkai-tc-heading.woff2" as="font" type="font/woff2" crossorigin>
 
 <title data-en="GrokX · Downloads and Quick Start">GrokX · 下载与使用指南</title>
 <script src="preferences.js"></script>
 <link rel="stylesheet" href="site.css">
 <style>
+/* LXGW WenKai TC Light from Google Fonts, subset to the homepage heading. See fonts/OFL-LXGW-WenKai-TC.txt. */
+@font-face{font-family:"GrokX WenKai";src:url("fonts/wenkai-tc-heading.woff2") format("woff2");font-style:normal;font-weight:300;font-display:swap}
 .hero{padding:clamp(3.75rem,8vw,7rem) 0 clamp(3.5rem,7vw,6rem)}
 .hero-composition{display:grid;grid-template-columns:minmax(0,2.25fr) minmax(0,1fr);align-items:end;gap:clamp(1rem,3vw,2.5rem);padding-bottom:clamp(1.8rem,4vw,3.25rem)}
 .hero h1{position:relative;z-index:1;margin:0;font-size:clamp(3rem,7.35vw,6.3rem);letter-spacing:-.055em;line-height:1.04;font-weight:760}
@@ -20,6 +23,8 @@
   .typing-cursor::after{content:"";position:absolute;inset-inline-start:.035em;inset-block-end:.1em;width:2px;height:.78em;background:currentColor}
 }
 .hero-accent{padding-inline-start:clamp(1rem,5vw,4.1rem);margin-top:.13em;font-weight:650;letter-spacing:-.04em;color:var(--step)}
+html[lang="zh-CN"] .hero h1{font-family:"GrokX WenKai","Kaiti SC",KaiTi,var(--serif);font-weight:300;font-synthesis:none;letter-spacing:-.02em;line-height:1.1}
+html[lang="zh-CN"] .hero-accent{font-weight:inherit;letter-spacing:inherit}
 html[lang="en"] .hero h1{font-size:clamp(2.65rem,6.45vw,5.55rem)}
 html[lang="en"] .hero-accent{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:inherit}
 .hero-art{position:relative;isolation:isolate;align-self:end;margin:0 0 -.75rem;max-width:330px;width:100%;justify-self:end}
