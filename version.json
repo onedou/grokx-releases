@@ -1,12 +1,12 @@
 {
-  "version": "0.30.1",
+  "version": "0.30.2",
   "date": "2026-11-09",
   "notes": {
-    "zh-CN": "发送失败不再丢字：消息被拒时草稿和附件回到输入框，并说明原因。Agent 用 [1] [2] 列出选项时直接点选就能回复。修复流式生成中表格横向滚动被重置、活动块与工具卡宽度不一致的问题，标题层级更紧凑。后台回合结束时会响一声「嗒·嗒—咔」的完成提示音。",
-    "en": "A refused message no longer disappears: the draft and attachments go back into the composer with the reason. When an agent lists options as [1] [2], they become buttons you can pick. Fixed the table's horizontal scroll resetting while streaming, matched activity rows to tool-card width, and tightened heading sizes. A finished background turn now plays a soft two-knock chime with a seed crack."
+    "zh-CN": "表格里的长段落现在会跟着正文列宽自动换行，不再拉成一条横到屏幕外的长行；只有出现无法断开的超长标识符时才会横向滚动。",
+    "en": "Long paragraphs inside tables now wrap with the message column instead of stretching into one endless line; the table only scrolls sideways when a single token cannot be broken."
   },
   "downloads": {
-    "macOS": "https://github.com/onedou/grokx-releases/releases/download/v0.30.1/GrokX_0.30.1_universal.dmg"
+    "macOS": "https://github.com/onedou/grokx-releases/releases/download/v0.30.2/GrokX_0.30.2_universal.dmg"
   },
   "site": "https://grokx.bel.org.cn"
 }
