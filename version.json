@@ -1,12 +1,12 @@
 {
-  "version": "0.30.2",
+  "version": "0.30.3",
   "date": "2026-11-09",
   "notes": {
-    "zh-CN": "表格里的长段落现在会跟着正文列宽自动换行，不再拉成一条横到屏幕外的长行；只有出现无法断开的超长标识符时才会横向滚动。",
-    "en": "Long paragraphs inside tables now wrap with the message column instead of stretching into one endless line; the table only scrolls sideways when a single token cannot be broken."
+    "zh-CN": "对话导航条的刻度现在一样长：原先悬停和当前项会拉长到 14px，其他是 10px，看起来一排刻度长短不齐、还整体左移了 4px。现在长度统一，用颜色区分当前所在的位置。",
+    "en": "Every tick in the conversation rail is now the same length. Hovered and current ticks used to grow to 14px while the rest stayed at 10px, which read as a ragged column and shifted the active mark 4px left; the current position is shown by colour instead."
   },
   "downloads": {
-    "macOS": "https://github.com/onedou/grokx-releases/releases/download/v0.30.2/GrokX_0.30.2_universal.dmg"
+    "macOS": "https://github.com/onedou/grokx-releases/releases/download/v0.30.3/GrokX_0.30.3_universal.dmg"
   },
   "site": "https://grokx.bel.org.cn"
 }
