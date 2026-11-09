@@ -1,12 +1,12 @@
 {
-  "version": "0.30.5",
+  "version": "0.30.6",
   "date": "2026-11-09",
   "notes": {
-    "zh-CN": "对话导航条再调两处：刻度整体在导航条里竖直居中，不再贴着顶部；刻度往右挪到紧贴正文左侧，离文字只留 2px。",
-    "en": "Two more fixes to the conversation rail: the tick column is centred vertically in the rail instead of sticking to the top, and the ticks now sit right beside the transcript with a 2px gap."
+    "zh-CN": "对话导航条的刻度往左退到侧栏与正文之间的空隙中间，不再紧贴文字；离正文留出 10px，参照 Codex 的间距。竖直居中保持不变。",
+    "en": "The conversation rail ticks moved left, into the middle of the gutter between the sidebar and the transcript, with a 10px gap to the text the way Codex spaces its outline. Vertical centring is unchanged."
   },
   "downloads": {
-    "macOS": "https://github.com/onedou/grokx-releases/releases/download/v0.30.5/GrokX_0.30.5_universal.dmg"
+    "macOS": "https://github.com/onedou/grokx-releases/releases/download/v0.30.6/GrokX_0.30.6_universal.dmg"
   },
   "site": "https://grokx.bel.org.cn"
 }
