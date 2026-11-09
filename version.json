@@ -1,14 +1,12 @@
 {
-  "version": "0.29.0",
+  "version": "0.30.1",
   "date": "2026-11-09",
   "notes": {
-    "zh-CN": "回合进行中也能插话：输入框不再被挡住，发送会停下当前回合并立即把这条消息交给 Agent，转录、已写入的文件与模型设置都保留。",
-    "en": "You can now interject while a turn is running: the composer stays available, and sending stops the current turn and hands your message to the agent right away, keeping the transcript, files already written and the model settings."
+    "zh-CN": "发送失败不再丢字：消息被拒时草稿和附件回到输入框，并说明原因。Agent 用 [1] [2] 列出选项时直接点选就能回复。修复流式生成中表格横向滚动被重置、活动块与工具卡宽度不一致的问题，标题层级更紧凑。后台回合结束时会响一声「嗒·嗒—咔」的完成提示音。",
+    "en": "A refused message no longer disappears: the draft and attachments go back into the composer with the reason. When an agent lists options as [1] [2], they become buttons you can pick. Fixed the table's horizontal scroll resetting while streaming, matched activity rows to tool-card width, and tightened heading sizes. A finished background turn now plays a soft two-knock chime with a seed crack."
   },
   "downloads": {
-    "macOS": "https://github.com/onedou/grokx-releases/releases/download/v0.29.0/GrokX_0.29.0_universal.dmg",
-    "windowsX64": "https://github.com/onedou/grokx-releases/releases/download/v0.29.0/GrokX_0.29.0_x64-setup.exe",
-    "windowsArm64": "https://github.com/onedou/grokx-releases/releases/download/v0.29.0/GrokX_0.29.0_arm64-setup.exe"
+    "macOS": "https://github.com/onedou/grokx-releases/releases/download/v0.30.1/GrokX_0.30.1_universal.dmg"
   },
   "site": "https://grokx.bel.org.cn"
 }
