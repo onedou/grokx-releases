@@ -1,12 +1,12 @@
 {
-  "version": "0.30.3",
+  "version": "0.30.4",
   "date": "2026-11-09",
   "notes": {
-    "zh-CN": "对话导航条的刻度现在一样长：原先悬停和当前项会拉长到 14px，其他是 10px，看起来一排刻度长短不齐、还整体左移了 4px。现在长度统一，用颜色区分当前所在的位置。",
-    "en": "Every tick in the conversation rail is now the same length. Hovered and current ticks used to grow to 14px while the rest stayed at 10px, which read as a ragged column and shifted the active mark 4px left; the current position is shown by colour instead."
+    "zh-CN": "对话导航条的刻度改成紧凑排列：固定 12px 间距、从顶部往下排，不再按消息在整篇对话里的真实位置铺满整个窗口高度。当前所在位置仍然用更深的颜色标出，点击刻度照旧跳转。",
+    "en": "The conversation rail now keeps its ticks in one compact column, 12px apart from the top, instead of spreading them over the full window height by each message's position in the transcript. The current position is still marked by a darker tick, and clicking a tick still jumps there."
   },
   "downloads": {
-    "macOS": "https://github.com/onedou/grokx-releases/releases/download/v0.30.3/GrokX_0.30.3_universal.dmg"
+    "macOS": "https://github.com/onedou/grokx-releases/releases/download/v0.30.4/GrokX_0.30.4_universal.dmg"
   },
   "site": "https://grokx.bel.org.cn"
 }
