@@ -1,12 +1,12 @@
 {
-  "version": "0.30.6",
+  "version": "0.30.7",
   "date": "2026-11-09",
   "notes": {
-    "zh-CN": "对话导航条的刻度往左退到侧栏与正文之间的空隙中间，不再紧贴文字；离正文留出 10px，参照 Codex 的间距。竖直居中保持不变。",
-    "en": "The conversation rail ticks moved left, into the middle of the gutter between the sidebar and the transcript, with a 10px gap to the text the way Codex spaces its outline. Vertical centring is unchanged."
+    "zh-CN": "对话导航条靠到内容区左侧，和 Codex 一样待在外侧留白里；把鼠标移到刻度上会弹出进度卡片，显示第几条 / 共几条和那条消息的开头，点一下就跳过去。输入区那排控件换行时，模型 / 推理 / 发送这一组固定贴右，不再掉到第二行左边、把发送按钮夹在中间。",
+    "en": "The conversation rail now sits against the left edge of the content area, out in the margin the way Codex keeps its outline; hovering a tick opens a card with its position (n of m) and the start of that message, and clicking still jumps there. In the composer, when the control row wraps, the model / effort / send group stays pinned to the right edge instead of dropping to a new row with the send button stranded mid-row."
   },
   "downloads": {
-    "macOS": "https://github.com/onedou/grokx-releases/releases/download/v0.30.6/GrokX_0.30.6_universal.dmg"
+    "macOS": "https://github.com/onedou/grokx-releases/releases/download/v0.30.7/GrokX_0.30.7_universal.dmg"
   },
   "site": "https://grokx.bel.org.cn"
 }
