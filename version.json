@@ -1,14 +1,14 @@
 {
-  "version": "0.28.2",
-  "date": "2026-11-08",
+  "version": "0.29.0",
+  "date": "2026-11-09",
   "notes": {
-    "zh-CN": "首页推荐提示词不再显示成 JSON 片段；OpenCode 模型没有推理强度时，菜单会明确说明。",
-    "en": "Home starter prompts no longer show up as JSON fragments; the model menu now says so when an OpenCode model has no reasoning levels."
+    "zh-CN": "回合进行中也能插话：输入框不再被挡住，发送会停下当前回合并立即把这条消息交给 Agent，转录、已写入的文件与模型设置都保留。",
+    "en": "You can now interject while a turn is running: the composer stays available, and sending stops the current turn and hands your message to the agent right away, keeping the transcript, files already written and the model settings."
   },
   "downloads": {
-    "macOS": "https://github.com/onedou/grokx-releases/releases/download/v0.28.2/GrokX_0.28.2_universal.dmg",
-    "windowsX64": "https://github.com/onedou/grokx-releases/releases/download/v0.28.2/GrokX_0.28.2_x64-setup.exe",
-    "windowsArm64": "https://github.com/onedou/grokx-releases/releases/download/v0.28.2/GrokX_0.28.2_arm64-setup.exe"
+    "macOS": "https://github.com/onedou/grokx-releases/releases/download/v0.29.0/GrokX_0.29.0_universal.dmg",
+    "windowsX64": "https://github.com/onedou/grokx-releases/releases/download/v0.29.0/GrokX_0.29.0_x64-setup.exe",
+    "windowsArm64": "https://github.com/onedou/grokx-releases/releases/download/v0.29.0/GrokX_0.29.0_arm64-setup.exe"
   },
   "site": "https://grokx.bel.org.cn"
 }
