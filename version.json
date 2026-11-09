@@ -1,12 +1,12 @@
 {
-  "version": "0.30.7",
+  "version": "0.30.8",
   "date": "2026-11-09",
   "notes": {
-    "zh-CN": "对话导航条靠到内容区左侧，和 Codex 一样待在外侧留白里；把鼠标移到刻度上会弹出进度卡片，显示第几条 / 共几条和那条消息的开头，点一下就跳过去。输入区那排控件换行时，模型 / 推理 / 发送这一组固定贴右，不再掉到第二行左边、把发送按钮夹在中间。",
-    "en": "The conversation rail now sits against the left edge of the content area, out in the margin the way Codex keeps its outline; hovering a tick opens a card with its position (n of m) and the start of that message, and clicking still jumps there. In the composer, when the control row wraps, the model / effort / send group stays pinned to the right edge instead of dropping to a new row with the send button stranded mid-row."
+    "zh-CN": "修两处导航条问题：点某个刻度后高亮会退回上一条（跳转落点比判定阈值低 4px），现在停在点的那一条；悬停卡片的宽度被 14px 的导航条挤成一个字一行，改成固定 15rem，正常换行。当前刻度的颜色也加深，和悬停区分开。",
+    "en": "Two rail fixes: after clicking a tick the highlight fell back to the message above (the jump lands 4px below the threshold the scroll check used) — it now stays on the one you clicked. The hover card was squeezed by the 14px-wide rail into one character per line; it has a fixed 15rem width now and wraps normally. The current tick is also darker so it reads apart from hover."
   },
   "downloads": {
-    "macOS": "https://github.com/onedou/grokx-releases/releases/download/v0.30.7/GrokX_0.30.7_universal.dmg"
+    "macOS": "https://github.com/onedou/grokx-releases/releases/download/v0.30.8/GrokX_0.30.8_universal.dmg"
   },
   "site": "https://grokx.bel.org.cn"
 }
