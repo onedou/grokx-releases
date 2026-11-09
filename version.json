@@ -1,12 +1,12 @@
 {
-  "version": "0.30.4",
+  "version": "0.30.5",
   "date": "2026-11-09",
   "notes": {
-    "zh-CN": "对话导航条的刻度改成紧凑排列：固定 12px 间距、从顶部往下排，不再按消息在整篇对话里的真实位置铺满整个窗口高度。当前所在位置仍然用更深的颜色标出，点击刻度照旧跳转。",
-    "en": "The conversation rail now keeps its ticks in one compact column, 12px apart from the top, instead of spreading them over the full window height by each message's position in the transcript. The current position is still marked by a darker tick, and clicking a tick still jumps there."
+    "zh-CN": "对话导航条再调两处：刻度整体在导航条里竖直居中，不再贴着顶部；刻度往右挪到紧贴正文左侧，离文字只留 2px。",
+    "en": "Two more fixes to the conversation rail: the tick column is centred vertically in the rail instead of sticking to the top, and the ticks now sit right beside the transcript with a 2px gap."
   },
   "downloads": {
-    "macOS": "https://github.com/onedou/grokx-releases/releases/download/v0.30.4/GrokX_0.30.4_universal.dmg"
+    "macOS": "https://github.com/onedou/grokx-releases/releases/download/v0.30.5/GrokX_0.30.5_universal.dmg"
   },
   "site": "https://grokx.bel.org.cn"
 }
