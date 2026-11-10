@@ -2,11 +2,13 @@
   "version": "0.37.0",
   "date": "2026-11-10",
   "notes": {
-    "zh-CN": "长对话不再越聊越卡。逐字输出时，消息、工具卡和 Markdown 只重渲染正在变化的那一块，不再整段重排；每份 diff 的行与统计按会话缓存一次，不再每个 token 重算。会话头部现在显示本轮已工作时长：运行中每秒刷新，回合结束后定格为本轮用时，一眼能看出这次等了多久。",
-    "en": "Long conversations no longer slow down as they grow. While a reply streams, only the part that is changing re-renders: messages, tool cards and Markdown stay put, and each diff's rows and stats are computed once instead of once per token. The session header now shows how long the current turn has been working — it ticks every second while the agent runs and stays on screen with the turn's final duration, so you can see at a glance how long you waited."
+    "zh-CN": "长对话不再越聊越卡。逐字输出时，消息、工具卡和 Markdown 只重渲染正在变化的那一块，不再整段重排；每份 diff 的行与统计按会话缓存一次，不再每个 token 重算。会话头部现在显示本轮已工作时长：运行中每秒刷新，回合结束后定格为本轮用时，一眼能看出这次等了多久。Windows 安装包已补上：浏览器面板改为原生页面，点击能落到页面，新窗口链接留在当前标签；切换 CLI 时不再弹出空白终端。",
+    "en": "Long conversations no longer slow down as they grow. While a reply streams, only the part that is changing re-renders: messages, tool cards and Markdown stay put, and each diff's rows and stats are computed once instead of once per token. The session header now shows how long the current turn has been working — it ticks every second while the agent runs and stays on screen with the turn's final duration, so you can see at a glance how long you waited. Windows installers are included. On Windows the browser pane is a native page, so clicks land on the page and new-window links stay in the current tab. Switching CLIs no longer opens a blank terminal."
   },
   "downloads": {
-    "macOS": "https://github.com/onedou/grokx-releases/releases/download/v0.37.0/GrokX_0.37.0_universal.dmg"
+    "macOS": "https://github.com/onedou/grokx-releases/releases/download/v0.37.0/GrokX_0.37.0_universal.dmg",
+    "windowsX64": "https://github.com/onedou/grokx-releases/releases/download/v0.37.0/GrokX_0.37.0_x64-setup.exe",
+    "windowsArm64": "https://github.com/onedou/grokx-releases/releases/download/v0.37.0/GrokX_0.37.0_arm64-setup.exe"
   },
   "site": "https://grokx.bel.org.cn"
 }
