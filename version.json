@@ -1,13 +1,12 @@
 {
-  "version": "0.33.3",
+  "version": "0.34.0",
   "date": "2026-11-10",
   "notes": {
-    "zh-CN": "编辑已发送的消息时，编辑框现在是整条气泡的宽度，长消息不再被挤成窄条反复折行；输入越多自动增高，最多约 22rem。图片预览新增右键复制：在预览大图或对话里的缩略图上点右键选「复制图片」，就能把这张图直接粘贴到其他应用。",
-    "en": "Editing a sent message now opens at the width of a full bubble instead of a narrow strip, so a long message stops wrapping every few words; the box also grows taller as you type, up to about 22rem. Image previews gain right-click copy: choose “Copy image” on the preview or on a thumbnail in the transcript to paste that picture into another app."
+    "zh-CN": "浏览器画面不再白屏：画面流中断后会自动重连，停靠面板和弹出窗口也不会再互相抢流——同一时间只由一个窗口显示页面，另一个会提示「这个标签正在另一个窗口显示」，点一下就能切回来。标签页按下 × 立即关闭（也可以中键关闭），Chromium 拒绝关闭时会直接说明原因，而不是把标签藏起来当作已关闭。第三方模型（DeepSeek、Kimi 等）的用量不再只是一个「—」：现在显示本次会话的输入、输出、缓存词元和模型调用次数，并说明这类模型没有套餐额度。",
+    "en": "The browser pane stops going blank: a screencast that drops now reconnects on its own, and the docked pane and the pop-out window no longer pull the stream away from each other — one window shows the page at a time and the other says \"This tab is showing in another window\" with a button to take it back. Tabs close the moment you press × (middle-click works too), and when Chromium refuses a close it says why instead of hiding the tab as if it had closed. Third-party models (DeepSeek, Kimi and so on) no longer show a bare \"—\" for usage: the pill reports this session's input, output, cached tokens and model calls, and notes that these models have no plan allowance."
   },
   "downloads": {
-    "macOS": "https://github.com/onedou/grokx-releases/releases/download/v0.33.3/GrokX_0.33.3_universal.dmg",
-    "windowsArm64": "https://github.com/onedou/grokx-releases/releases/download/v0.33.3/GrokX_0.33.3_arm64-setup.exe"
+    "macOS": "https://github.com/onedou/grokx-releases/releases/download/v0.34.0/GrokX_0.34.0_universal.dmg"
   },
   "site": "https://grokx.bel.org.cn"
 }
