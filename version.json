@@ -1,12 +1,12 @@
 {
-  "version": "0.34.0",
+  "version": "0.35.0",
   "date": "2026-11-10",
   "notes": {
-    "zh-CN": "浏览器画面不再白屏：画面流中断后会自动重连，停靠面板和弹出窗口也不会再互相抢流——同一时间只由一个窗口显示页面，另一个会提示「这个标签正在另一个窗口显示」，点一下就能切回来。标签页按下 × 立即关闭（也可以中键关闭），Chromium 拒绝关闭时会直接说明原因，而不是把标签藏起来当作已关闭。第三方模型（DeepSeek、Kimi 等）的用量不再只是一个「—」：现在显示本次会话的输入、输出、缓存词元和模型调用次数，并说明这类模型没有套餐额度。",
-    "en": "The browser pane stops going blank: a screencast that drops now reconnects on its own, and the docked pane and the pop-out window no longer pull the stream away from each other — one window shows the page at a time and the other says \"This tab is showing in another window\" with a button to take it back. Tabs close the moment you press × (middle-click works too), and when Chromium refuses a close it says why instead of hiding the tab as if it had closed. Third-party models (DeepSeek, Kimi and so on) no longer show a bare \"—\" for usage: the pill reports this session's input, output, cached tokens and model calls, and notes that these models have no plan allowance."
+    "zh-CN": "浏览器面板换成了真正的原生网页视图：页面直接渲染在窗口里，滚动、选中文字、输入法、视频都是系统自己的，不再是把画面一帧帧复制过来，所以不会再出现发白、发虚或卡住不动。Agent 用的还是同一个页面：它打开的网址、点击、输入、滚动和截图都发生在你眼前的这个视图里，你能看着它操作，也能随时自己接管。代价是引擎从 Chromium 换成了系统 WebKit，依赖 Chromium 特有能力的站点表现可能不同；浏览器也不再能单独弹成第二个窗口。",
+    "en": "The browser pane is now a real native web view: pages render inside the window, so scrolling, text selection, input methods and video are the system's own instead of copied frames, and the pane can no longer go blank or blurry. The agent drives that same view — what it opens, clicks, types, scrolls and captures happens in front of you, and you can take over at any time. The trade-off: the engine is the system's WebKit rather than Chromium, so sites that depend on Chromium-only features may behave differently, and the browser can no longer pop out into a second window."
   },
   "downloads": {
-    "macOS": "https://github.com/onedou/grokx-releases/releases/download/v0.34.0/GrokX_0.34.0_universal.dmg"
+    "macOS": "https://github.com/onedou/grokx-releases/releases/download/v0.35.0/GrokX_0.35.0_universal.dmg"
   },
   "site": "https://grokx.bel.org.cn"
 }
