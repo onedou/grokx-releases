@@ -1,12 +1,12 @@
 {
-  "version": "0.35.2",
+  "version": "0.36.0",
   "date": "2026-11-10",
   "notes": {
-    "zh-CN": "浏览器面板改用 Safari 的标识访问网站：百度等站点不再返回「降级到 http」的页面，也就不会出现白屏和不停刷新。万一某个页面仍在自我循环跳转，面板检测到后会停止加载并提示，不再让页面无限转下去。",
-    "en": "The browser pane now identifies itself as Safari, so sites such as Baidu no longer answer with an https-to-http downgrade page, which is what caused the blank, endlessly refreshing tab. If a page still redirects itself in a loop, the pane stops it and says so instead of spinning forever."
+    "zh-CN": "Codex 与 Kimi 现在可以在一台机器上并存多个账号：每个账号有独立的配置目录（CODEX_HOME / KIMI_CODE_HOME），登录态、会话与历史互不干扰。到「设置 › 账号」里添加账号、设为默认，或点「登录」在已指向该目录的终端窗口里完成登录；输入框旁的账号选项会在同一目录开启新会话。OpenCode 仍走它自己的多凭据列表，切换对所有会话同时生效。",
+    "en": "Codex and Kimi can now keep several accounts side by side: each account is its own configuration directory (CODEX_HOME / KIMI_CODE_HOME), so sign-ins, sessions and history never mix. Add an account in Settings › Account, make it the default, or press Sign in to run the CLI's login in a Terminal window that already points at that directory. The account menu beside the composer starts a new session in the same folder. OpenCode keeps using its own credential list, whose switch applies to every session."
   },
   "downloads": {
-    "macOS": "https://github.com/onedou/grokx-releases/releases/download/v0.35.2/GrokX_0.35.2_universal.dmg"
+    "macOS": "https://github.com/onedou/grokx-releases/releases/download/v0.36.0/GrokX_0.36.0_universal.dmg"
   },
   "site": "https://grokx.bel.org.cn"
 }
