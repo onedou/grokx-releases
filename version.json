@@ -1,12 +1,12 @@
 {
-  "version": "0.31.0",
+  "version": "0.32.0",
   "date": "2026-11-10",
   "notes": {
-    "zh-CN": "输入框支持 / 斜杠命令：输入 / 会列出当前 CLI 为这个会话上报的命令（Codex 的 /compact、CodeBuddy 的自定义命令等），可继续输入筛选，方向键选择，Enter 或 Tab 补全，Esc 关闭，鼠标点击同样可用。补全只填入命令和空格，发送仍由你自己确认。",
-    "en": "Slash commands in the composer: typing / lists the commands the current CLI reports for the session (Codex's /compact, CodeBuddy custom commands, and so on). Keep typing to filter, use the arrow keys to move, Enter or Tab to complete, Esc to close, or click a row. Picking a command only fills the box in; sending stays a separate Enter."
+    "zh-CN": "回合进行中发出的消息改为排队：不再打断正在做的工作，等这一轮结束后自动按顺序发送，输入框上方会显示排队中的内容并可以取消。同时修复了多会话发送被挡住的问题——一个对话在运行时，其他对话（以及从首页新建的对话）都能立刻发送，不会再提示“上一条消息还在发送”。",
+    "en": "Messages typed while a turn is running are now queued: nothing is interrupted, and each queued message is sent in order as soon as that turn ends, with a note above the composer that shows what is waiting and can cancel it. Sending is also no longer blocked across conversations — a running turn in one chat (or a new chat started from home) never shows \"a message is still being sent\"."
   },
   "downloads": {
-    "macOS": "https://github.com/onedou/grokx-releases/releases/download/v0.31.0/GrokX_0.31.0_universal.dmg"
+    "macOS": "https://github.com/onedou/grokx-releases/releases/download/v0.32.0/GrokX_0.32.0_universal.dmg"
   },
   "site": "https://grokx.bel.org.cn"
 }
