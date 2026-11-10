@@ -1,14 +1,12 @@
 {
-  "version": "0.37.0",
-  "date": "2026-11-10",
+  "version": "0.37.2",
+  "date": "2026-11-11",
   "notes": {
-    "zh-CN": "长对话不再越聊越卡。逐字输出时，消息、工具卡和 Markdown 只重渲染正在变化的那一块，不再整段重排；每份 diff 的行与统计按会话缓存一次，不再每个 token 重算。会话头部现在显示本轮已工作时长：运行中每秒刷新，回合结束后定格为本轮用时，一眼能看出这次等了多久。Windows 安装包已补上：浏览器面板改为原生页面，点击能落到页面，新窗口链接留在当前标签；切换 CLI 时不再弹出空白终端。",
-    "en": "Long conversations no longer slow down as they grow. While a reply streams, only the part that is changing re-renders: messages, tool cards and Markdown stay put, and each diff's rows and stats are computed once instead of once per token. The session header now shows how long the current turn has been working — it ticks every second while the agent runs and stays on screen with the turn's final duration, so you can see at a glance how long you waited. Windows installers are included. On Windows the browser pane is a native page, so clicks land on the page and new-window links stay in the current tab. Switching CLIs no longer opens a blank terminal."
+    "zh-CN": "会话滚到最底部时，左侧导航条不再停在倒数第二条。以前它只把顶到屏幕上方的消息算作当前项，最新一条消息停在下方就被漏掉；现在只要滚动条到底，高亮就落到最新一条消息上。内容不足一屏的会话不受影响。本次只发布 macOS 版，Windows 安装包因构建环境受限暂缺。",
+    "en": "The conversation rail no longer stops one message short of the end when you scroll to the bottom. It only counted a message that had reached the top of the viewport, so the newest one, still sitting lower on screen, was skipped; reaching the bottom of the thread now marks the newest message. Short threads that fit on one screen are unchanged. This release ships macOS only; Windows installers are missing because the build environment is blocked."
   },
   "downloads": {
-    "macOS": "https://github.com/onedou/grokx-releases/releases/download/v0.37.0/GrokX_0.37.0_universal.dmg",
-    "windowsX64": "https://github.com/onedou/grokx-releases/releases/download/v0.37.0/GrokX_0.37.0_x64-setup.exe",
-    "windowsArm64": "https://github.com/onedou/grokx-releases/releases/download/v0.37.0/GrokX_0.37.0_arm64-setup.exe"
+    "macOS": "https://github.com/onedou/grokx-releases/releases/download/v0.37.2/GrokX_0.37.2_universal.dmg"
   },
   "site": "https://grokx.bel.org.cn"
 }
