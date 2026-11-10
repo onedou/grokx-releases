@@ -1,12 +1,12 @@
 {
-  "version": "0.33.2",
+  "version": "0.33.3",
   "date": "2026-11-10",
   "notes": {
-    "zh-CN": "修复侧栏待审批数字气泡挂错标签页的问题。此前只要有待审批请求，气泡就出现在 Bots 标签上，即使请求来自你自己的对话。现在按请求所属会话分流：对话里的请求显示在「对话」，Bot 线程的请求显示在「Bots」，点击气泡仍会打开审批抽屉。",
-    "en": "Fixes the pending-approval badge landing on the wrong sidebar tab. Any waiting request used to badge Bots, even when it came from one of your own chats. Each tab now counts only the requests listed under it, and clicking the badge still opens the approval drawer."
+    "zh-CN": "编辑已发送的消息时，编辑框现在是整条气泡的宽度，长消息不再被挤成窄条反复折行；输入越多自动增高，最多约 22rem。图片预览新增右键复制：在预览大图或对话里的缩略图上点右键选「复制图片」，就能把这张图直接粘贴到其他应用。",
+    "en": "Editing a sent message now opens at the width of a full bubble instead of a narrow strip, so a long message stops wrapping every few words; the box also grows taller as you type, up to about 22rem. Image previews gain right-click copy: choose “Copy image” on the preview or on a thumbnail in the transcript to paste that picture into another app."
   },
   "downloads": {
-    "macOS": "https://github.com/onedou/grokx-releases/releases/download/v0.33.2/GrokX_0.33.2_universal.dmg"
+    "macOS": "https://github.com/onedou/grokx-releases/releases/download/v0.33.3/GrokX_0.33.3_universal.dmg"
   },
   "site": "https://grokx.bel.org.cn"
 }
