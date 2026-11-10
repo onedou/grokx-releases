@@ -1,12 +1,12 @@
 {
-  "version": "0.33.1",
+  "version": "0.33.2",
   "date": "2026-11-10",
   "notes": {
-    "zh-CN": "修复 CodeBuddy 会话里消息被切成碎片的问题。CodeBuddy 会把一轮回答的思考块与正文块按 token 交替下发，此前每切换一次就新起一条消息，一条回答被切成几十个气泡，粗体、行内代码和表格都断在碎片边界上。现在同一类文本流会合并成一条完整消息，只有工具调用、审批和新的用户消息才会结束当前这条。",
-    "en": "Fixes fragmented messages in CodeBuddy conversations. CodeBuddy interleaves a turn's reasoning and answer chunks token by token; GrokX used to start a new bubble at every switch, cutting one answer into dozens of fragments and breaking bold, inline code and tables at the seams. Each stream is now folded back into one message, and only a tool call, a permission request or a new user message ends it."
+    "zh-CN": "修复侧栏待审批数字气泡挂错标签页的问题。此前只要有待审批请求，气泡就出现在 Bots 标签上，即使请求来自你自己的对话。现在按请求所属会话分流：对话里的请求显示在「对话」，Bot 线程的请求显示在「Bots」，点击气泡仍会打开审批抽屉。",
+    "en": "Fixes the pending-approval badge landing on the wrong sidebar tab. Any waiting request used to badge Bots, even when it came from one of your own chats. Each tab now counts only the requests listed under it, and clicking the badge still opens the approval drawer."
   },
   "downloads": {
-    "macOS": "https://github.com/onedou/grokx-releases/releases/download/v0.33.1/GrokX_0.33.1_universal.dmg"
+    "macOS": "https://github.com/onedou/grokx-releases/releases/download/v0.33.2/GrokX_0.33.2_universal.dmg"
   },
   "site": "https://grokx.bel.org.cn"
 }
