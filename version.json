@@ -1,12 +1,12 @@
 {
-  "version": "0.35.1",
+  "version": "0.35.2",
   "date": "2026-11-10",
   "notes": {
-    "zh-CN": "回复里的表格不再把短标签列挤成一字一行的竖排：只有「卡点」「需要人审批」这类短标签的单元格保持单行，列宽由标签本身决定，正文列照常换行。表头加了浅底色并改为左对齐，与下方单元格对齐；多行单元格顶对齐，长表格读起来不再漂浮。",
-    "en": "Tables in replies no longer squeeze a short label column into one character per line: a cell holding only a short label such as 卡点 or 需要人审批 stays on one line, so the column keeps the label's width while prose cells still wrap. The header row gains a tint and reads left-aligned with the cells under it, and multi-line cells align to the top, so long tables scan cleanly."
+    "zh-CN": "浏览器面板改用 Safari 的标识访问网站：百度等站点不再返回「降级到 http」的页面，也就不会出现白屏和不停刷新。万一某个页面仍在自我循环跳转，面板检测到后会停止加载并提示，不再让页面无限转下去。",
+    "en": "The browser pane now identifies itself as Safari, so sites such as Baidu no longer answer with an https-to-http downgrade page, which is what caused the blank, endlessly refreshing tab. If a page still redirects itself in a loop, the pane stops it and says so instead of spinning forever."
   },
   "downloads": {
-    "macOS": "https://github.com/onedou/grokx-releases/releases/download/v0.35.1/GrokX_0.35.1_universal.dmg"
+    "macOS": "https://github.com/onedou/grokx-releases/releases/download/v0.35.2/GrokX_0.35.2_universal.dmg"
   },
   "site": "https://grokx.bel.org.cn"
 }
