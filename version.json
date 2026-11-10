@@ -1,12 +1,12 @@
 {
-  "version": "0.30.9",
-  "date": "2026-11-09",
+  "version": "0.31.0",
+  "date": "2026-11-10",
   "notes": {
-    "zh-CN": "编辑已发送的消息时不再丢图片：编辑框里会显示原消息的图片，发送后图片会随改过的文字一起重新发给模型，不用再重新添加。图片已存在本地，编辑只读取并复用，不会重复存储。",
-    "en": "Editing a sent message no longer drops its image: the editor shows the original image, and the edited turn is re-sent with it instead of asking you to attach it again. The stored copy is reused, not written twice."
+    "zh-CN": "输入框支持 / 斜杠命令：输入 / 会列出当前 CLI 为这个会话上报的命令（Codex 的 /compact、CodeBuddy 的自定义命令等），可继续输入筛选，方向键选择，Enter 或 Tab 补全，Esc 关闭，鼠标点击同样可用。补全只填入命令和空格，发送仍由你自己确认。",
+    "en": "Slash commands in the composer: typing / lists the commands the current CLI reports for the session (Codex's /compact, CodeBuddy custom commands, and so on). Keep typing to filter, use the arrow keys to move, Enter or Tab to complete, Esc to close, or click a row. Picking a command only fills the box in; sending stays a separate Enter."
   },
   "downloads": {
-    "macOS": "https://github.com/onedou/grokx-releases/releases/download/v0.30.9/GrokX_0.30.9_universal.dmg"
+    "macOS": "https://github.com/onedou/grokx-releases/releases/download/v0.31.0/GrokX_0.31.0_universal.dmg"
   },
   "site": "https://grokx.bel.org.cn"
 }
