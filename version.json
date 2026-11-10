@@ -1,12 +1,12 @@
 {
-  "version": "0.32.0",
+  "version": "0.33.0",
   "date": "2026-11-10",
   "notes": {
-    "zh-CN": "回合进行中发出的消息改为排队：不再打断正在做的工作，等这一轮结束后自动按顺序发送，输入框上方会显示排队中的内容并可以取消。同时修复了多会话发送被挡住的问题——一个对话在运行时，其他对话（以及从首页新建的对话）都能立刻发送，不会再提示“上一条消息还在发送”。",
-    "en": "Messages typed while a turn is running are now queued: nothing is interrupted, and each queued message is sent in order as soon as that turn ends, with a note above the composer that shows what is waiting and can cancel it. Sending is also no longer blocked across conversations — a running turn in one chat (or a new chat started from home) never shows \"a message is still being sent\"."
+    "zh-CN": "新增对 Kimi Code CLI 的支持：GrokX 现在可以用 kimi acp 打开会话，和 Grok、OpenCode、CodeBuddy、Antigravity、Codex 一样在新建对话或 Bot 里选择 Kimi。模型（K3 / K3.1 Pro 等）与思考强度（low / high / max）取自 Kimi 自己上报的目录；Kimi 的权限请求照常在聊天里弹出审批，它自己的 mode 选择保持不变。Kimi 只上报上下文占用、不上报词元数，所以用量气泡显示上下文占用环而不是词元合计。粘贴图片同样可用——Kimi 的模型都接受图片输入。",
+    "en": "This release adds Kimi Code CLI: GrokX can now run a conversation on kimi acp, picked next to Grok, OpenCode, CodeBuddy, Antigravity and Codex when you start a chat or create a Bot. Models (K3, K3.1 Pro, …) and thinking levels (low / high / max) come from the catalog Kimi reports; its permission requests show up in the chat as usual while Kimi's own mode picker is left alone. Kimi reports how full the context is but no token counts, so the usage pill shows a context ring instead of a token total. Pasting images works too — every Kimi model accepts them."
   },
   "downloads": {
-    "macOS": "https://github.com/onedou/grokx-releases/releases/download/v0.32.0/GrokX_0.32.0_universal.dmg"
+    "macOS": "https://github.com/onedou/grokx-releases/releases/download/v0.33.0/GrokX_0.33.0_universal.dmg"
   },
   "site": "https://grokx.bel.org.cn"
 }
