@@ -1,12 +1,12 @@
 {
-  "version": "0.35.0",
+  "version": "0.35.1",
   "date": "2026-11-10",
   "notes": {
-    "zh-CN": "浏览器面板换成了真正的原生网页视图：页面直接渲染在窗口里，滚动、选中文字、输入法、视频都是系统自己的，不再是把画面一帧帧复制过来，所以不会再出现发白、发虚或卡住不动。Agent 用的还是同一个页面：它打开的网址、点击、输入、滚动和截图都发生在你眼前的这个视图里，你能看着它操作，也能随时自己接管。代价是引擎从 Chromium 换成了系统 WebKit，依赖 Chromium 特有能力的站点表现可能不同；浏览器也不再能单独弹成第二个窗口。",
-    "en": "The browser pane is now a real native web view: pages render inside the window, so scrolling, text selection, input methods and video are the system's own instead of copied frames, and the pane can no longer go blank or blurry. The agent drives that same view — what it opens, clicks, types, scrolls and captures happens in front of you, and you can take over at any time. The trade-off: the engine is the system's WebKit rather than Chromium, so sites that depend on Chromium-only features may behave differently, and the browser can no longer pop out into a second window."
+    "zh-CN": "回复里的表格不再把短标签列挤成一字一行的竖排：只有「卡点」「需要人审批」这类短标签的单元格保持单行，列宽由标签本身决定，正文列照常换行。表头加了浅底色并改为左对齐，与下方单元格对齐；多行单元格顶对齐，长表格读起来不再漂浮。",
+    "en": "Tables in replies no longer squeeze a short label column into one character per line: a cell holding only a short label such as 卡点 or 需要人审批 stays on one line, so the column keeps the label's width while prose cells still wrap. The header row gains a tint and reads left-aligned with the cells under it, and multi-line cells align to the top, so long tables scan cleanly."
   },
   "downloads": {
-    "macOS": "https://github.com/onedou/grokx-releases/releases/download/v0.35.0/GrokX_0.35.0_universal.dmg"
+    "macOS": "https://github.com/onedou/grokx-releases/releases/download/v0.35.1/GrokX_0.35.1_universal.dmg"
   },
   "site": "https://grokx.bel.org.cn"
 }
