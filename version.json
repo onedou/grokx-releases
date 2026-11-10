@@ -1,12 +1,12 @@
 {
-  "version": "0.36.0",
+  "version": "0.37.0",
   "date": "2026-11-10",
   "notes": {
-    "zh-CN": "Codex 与 Kimi 现在可以在一台机器上并存多个账号：每个账号有独立的配置目录（CODEX_HOME / KIMI_CODE_HOME），登录态、会话与历史互不干扰。到「设置 › 账号」里添加账号、设为默认，或点「登录」在已指向该目录的终端窗口里完成登录；输入框旁的账号选项会在同一目录开启新会话。OpenCode 仍走它自己的多凭据列表，切换对所有会话同时生效。",
-    "en": "Codex and Kimi can now keep several accounts side by side: each account is its own configuration directory (CODEX_HOME / KIMI_CODE_HOME), so sign-ins, sessions and history never mix. Add an account in Settings › Account, make it the default, or press Sign in to run the CLI's login in a Terminal window that already points at that directory. The account menu beside the composer starts a new session in the same folder. OpenCode keeps using its own credential list, whose switch applies to every session."
+    "zh-CN": "长对话不再越聊越卡。逐字输出时，消息、工具卡和 Markdown 只重渲染正在变化的那一块，不再整段重排；每份 diff 的行与统计按会话缓存一次，不再每个 token 重算。会话头部现在显示本轮已工作时长：运行中每秒刷新，回合结束后定格为本轮用时，一眼能看出这次等了多久。",
+    "en": "Long conversations no longer slow down as they grow. While a reply streams, only the part that is changing re-renders: messages, tool cards and Markdown stay put, and each diff's rows and stats are computed once instead of once per token. The session header now shows how long the current turn has been working — it ticks every second while the agent runs and stays on screen with the turn's final duration, so you can see at a glance how long you waited."
   },
   "downloads": {
-    "macOS": "https://github.com/onedou/grokx-releases/releases/download/v0.36.0/GrokX_0.36.0_universal.dmg"
+    "macOS": "https://github.com/onedou/grokx-releases/releases/download/v0.37.0/GrokX_0.37.0_universal.dmg"
   },
   "site": "https://grokx.bel.org.cn"
 }
