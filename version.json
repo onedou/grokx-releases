@@ -6,7 +6,8 @@
     "en": "Editing a sent message now opens at the width of a full bubble instead of a narrow strip, so a long message stops wrapping every few words; the box also grows taller as you type, up to about 22rem. Image previews gain right-click copy: choose “Copy image” on the preview or on a thumbnail in the transcript to paste that picture into another app."
   },
   "downloads": {
-    "macOS": "https://github.com/onedou/grokx-releases/releases/download/v0.33.3/GrokX_0.33.3_universal.dmg"
+    "macOS": "https://github.com/onedou/grokx-releases/releases/download/v0.33.3/GrokX_0.33.3_universal.dmg",
+    "windowsArm64": "https://github.com/onedou/grokx-releases/releases/download/v0.33.3/GrokX_0.33.3_arm64-setup.exe"
   },
   "site": "https://grokx.bel.org.cn"
 }
