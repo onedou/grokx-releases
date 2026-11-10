@@ -1,12 +1,12 @@
 {
-  "version": "0.33.0",
+  "version": "0.33.1",
   "date": "2026-11-10",
   "notes": {
-    "zh-CN": "新增对 Kimi Code CLI 的支持：GrokX 现在可以用 kimi acp 打开会话，和 Grok、OpenCode、CodeBuddy、Antigravity、Codex 一样在新建对话或 Bot 里选择 Kimi。模型（K3 / K3.1 Pro 等）与思考强度（low / high / max）取自 Kimi 自己上报的目录；Kimi 的权限请求照常在聊天里弹出审批，它自己的 mode 选择保持不变。Kimi 只上报上下文占用、不上报词元数，所以用量气泡显示上下文占用环而不是词元合计。粘贴图片同样可用——Kimi 的模型都接受图片输入。",
-    "en": "This release adds Kimi Code CLI: GrokX can now run a conversation on kimi acp, picked next to Grok, OpenCode, CodeBuddy, Antigravity and Codex when you start a chat or create a Bot. Models (K3, K3.1 Pro, …) and thinking levels (low / high / max) come from the catalog Kimi reports; its permission requests show up in the chat as usual while Kimi's own mode picker is left alone. Kimi reports how full the context is but no token counts, so the usage pill shows a context ring instead of a token total. Pasting images works too — every Kimi model accepts them."
+    "zh-CN": "修复 CodeBuddy 会话里消息被切成碎片的问题。CodeBuddy 会把一轮回答的思考块与正文块按 token 交替下发，此前每切换一次就新起一条消息，一条回答被切成几十个气泡，粗体、行内代码和表格都断在碎片边界上。现在同一类文本流会合并成一条完整消息，只有工具调用、审批和新的用户消息才会结束当前这条。",
+    "en": "Fixes fragmented messages in CodeBuddy conversations. CodeBuddy interleaves a turn's reasoning and answer chunks token by token; GrokX used to start a new bubble at every switch, cutting one answer into dozens of fragments and breaking bold, inline code and tables at the seams. Each stream is now folded back into one message, and only a tool call, a permission request or a new user message ends it."
   },
   "downloads": {
-    "macOS": "https://github.com/onedou/grokx-releases/releases/download/v0.33.0/GrokX_0.33.0_universal.dmg"
+    "macOS": "https://github.com/onedou/grokx-releases/releases/download/v0.33.1/GrokX_0.33.1_universal.dmg"
   },
   "site": "https://grokx.bel.org.cn"
 }
