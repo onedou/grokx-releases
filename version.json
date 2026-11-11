@@ -1,13 +1,12 @@
 {
-  "version": "0.39.1",
+  "version": "0.40.0",
   "date": "2026-11-11",
   "notes": {
-    "zh-CN": "后台命令还在运行时，会在 45 秒后自动让智能体查看结果并继续，不用再手动问一句。每条消息最多续 3 次；未完成的审批、手动停止，或关闭设置里的「后台命令结束后自动续跑」时不会触发。同时保留引导模式。本次提供 Windows x64 与 ARM64 安装包。macOS universal 未重新打包，最新的 macOS 安装包仍是 0.39.0。",
-    "en": "When a turn ends while a command it started is still running, GrokX asks the agent to check the result and continue after 45 seconds, up to 3 times per message. It stays quiet when an approval is waiting, you press stop, or the setting is off. Steer Mode from 0.39.0 remains. This release adds Windows x64 and ARM64 installers. The macOS universal build was not rebuilt; the latest macOS installer remains 0.39.0."
+    "zh-CN": "侧边栏会话列表：每个项目组默认只显示最近 10 条会话，其余折叠为「显示其余 N 条会话」，点击展开后可再收起；当前打开的会话始终保持可见。本次提供 macOS universal 安装包；Windows x64 与 ARM64 因 GitHub Actions 账户账单问题暂未构建，修复后补发，Windows 用户可继续使用 0.39.1 安装包。",
+    "en": "Sidebar session list: each project group now shows only the 10 most recent sessions; the rest collapse behind a \"Show N more sessions\" row that expands and collapses again, and the session you have open always stays visible. This release ships the macOS universal installer. Windows x64 and ARM64 builds are pending because the GitHub Actions account has a billing issue; Windows users can keep using the 0.39.1 installers."
   },
   "downloads": {
-    "windowsX64": "https://github.com/onedou/grokx-releases/releases/download/v0.39.1/GrokX_0.39.1_x64-setup.exe",
-    "windowsArm64": "https://github.com/onedou/grokx-releases/releases/download/v0.39.1/GrokX_0.39.1_arm64-setup.exe"
+    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.40.0/GrokX_0.40.0_universal.dmg"
   },
   "site": "https://grokx.bel.org.cn"
 }
