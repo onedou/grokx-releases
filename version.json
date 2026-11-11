@@ -1,12 +1,12 @@
 {
-  "version": "0.38.1",
+  "version": "0.39.0",
   "date": "2026-11-11",
   "notes": {
-    "zh-CN": "修复 macOS 上 OpenCode 和 CodeBuddy 的“在终端安装”及登录按钮报 Unknown action 的问题；补齐缺失的终端动作处理，并加入所有 CLI 在 macOS/Windows 两侧的安装与登录路由回归检查。本次提供 macOS universal 安装包。Windows x64/ARM64 未构建：GitHub Actions 因账号付款或额度限制无法启动。",
-    "en": "Fixed Unknown action when installing or signing in to OpenCode and CodeBuddy from macOS. Restored the missing terminal actions and added regression checks for every CLI setup action on macOS and Windows. Includes the macOS universal installer. Windows x64/ARM64 installers were not built because GitHub Actions is blocked by account payment or spending limits."
+    "zh-CN": "新增引导模式（Steer Mode）：在设置中开启后，回合进行中发送消息会停下当前回合，这条消息立即发进同一个会话生效；关闭时保持排队行为，等回合结束后自动发送。本次提供 macOS universal 安装包。Windows x64/ARM64 未构建：GitHub Actions 因账号付款或额度限制无法启动。",
+    "en": "New Steer Mode: when enabled in Settings, sending while a turn is running stops that turn and applies your message immediately in the same session; when off, messages are queued until the turn ends. Includes the macOS universal installer. Windows x64/ARM64 installers were not built because GitHub Actions is blocked by account payment or spending limits."
   },
   "downloads": {
-    "macOS": "https://github.com/onedou/grokx-releases/releases/download/v0.38.1/GrokX_0.38.1_universal.dmg"
+    "macOS": "https://github.com/onedou/grokx-releases/releases/download/v0.39.0/GrokX_0.39.0_universal.dmg"
   },
   "site": "https://grokx.bel.org.cn"
 }
