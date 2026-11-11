@@ -1,12 +1,12 @@
 {
-  "version": "0.37.3",
+  "version": "0.38.0",
   "date": "2026-11-11",
   "notes": {
-    "zh-CN": "对话左侧导航条里，当前消息对应的刻度现在是一条更长的线，其余刻度保持短横，参考 Codex 会话轮廓的做法，一眼能看出自己读到哪一条。加长只向右延伸，刻度左边始终对齐；长度按正文左侧的实际间隙封顶，窗口变窄时自动收短，不会压到正文。本次只发布 macOS 版，Windows 安装包因构建环境受限暂缺。",
-    "en": "In the conversation rail, the tick for the message you are on is now a longer line while the rest stay short dashes, the way the Codex outline marks your place. It grows to the right only, so the column keeps its left edge, and its length is capped by the real gap before the text, so a narrow window shortens it instead of letting it run into the transcript. This release ships macOS only; Windows installers are missing because the build environment is blocked."
+    "zh-CN": "切换 ChatGPT 账号后，当前会话会继续：Codex 的会话记录被带到新账号，并在新账号下恢复同一个会话，上下文和工具记录都在，不用再新开一个空会话重说一遍。遇到无法搬移会话记录的账号时，之前的历史会以文本形式交给新账号。本次仍只发布 macOS 版，Windows 安装包因构建环境受限暂缺。",
+    "en": "Switching ChatGPT accounts now continues the open conversation: the Codex session record is carried to the new account, which resumes the same session with its context and tool history intact instead of starting an empty one. When an account has no record to move, the earlier turns are handed over as text. This release still ships macOS only; Windows installers are missing because the build environment is blocked."
   },
   "downloads": {
-    "macOS": "https://github.com/onedou/grokx-releases/releases/download/v0.37.3/GrokX_0.37.3_universal.dmg"
+    "macOS": "https://github.com/onedou/grokx-releases/releases/download/v0.38.0/GrokX_0.38.0_universal.dmg"
   },
   "site": "https://grokx.bel.org.cn"
 }
