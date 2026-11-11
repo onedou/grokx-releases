@@ -1,12 +1,13 @@
 {
-  "version": "0.39.0",
+  "version": "0.39.1",
   "date": "2026-11-11",
   "notes": {
-    "zh-CN": "新增引导模式（Steer Mode）：在设置中开启后，回合进行中发送消息会停下当前回合，这条消息立即发进同一个会话生效；关闭时保持排队行为，等回合结束后自动发送。本次提供 macOS universal 安装包。Windows x64/ARM64 未构建：GitHub Actions 因账号付款或额度限制无法启动。",
-    "en": "New Steer Mode: when enabled in Settings, sending while a turn is running stops that turn and applies your message immediately in the same session; when off, messages are queued until the turn ends. Includes the macOS universal installer. Windows x64/ARM64 installers were not built because GitHub Actions is blocked by account payment or spending limits."
+    "zh-CN": "后台命令还在运行时，会在 45 秒后自动让智能体查看结果并继续，不用再手动问一句。每条消息最多续 3 次；未完成的审批、手动停止，或关闭设置里的「后台命令结束后自动续跑」时不会触发。同时保留引导模式。本次提供 Windows x64 与 ARM64 安装包。macOS universal 未重新打包，最新的 macOS 安装包仍是 0.39.0。",
+    "en": "When a turn ends while a command it started is still running, GrokX asks the agent to check the result and continue after 45 seconds, up to 3 times per message. It stays quiet when an approval is waiting, you press stop, or the setting is off. Steer Mode from 0.39.0 remains. This release adds Windows x64 and ARM64 installers. The macOS universal build was not rebuilt; the latest macOS installer remains 0.39.0."
   },
   "downloads": {
-    "macOS": "https://github.com/onedou/grokx-releases/releases/download/v0.39.0/GrokX_0.39.0_universal.dmg"
+    "windowsX64": "https://github.com/onedou/grokx-releases/releases/download/v0.39.1/GrokX_0.39.1_x64-setup.exe",
+    "windowsArm64": "https://github.com/onedou/grokx-releases/releases/download/v0.39.1/GrokX_0.39.1_arm64-setup.exe"
   },
   "site": "https://grokx.bel.org.cn"
 }
