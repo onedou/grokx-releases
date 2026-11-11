@@ -2,11 +2,13 @@
   "version": "0.41.0",
   "date": "2026-11-11",
   "notes": {
-    "zh-CN": "浏览器现在与对话关联：每个对话在 GrokX 运行期间保留自己的标签页、当前页面和浏览器开关；切换对话会恢复对应页面，后台对话独立浏览，删除对话会关闭其标签页。网站登录仍使用共享浏览器配置。本次提供 macOS universal 安装包。Windows x64/ARM64 因 GitHub Actions 账户付款或消费限额问题未构建，本版本暂不提供 Windows 安装包。",
-    "en": "The browser is now associated with each conversation: while GrokX is running, every chat keeps its own tabs, active page and pane toggle. Switching chats restores their pages, background agents browse independently, and deleting a chat closes its tabs. Website sign-ins still use the shared browser profile. This release provides the macOS universal installer. Windows x64/ARM64 installers are not available for this version because GitHub Actions could not start due to account payment or spending-limit issues."
+    "zh-CN": "浏览器现在与对话关联：每个对话在 GrokX 运行期间保留自己的标签页、当前页面和浏览器开关；切换对话会恢复对应页面，后台对话独立浏览，删除对话会关闭其标签页。网站登录仍使用共享浏览器配置。本次提供 macOS universal 与 Windows x64 / ARM64 安装包。",
+    "en": "The browser is now associated with each conversation: while GrokX is running, every chat keeps its own tabs, active page and pane toggle. Switching chats restores their pages, background agents browse independently, and deleting a chat closes its tabs. Website sign-ins still use the shared browser profile. This release provides the macOS universal installer plus Windows x64 and ARM64 installers."
   },
   "downloads": {
-    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.41.0/GrokX_0.41.0_universal.dmg"
+    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.41.0/GrokX_0.41.0_universal.dmg",
+    "windowsX64": "https://github.com/onedou/grokx-releases/releases/download/v0.41.0/GrokX_0.41.0_x64-setup.exe",
+    "windowsArm64": "https://github.com/onedou/grokx-releases/releases/download/v0.41.0/GrokX_0.41.0_arm64-setup.exe"
   },
   "site": "https://grokx.bel.org.cn"
 }
