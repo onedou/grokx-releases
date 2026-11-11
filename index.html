@@ -560,12 +560,13 @@ return notes.filter(note =&gt; note.title.toLowerCase().includes(needle));</code
           const manifest = await fetchJson(url);
           if (typeof manifest?.version !== 'string' || !/^\d+\.\d+\.\d+$/.test(manifest.version)) continue;
           const version = manifest.version;
-          const valid = links.every(({ dataset }) => {
-            const platform = dataset.downloadPlatform;
-            return manifest.downloads?.[platform] ===
-              `${releasePage}/v${version}/GrokX_${version}_${suffixes[platform]}`;
-          });
-          if (valid) return manifest;
+          const declared = new Map(Object.entries(manifest.downloads ?? {}).map(([platform, url]) => [platform.toLowerCase(), url]));
+          const downloads = {};
+          for (const [platform, suffix] of Object.entries(suffixes)) {
+            const url = declared.get(platform.toLowerCase());
+            if (url === `${releasePage}/v${version}/GrokX_${version}_${suffix}`) downloads[platform] = url;
+          }
+          if (Object.keys(downloads).length) return { version, downloads };
         } catch {
           // Try the copy served by GitHub Pages, then keep the GitHub Releases link.
         }
@@ -578,14 +579,22 @@ return notes.filter(note =&gt; note.title.toLowerCase().includes(needle));</code
       if (!manifest) return;
       const { version, downloads } = manifest;
       document.querySelector('#download-version').textContent = ' ' + version;
-      for (const link of links) link.href = downloads[link.dataset.downloadPlatform];
+      const availableLinks = links.filter((link) => {
+        const url = downloads[link.dataset.downloadPlatform];
+        if (!url) {
+          link.closest('li').remove();
+          return false;
+        }
+        link.href = url;
+        return true;
+      });
       list.hidden = false;
       document.querySelector('#download-fallback').hidden = true;
 
       try {
         const release = await fetchJson(`https://api.github.com/repos/${repository}/releases/tags/v${version}`);
         if (release?.tag_name !== 'v' + version || !Array.isArray(release.assets)) return;
-        for (const link of links) {
+        for (const link of availableLinks) {
           const asset = release.assets.find(item => item.browser_download_url === link.href);
           if (Number.isFinite(asset?.size) && asset.size > 0) {
             link.querySelector('.download-size').textContent = ' · ' + (asset.size / 1_000_000).toFixed(1) + '\u00a0MB';
