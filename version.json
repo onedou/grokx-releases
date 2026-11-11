@@ -2,11 +2,13 @@
   "version": "0.40.0",
   "date": "2026-11-11",
   "notes": {
-    "zh-CN": "侧边栏会话列表：每个项目组默认只显示最近 10 条会话，其余折叠为「显示其余 N 条会话」，点击展开后可再收起；当前打开的会话始终保持可见。本次提供 macOS universal 安装包；Windows x64 与 ARM64 因 GitHub Actions 账户账单问题暂未构建，修复后补发，Windows 用户可继续使用 0.39.1 安装包。",
-    "en": "Sidebar session list: each project group now shows only the 10 most recent sessions; the rest collapse behind a \"Show N more sessions\" row that expands and collapses again, and the session you have open always stays visible. This release ships the macOS universal installer. Windows x64 and ARM64 builds are pending because the GitHub Actions account has a billing issue; Windows users can keep using the 0.39.1 installers."
+    "zh-CN": "侧边栏会话列表：每个项目组默认只显示最近 10 条会话，其余折叠为「显示 N 条更多会话」，展开后可再次收起；当前打开的会话始终保持可见。本次提供 macOS universal 与 Windows x64 / ARM64 安装包。",
+    "en": "Sidebar session list: each project group now shows only the 10 most recent sessions; the rest collapse behind a \"Show N more sessions\" row that expands and collapses again, and the session you have open always stays visible. This release ships the macOS universal installer and the Windows x64 and ARM64 installers."
   },
   "downloads": {
-    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.40.0/GrokX_0.40.0_universal.dmg"
+    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.40.0/GrokX_0.40.0_universal.dmg",
+    "windowsX64": "https://github.com/onedou/grokx-releases/releases/download/v0.40.0/GrokX_0.40.0_x64-setup.exe",
+    "windowsArm64": "https://github.com/onedou/grokx-releases/releases/download/v0.40.0/GrokX_0.40.0_arm64-setup.exe"
   },
   "site": "https://grokx.bel.org.cn"
 }
