@@ -48,10 +48,227 @@
     <p data-en="See what changed in each public release of GrokX, from newest to oldest.">从新到旧查看 GrokX 各公开版本的改动和安装包。</p>
   </header>
   <ol class="releases">
+      <li id="v0.41.0">
+        <div class="release-version">
+          <h2>v0.41.0</h2>
+          <span class="latest" data-en="Latest">最新发布</span>
+        </div>
+        <p data-en="Browser tabs, the active page and the pane toggle are now per conversation: switching chats restores their browser, background agents work in their own pages, deleting a chat closes its tabs, and website sign-ins still share one profile.">浏览器与对话关联：每个对话各有标签页、当前页面和面板开关，切换对话恢复对应浏览器，后台对话独立浏览，删除对话关闭其标签页；网站登录仍共用浏览器配置。</p>
+        <a class="release-link" href="https://github.com/onedou/grokx-releases/releases/tag/v0.41.0"><span data-en="Installers">安装包</span> <span class="sr-only">v0.41.0</span><span aria-hidden="true">↗</span></a>
+      </li>
+      <li id="v0.40.0">
+        <div class="release-version">
+          <h2>v0.40.0</h2>
+        </div>
+        <p data-en="Each project group in the sidebar shows the 10 most recent chats by default behind a “show more” fold, and the open chat stays visible.">侧边栏每个项目组默认只显示最近 10 条会话，其余折叠为「显示更多」，当前打开的会话始终可见。</p>
+        <a class="release-link" href="https://github.com/onedou/grokx-releases/releases/tag/v0.40.0"><span data-en="Installers">安装包</span> <span class="sr-only">v0.40.0</span><span aria-hidden="true">↗</span></a>
+      </li>
+      <li id="v0.39.1">
+        <div class="release-version">
+          <h2>v0.39.1</h2>
+        </div>
+        <p data-en="When a background command is still running at the end of a turn, GrokX now has the agent check the result and continue on its own; pending approvals, manual stops and bot chats are left alone.">后台命令还在运行时自动让智能体查看结果并继续，不用再手动追问；未回答的审批、手动停止和 Bot 会话不会触发。</p>
+        <a class="release-link" href="https://github.com/onedou/grokx-releases/releases/tag/v0.39.1"><span data-en="Installers">安装包</span> <span class="sr-only">v0.39.1</span><span aria-hidden="true">↗</span></a>
+      </li>
+      <li id="v0.39.0">
+        <div class="release-version">
+          <h2>v0.39.0</h2>
+        </div>
+        <p data-en="Adds Steer Mode: with it on, sending mid-turn stops the current turn and takes effect immediately; with it off messages keep queueing, and an interrupted turn is marked as steered.">新增引导模式（Steer Mode）：开启后回合中发送会停下当前回合并立即生效，关闭时保持排队；被打断的回合显示「已引导」。</p>
+        <a class="release-link" href="https://github.com/onedou/grokx-releases/releases/tag/v0.39.0"><span data-en="Installers">安装包</span> <span class="sr-only">v0.39.0</span><span aria-hidden="true">↗</span></a>
+      </li>
+      <li id="v0.38.1">
+        <div class="release-version">
+          <h2>v0.38.1</h2>
+        </div>
+        <p data-en="Fixes “Unknown action” from the Install in Terminal and sign-in buttons for OpenCode and CodeBuddy on macOS, restoring four missing terminal actions.">修复 macOS 上 OpenCode 和 CodeBuddy 的「Install in Terminal」与登录按钮报 Unknown action，恢复四个缺失的终端动作。</p>
+        <a class="release-link" href="https://github.com/onedou/grokx-releases/releases/tag/v0.38.1"><span data-en="Installers">安装包</span> <span class="sr-only">v0.38.1</span><span aria-hidden="true">↗</span></a>
+      </li>
+      <li id="v0.38.0">
+        <div class="release-version">
+          <h2>v0.38.0</h2>
+        </div>
+        <p data-en="Switching accounts keeps the current conversation: Codex history moves to the new account and the chat continues instead of starting empty.">切换账号后当前会话继续：Codex 的会话记录带到新账号，直接接着聊，不再新开空会话。</p>
+        <a class="release-link" href="https://github.com/onedou/grokx-releases/releases/tag/v0.38.0"><span data-en="Installers">安装包</span> <span class="sr-only">v0.38.0</span><span aria-hidden="true">↗</span></a>
+      </li>
+      <li id="v0.37.3">
+        <div class="release-version">
+          <h2>v0.37.3</h2>
+        </div>
+        <p data-en="The minimap mark for the current message is drawn as a longer line that only extends right, stays aligned on the left and shortens on narrow windows.">对话导航条中当前消息的刻度画成更长的线，只向右延伸、左侧保持对齐，窗口变窄时自动收短。</p>
+        <a class="release-link" href="https://github.com/onedou/grokx-releases/releases/tag/v0.37.3"><span data-en="Installers">安装包</span> <span class="sr-only">v0.37.3</span><span aria-hidden="true">↗</span></a>
+      </li>
+      <li id="v0.37.2">
+        <div class="release-version">
+          <h2>v0.37.2</h2>
+        </div>
+        <p data-en="Scrolling to the bottom of a chat now highlights the newest message in the left minimap instead of the second-to-last one.">会话滚到底部时，左侧导航条高亮最新一条消息，不再停在倒数第二条。</p>
+        <a class="release-link" href="https://github.com/onedou/grokx-releases/releases/tag/v0.37.2"><span data-en="Installers">安装包</span> <span class="sr-only">v0.37.2</span><span aria-hidden="true">↗</span></a>
+      </li>
+      <li id="v0.37.0">
+        <div class="release-version">
+          <h2>v0.37.0</h2>
+        </div>
+        <p data-en="Long conversations stream smoothly again by re-rendering only the changing part and caching diffs per chat; the chat header shows how long the current turn has been working. Windows installers are back, the browser pane is now a native page, and switching CLIs no longer opens a blank terminal.">长对话逐字输出不再卡顿：只重渲染正在变化的部分，diff 按会话缓存；会话头部显示本轮已工作时长。Windows 安装包恢复，浏览器面板改为原生页面，切换 CLI 不再弹出空白终端。</p>
+        <a class="release-link" href="https://github.com/onedou/grokx-releases/releases/tag/v0.37.0"><span data-en="Installers">安装包</span> <span class="sr-only">v0.37.0</span><span aria-hidden="true">↗</span></a>
+      </li>
+      <li id="v0.36.0">
+        <div class="release-version">
+          <h2>v0.36.0</h2>
+        </div>
+        <p data-en="Codex and Kimi now support multiple accounts, each with its own config directory so chats, history and sign-ins stay separate; accounts can be added, removed, made default and signed in from Settings.">Codex 与 Kimi 支持多账号：每个账号独立配置目录，会话、历史和登录态互不干扰，可在设置里添加、删除、设为默认并在终端登录。</p>
+        <a class="release-link" href="https://github.com/onedou/grokx-releases/releases/tag/v0.36.0"><span data-en="Installers">安装包</span> <span class="sr-only">v0.36.0</span><span aria-hidden="true">↗</span></a>
+      </li>
+      <li id="v0.35.2">
+        <div class="release-version">
+          <h2>v0.35.2</h2>
+        </div>
+        <p data-en="The browser pane now identifies as Safari, and pages that keep redirecting to themselves stop loading with a notice.">浏览器面板以 Safari 标识访问网站，页面自我循环跳转时自动停止加载并提示。</p>
+        <a class="release-link" href="https://github.com/onedou/grokx-releases/releases/tag/v0.35.2"><span data-en="Installers">安装包</span> <span class="sr-only">v0.35.2</span><span aria-hidden="true">↗</span></a>
+      </li>
+      <li id="v0.35.1">
+        <div class="release-version">
+          <h2>v0.35.1</h2>
+        </div>
+        <p data-en="Short label columns in tables no longer collapse to one character per line; headers get a tinted background and left alignment.">表格短标签列不再被压成一字一行，表头加底色并左对齐。</p>
+        <a class="release-link" href="https://github.com/onedou/grokx-releases/releases/tag/v0.35.1"><span data-en="Installers">安装包</span> <span class="sr-only">v0.35.1</span><span aria-hidden="true">↗</span></a>
+      </li>
+      <li id="v0.35.0">
+        <div class="release-version">
+          <h2>v0.35.0</h2>
+        </div>
+        <p data-en="The browser pane is now a native web view: scrolling, IME and video come from the system, the agent shares the page you are looking at, and the engine moves from Chromium to system WebKit, so the separate browser window is gone.">浏览器面板改为原生网页视图：滚动、输入法、视频都由系统处理，不再逐帧复制画面，Agent 与你共用同一个页面；引擎从 Chromium 换成系统 WebKit，也不再能弹出第二个窗口。</p>
+        <a class="release-link" href="https://github.com/onedou/grokx-releases/releases/tag/v0.35.0"><span data-en="Installers">安装包</span> <span class="sr-only">v0.35.0</span><span aria-hidden="true">↗</span></a>
+      </li>
+      <li id="v0.34.0">
+        <div class="release-version">
+          <h2>v0.34.0</h2>
+        </div>
+        <p data-en="Browser streams reconnect automatically and only one window shows a page at a time; tabs close on press; usage for third-party models shows input, output, cached tokens and call counts.">浏览器画面断流后自动重连，同一时间只由一个窗口显示页面；标签页按下即关；第三方模型用量显示本次会话的输入、输出、缓存词元与调用次数。</p>
+        <a class="release-link" href="https://github.com/onedou/grokx-releases/releases/tag/v0.34.0"><span data-en="Installers">安装包</span> <span class="sr-only">v0.34.0</span><span aria-hidden="true">↗</span></a>
+      </li>
+      <li id="v0.33.3">
+        <div class="release-version">
+          <h2>v0.33.3</h2>
+        </div>
+        <p data-en="The edit box now spans the full bubble and grows as you type instead of squeezing long messages; image previews support right-click copy.">编辑框改为整条气泡宽度，长消息不再被挤成窄条反复折行，输入越多自动增高；图片预览支持右键复制。</p>
+        <a class="release-link" href="https://github.com/onedou/grokx-releases/releases/tag/v0.33.3"><span data-en="Installers">安装包</span> <span class="sr-only">v0.33.3</span><span aria-hidden="true">↗</span></a>
+      </li>
+      <li id="v0.33.2">
+        <div class="release-version">
+          <h2>v0.33.2</h2>
+        </div>
+        <p data-en="Pending-approval badges now appear on the tab that owns the request — Chats or Bots — instead of always badging Bots.">待审批气泡按请求所属会话分流到「对话」或「Bots」标签，不再一律挂在 Bots 上。</p>
+        <a class="release-link" href="https://github.com/onedou/grokx-releases/releases/tag/v0.33.2"><span data-en="Installers">安装包</span> <span class="sr-only">v0.33.2</span><span aria-hidden="true">↗</span></a>
+      </li>
+      <li id="v0.33.1">
+        <div class="release-version">
+          <h2>v0.33.1</h2>
+        </div>
+        <p data-en="Fixes CodeBuddy transcripts being split by interleaved thinking, so bold text, inline code and tables no longer break at chunk boundaries.">修复 CodeBuddy 交错思考导致消息被切成碎片的问题，粗体、行内代码和表格不再断在碎片边界。</p>
+        <a class="release-link" href="https://github.com/onedou/grokx-releases/releases/tag/v0.33.1"><span data-en="Installers">安装包</span> <span class="sr-only">v0.33.1</span><span aria-hidden="true">↗</span></a>
+      </li>
+      <li id="v0.33.0">
+        <div class="release-version">
+          <h2>v0.33.0</h2>
+        </div>
+        <p data-en="Adds Kimi Code CLI support: models and thinking levels come from Kimi’s own catalog, permission requests appear in the chat, and usage shows a context gauge.">新增 Kimi Code CLI 支持：模型与思考强度取自 Kimi 上报的目录，权限请求照常在聊天中审批，用量显示上下文占用环。</p>
+        <a class="release-link" href="https://github.com/onedou/grokx-releases/releases/tag/v0.33.0"><span data-en="Installers">安装包</span> <span class="sr-only">v0.33.0</span><span aria-hidden="true">↗</span></a>
+      </li>
+      <li id="v0.32.0">
+        <div class="release-version">
+          <h2>v0.32.0</h2>
+        </div>
+        <p data-en="Sending mid-turn now queues the message until the turn ends, with a cancellable queue above the composer; separate chats can send at the same time.">回合进行中发送改为排队，等这一轮结束后自动发出，队列可在输入框上方取消；不同会话可以同时发送。</p>
+        <a class="release-link" href="https://github.com/onedou/grokx-releases/releases/tag/v0.32.0"><span data-en="Installers">安装包</span> <span class="sr-only">v0.32.0</span><span aria-hidden="true">↗</span></a>
+      </li>
+      <li id="v0.31.0">
+        <div class="release-version">
+          <h2>v0.31.0</h2>
+        </div>
+        <p data-en="The composer supports slash commands: it lists the commands the current CLI reports, with filtering, arrow-key selection and Enter or Tab completion.">输入框支持 / 斜杠命令：列出当前 CLI 上报的命令，可筛选、方向键选择、Enter 或 Tab 补全。</p>
+        <a class="release-link" href="https://github.com/onedou/grokx-releases/releases/tag/v0.31.0"><span data-en="Installers">安装包</span> <span class="sr-only">v0.31.0</span><span aria-hidden="true">↗</span></a>
+      </li>
+      <li id="v0.30.9">
+        <div class="release-version">
+          <h2>v0.30.9</h2>
+        </div>
+        <p data-en="Editing a message keeps and re-sends its original images.">编辑消息时保留并重新发送原图片。</p>
+        <a class="release-link" href="https://github.com/onedou/grokx-releases/releases/tag/v0.30.9"><span data-en="Installers">安装包</span> <span class="sr-only">v0.30.9</span><span aria-hidden="true">↗</span></a>
+      </li>
+      <li id="v0.30.8">
+        <div class="release-version">
+          <h2>v0.30.8</h2>
+        </div>
+        <p data-en="Fixes the chat minimap: highlighting no longer falls back to the previous message after a click, and the hover card keeps a fixed width.">修复导航条：点刻度后高亮不再退回上一条，悬停卡片改为固定宽度，不再一个字一行。</p>
+        <a class="release-link" href="https://github.com/onedou/grokx-releases/releases/tag/v0.30.8"><span data-en="Installers">安装包</span> <span class="sr-only">v0.30.8</span><span aria-hidden="true">↗</span></a>
+      </li>
+      <li id="v0.30.7">
+        <div class="release-version">
+          <h2>v0.30.7</h2>
+        </div>
+        <p data-en="The chat minimap moves left with a hover progress card, and the right-hand control group stays flush right when the composer wraps.">对话导航条靠左并加悬停进度卡片；输入区控件换行时右侧按钮组固定贴右。</p>
+        <a class="release-link" href="https://github.com/onedou/grokx-releases/releases/tag/v0.30.7"><span data-en="Installers">安装包</span> <span class="sr-only">v0.30.7</span><span aria-hidden="true">↗</span></a>
+      </li>
+      <li id="v0.30.6">
+        <div class="release-version">
+          <h2>v0.30.6</h2>
+        </div>
+        <p data-en="Minimap marks move into the middle of the gutter between sidebar and text, 10px from the content and still vertically centred.">对话导航条刻度移到侧栏与正文之间空隙的中间，离正文 10px，竖直居中不变。</p>
+        <a class="release-link" href="https://github.com/onedou/grokx-releases/releases/tag/v0.30.6"><span data-en="Installers">安装包</span> <span class="sr-only">v0.30.6</span><span aria-hidden="true">↗</span></a>
+      </li>
+      <li id="v0.30.5">
+        <div class="release-version">
+          <h2>v0.30.5</h2>
+        </div>
+        <p data-en="Minimap marks are vertically centred and moved right to sit 2px from the text column.">对话导航条刻度竖直居中，并右移紧贴正文左侧（间距 2px）。</p>
+        <a class="release-link" href="https://github.com/onedou/grokx-releases/releases/tag/v0.30.5"><span data-en="Installers">安装包</span> <span class="sr-only">v0.30.5</span><span aria-hidden="true">↗</span></a>
+      </li>
+      <li id="v0.30.4">
+        <div class="release-version">
+          <h2>v0.30.4</h2>
+        </div>
+        <p data-en="Minimap marks now use a fixed 12px spacing from the top instead of stretching across the whole window height.">对话导航条刻度改为固定 12px 间距、从顶部往下排列，不再铺满整个窗口高度。</p>
+        <a class="release-link" href="https://github.com/onedou/grokx-releases/releases/tag/v0.30.4"><span data-en="Installers">安装包</span> <span class="sr-only">v0.30.4</span><span aria-hidden="true">↗</span></a>
+      </li>
+      <li id="v0.30.3">
+        <div class="release-version">
+          <h2>v0.30.3</h2>
+        </div>
+        <p data-en="Minimap marks share one length and the current item is distinguished by colour.">对话导航条刻度统一长度，当前项改用颜色区分，不再长短不齐。</p>
+        <a class="release-link" href="https://github.com/onedou/grokx-releases/releases/tag/v0.30.3"><span data-en="Installers">安装包</span> <span class="sr-only">v0.30.3</span><span aria-hidden="true">↗</span></a>
+      </li>
+      <li id="v0.30.2">
+        <div class="release-version">
+          <h2>v0.30.2</h2>
+        </div>
+        <p data-en="Long paragraphs inside tables wrap to the text column instead of running off the screen.">表格里的长段落跟随正文列宽自动换行，不再拉成一条横到屏幕外的长行。</p>
+        <a class="release-link" href="https://github.com/onedou/grokx-releases/releases/tag/v0.30.2"><span data-en="Installers">安装包</span> <span class="sr-only">v0.30.2</span><span aria-hidden="true">↗</span></a>
+      </li>
+      <li id="v0.30.1">
+        <div class="release-version">
+          <h2>v0.30.1</h2>
+        </div>
+        <p data-en="Failed sends keep the draft and explain why; agent [1] [2] options become a picker; streaming no longer resets horizontal table scroll; activity blocks match tool-card width; the completion sound is a two-tone click.">发送失败保留草稿并说明原因；Agent 的 [1] [2] 选项变成选择器；修复流式生成时表格横向滚动被重置；活动块与工具卡同宽；完成提示音改为「嗒·嗒—咔」。</p>
+        <a class="release-link" href="https://github.com/onedou/grokx-releases/releases/tag/v0.30.1"><span data-en="Installers">安装包</span> <span class="sr-only">v0.30.1</span><span aria-hidden="true">↗</span></a>
+      </li>
+      <li id="v0.29.0">
+        <div class="release-version">
+          <h2>v0.29.0</h2>
+        </div>
+        <p data-en="You can now interject during a turn: the composer stays available and sending stops the turn to hand the message over immediately, keeping the transcript, written files and model settings.">回合进行中也能插话：输入框保持可用，发送会停下当前回合并立即交给 Agent，转录、已写文件和模型设置都保留。</p>
+        <a class="release-link" href="https://github.com/onedou/grokx-releases/releases/tag/v0.29.0"><span data-en="Installers">安装包</span> <span class="sr-only">v0.29.0</span><span aria-hidden="true">↗</span></a>
+      </li>
+      <li id="v0.28.2">
+        <div class="release-version">
+          <h2>v0.28.2</h2>
+        </div>
+        <p data-en="Home starter prompts no longer appear as JSON fragments, and the model menu says so when an OpenCode model has no reasoning levels.">首页推荐提示词不再显示成 JSON 片段；OpenCode 模型没有推理强度时，菜单会明确说明。</p>
+        <a class="release-link" href="https://github.com/onedou/grokx-releases/releases/tag/v0.28.2"><span data-en="Installers">安装包</span> <span class="sr-only">v0.28.2</span><span aria-hidden="true">↗</span></a>
+      </li>
       <li id="v0.28.1">
         <div class="release-version">
           <h2>v0.28.1</h2>
-          <span class="latest" data-en="Latest">最新发布</span>
         </div>
         <p data-en="OpenCode reasoning levels can now be chosen for every model and actually apply; creating or resuming a session no longer resets the chosen level.">OpenCode 的推理档位现在对任何模型都能选择，选中后真正生效；新建或恢复会话不再重置已选档位。</p>
         <a class="release-link" href="https://github.com/onedou/grokx-releases/releases/tag/v0.28.1"><span data-en="Installers">安装包</span> <span class="sr-only">v0.28.1</span><span aria-hidden="true">↗</span></a>
