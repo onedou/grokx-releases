@@ -1,12 +1,12 @@
 {
-  "version": "0.37.2",
+  "version": "0.37.3",
   "date": "2026-11-11",
   "notes": {
-    "zh-CN": "会话滚到最底部时，左侧导航条不再停在倒数第二条。以前它只把顶到屏幕上方的消息算作当前项，最新一条消息停在下方就被漏掉；现在只要滚动条到底，高亮就落到最新一条消息上。内容不足一屏的会话不受影响。本次只发布 macOS 版，Windows 安装包因构建环境受限暂缺。",
-    "en": "The conversation rail no longer stops one message short of the end when you scroll to the bottom. It only counted a message that had reached the top of the viewport, so the newest one, still sitting lower on screen, was skipped; reaching the bottom of the thread now marks the newest message. Short threads that fit on one screen are unchanged. This release ships macOS only; Windows installers are missing because the build environment is blocked."
+    "zh-CN": "对话左侧导航条里，当前消息对应的刻度现在是一条更长的线，其余刻度保持短横，参考 Codex 会话轮廓的做法，一眼能看出自己读到哪一条。加长只向右延伸，刻度左边始终对齐；长度按正文左侧的实际间隙封顶，窗口变窄时自动收短，不会压到正文。本次只发布 macOS 版，Windows 安装包因构建环境受限暂缺。",
+    "en": "In the conversation rail, the tick for the message you are on is now a longer line while the rest stay short dashes, the way the Codex outline marks your place. It grows to the right only, so the column keeps its left edge, and its length is capped by the real gap before the text, so a narrow window shortens it instead of letting it run into the transcript. This release ships macOS only; Windows installers are missing because the build environment is blocked."
   },
   "downloads": {
-    "macOS": "https://github.com/onedou/grokx-releases/releases/download/v0.37.2/GrokX_0.37.2_universal.dmg"
+    "macOS": "https://github.com/onedou/grokx-releases/releases/download/v0.37.3/GrokX_0.37.3_universal.dmg"
   },
   "site": "https://grokx.bel.org.cn"
 }
