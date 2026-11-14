@@ -1,12 +1,12 @@
 {
-  "version": "0.47.2",
-  "date": "2026-11-13",
+  "version": "0.47.6",
+  "date": "2026-11-14",
   "notes": {
-    "zh-CN": "定时任务可绑定 CLI 账号，任务始终使用所选账号运行且模型列表来自对应账号；系统通知点击后直接打开对应会话；修复 CodeBuddy 选择支持视觉的模型（如 Kimi-K3、GLM-5.3）时仍提示不支持图片输入的问题。本次仅提供 macOS universal 安装包；Windows x64/ARM64 因 GitHub Actions 账户付款限制未能构建，暂不提供 Windows 安装包。",
-    "en": "Scheduled tasks can now be pinned to a CLI account: they always run with the chosen account and load its model catalog. Clicking a system notification opens the matching conversation. Fixed CodeBuddy refusing image input on vision-capable models (e.g. Kimi-K3, GLM-5.3): GrokX now honors the per-model supportsImages flag the CLI reports. This release ships the macOS universal build only; the Windows x64/ARM64 installers could not be built because GitHub Actions jobs are blocked by the account payment limit."
+    "zh-CN": "修复 dsh-acp（DeepSeek Harness）上报新模型 ID 形态（DeepSeek-V41-Flash / [\"deepseek-official\",\"deepseek-flash\"]）时，支持视觉的 DeepSeek V4.1 Flash 被误报为不支持图片输入的问题。本次仅提供 macOS universal 安装包；Windows x64/ARM64 因 GitHub Actions 账户付款限制未能构建。",
+    "en": "Fixed DeepSeek V4.1 Flash being wrongly reported as text-only when dsh-acp (DeepSeek Harness) reports its new model id forms (DeepSeek-V41-Flash / [\"deepseek-official\",\"deepseek-flash\"]). This release ships the macOS universal build only; the Windows x64/ARM64 installers could not be built because GitHub Actions jobs are blocked by the account payment limit."
   },
   "downloads": {
-    "macOS": "https://github.com/onedou/grokx-releases/releases/download/v0.47.2/GrokX_0.47.2_universal.dmg"
+    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.47.6/GrokX_0.47.6_universal.dmg"
   },
   "site": "https://grokx.bel.org.cn"
 }
