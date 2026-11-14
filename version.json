@@ -1,16 +1,16 @@
 {
-  "version": "0.51.0",
+  "version": "0.52.0",
   "date": "2026-11-14",
   "notes": {
-    "zh-CN": "新增飞书机器人与移动端配对、项目 .github/skills 命令、会话置顶及提问卡片交互优化。本次同时提供 macOS 通用版、Windows x64/ARM64（未签名）与 iOS/Android 包：APK 为调试签名，IPA 为开发签名、只能安装到开发团队已注册的设备。",
-    "en": "Feishu bot with mobile pairing, project .github/skills commands, pinned sessions and a reworked question card. This release ships macOS universal, Windows x64/ARM64 (unsigned) and iOS/Android builds; the APK is debug-signed and the IPA is development-signed, so it only installs on devices registered with the development team."
+    "zh-CN": "新增 Trae Agent 支持（内置 ACP 桥接）与飞书设置分区、一键保存并连接。本次同时提供 macOS 通用版、Windows x64/ARM64（未签名）与 iOS/Android 包：APK 为调试签名，IPA 为开发签名、只能安装到开发团队已注册的设备。",
+    "en": "Trae Agent support via a built-in ACP bridge, a reorganized Feishu settings section and one-click save-and-connect. This release ships macOS universal, Windows x64/ARM64 (unsigned) and iOS/Android builds; the APK is debug-signed and the IPA is development-signed, so it only installs on devices registered with the development team."
   },
   "downloads": {
-    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.51.0/GrokX_0.51.0_universal.dmg",
-    "windowsX64": "https://github.com/onedou/grokx-releases/releases/download/v0.51.0/GrokX_0.51.0_x64-setup.exe",
-    "windowsArm64": "https://github.com/onedou/grokx-releases/releases/download/v0.51.0/GrokX_0.51.0_arm64-setup.exe",
-    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.51.0/GrokX-mobile-0.51.0.ipa",
-    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.51.0/GrokX-mobile-0.51.0-debug.apk"
+    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.52.0/GrokX_0.52.0_universal.dmg",
+    "windowsX64": "https://github.com/onedou/grokx-releases/releases/download/v0.52.0/GrokX_0.52.0_x64-setup.exe",
+    "windowsArm64": "https://github.com/onedou/grokx-releases/releases/download/v0.52.0/GrokX_0.52.0_arm64-setup.exe",
+    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.52.0/GrokX-mobile-0.52.0.ipa",
+    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.52.0/GrokX-mobile-0.52.0-debug.apk"
   },
   "site": "https://grokx.bel.org.cn"
 }
