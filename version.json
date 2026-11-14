@@ -1,12 +1,16 @@
 {
-  "version": "0.48.1",
+  "version": "0.51.0",
   "date": "2026-11-14",
   "notes": {
-    "zh-CN": "DeepSeek Harness（dsh-acp）输入 / 也弹出命令推荐：该适配器不通过 ACP 上报命令，GrokX 使用其实际内置命令（compact / plan / goal / permission / feedback）兜底，其他 CLI 维持实时上报。本次仅提供 macOS universal 安装包；Windows x64/ARM64 因 GitHub Actions 账户付款限制未能构建。",
-    "en": "DeepSeek Harness (dsh-acp) now offers slash commands too: the adapter reports none over ACP, so GrokX falls back to its actual built-in commands (compact / plan / goal / permission / feedback); other CLIs keep using their live-reported lists. This release ships the macOS universal build only; the Windows x64/ARM64 installers could not be built because GitHub Actions jobs are blocked by the account payment limit."
+    "zh-CN": "新增飞书机器人与移动端配对、项目 .github/skills 命令、会话置顶及提问卡片交互优化。本次同时提供 macOS 通用版、Windows x64/ARM64（未签名）与 iOS/Android 包：APK 为调试签名，IPA 为开发签名、只能安装到开发团队已注册的设备。",
+    "en": "Feishu bot with mobile pairing, project .github/skills commands, pinned sessions and a reworked question card. This release ships macOS universal, Windows x64/ARM64 (unsigned) and iOS/Android builds; the APK is debug-signed and the IPA is development-signed, so it only installs on devices registered with the development team."
   },
   "downloads": {
-    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.48.1/GrokX_0.48.1_universal.dmg"
+    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.51.0/GrokX_0.51.0_universal.dmg",
+    "windowsX64": "https://github.com/onedou/grokx-releases/releases/download/v0.51.0/GrokX_0.51.0_x64-setup.exe",
+    "windowsArm64": "https://github.com/onedou/grokx-releases/releases/download/v0.51.0/GrokX_0.51.0_arm64-setup.exe",
+    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.51.0/GrokX-mobile-0.51.0.ipa",
+    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.51.0/GrokX-mobile-0.51.0-debug.apk"
   },
   "site": "https://grokx.bel.org.cn"
 }

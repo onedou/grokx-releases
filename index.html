@@ -393,6 +393,8 @@ return notes.filter(note =&gt; note.title.toLowerCase().includes(needle));</code
       <li><a class="download" data-download-platform="macOS"><strong data-en="macOS Universal">macOS 通用版</strong><span class="detail"><span data-en="Apple silicon and Intel Macs">Apple 芯片与 Intel Mac</span> · DMG<span class="download-size"></span></span><span class="action"><span data-en="Download">下载</span> <span aria-hidden="true">↓</span></span></a></li>
       <li><a class="download" data-download-platform="windowsX64"><strong>Windows x64</strong><span class="detail"><span data-en="Intel and AMD PCs">Intel 与 AMD 电脑</span> · EXE<span class="download-size"></span></span><span class="action"><span data-en="Download">下载</span> <span aria-hidden="true">↓</span></span></a></li>
       <li><a class="download" data-download-platform="windowsArm64"><strong>Windows ARM64</strong><span class="detail"><span data-en="ARM64 PCs">ARM64 电脑</span> · EXE<span class="download-size"></span></span><span class="action"><span data-en="Download">下载</span> <span aria-hidden="true">↓</span></span></a></li>
+      <li><a class="download" data-download-platform="ios"><strong>iPhone / iPad</strong><span class="detail"><span data-en="Development build · registered devices only">开发签名 · 仅限已注册设备</span> · IPA<span class="download-size"></span></span><span class="action"><span data-en="Download">下载</span> <span aria-hidden="true">↓</span></span></a></li>
+      <li><a class="download" data-download-platform="android"><strong>Android</strong><span class="detail"><span data-en="Debug build · sideload to install">调试签名 · 侧载安装</span> · APK<span class="download-size"></span></span><span class="action"><span data-en="Download">下载</span> <span aria-hidden="true">↓</span></span></a></li>
     </ul>
     <p class="history"><a class="support-link" href="#support" data-en="Support GrokX ↓">支持 GrokX ↓</a><a href="changelog.html" data-en="Version history →">版本更新记录 →</a></p>
     </div>
@@ -538,7 +540,13 @@ return notes.filter(note =&gt; note.title.toLowerCase().includes(needle));</code
     const repository = 'onedou/grokx-releases';
     const rawManifest = `https://raw.githubusercontent.com/${repository}/refs/heads/main/version.json`;
     const releasePage = `https://github.com/${repository}/releases/download`;
-    const suffixes = { macOS: 'universal.dmg', windowsX64: 'x64-setup.exe', windowsArm64: 'arm64-setup.exe' };
+    const files = {
+      macOS: (v) => `GrokX_${v}_universal.dmg`,
+      windowsX64: (v) => `GrokX_${v}_x64-setup.exe`,
+      windowsArm64: (v) => `GrokX_${v}_arm64-setup.exe`,
+      ios: (v) => `GrokX-mobile-${v}.ipa`,
+      android: (v) => `GrokX-mobile-${v}-debug.apk`,
+    };
     const list = document.querySelector('#installer-list');
     const links = [...list.querySelectorAll('[data-download-platform]')];
 
@@ -562,9 +570,9 @@ return notes.filter(note =&gt; note.title.toLowerCase().includes(needle));</code
           const version = manifest.version;
           const declared = new Map(Object.entries(manifest.downloads ?? {}).map(([platform, url]) => [platform.toLowerCase(), url]));
           const downloads = {};
-          for (const [platform, suffix] of Object.entries(suffixes)) {
+          for (const [platform, fileName] of Object.entries(files)) {
             const url = declared.get(platform.toLowerCase());
-            if (url === `${releasePage}/v${version}/GrokX_${version}_${suffix}`) downloads[platform] = url;
+            if (url === `${releasePage}/v${version}/${fileName(version)}`) downloads[platform] = url;
           }
           if (Object.keys(downloads).length) return { version, downloads };
         } catch {
