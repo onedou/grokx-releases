@@ -1,12 +1,12 @@
 {
-  "version": "0.48.0",
+  "version": "0.48.1",
   "date": "2026-11-14",
   "notes": {
-    "zh-CN": "新增 DeepSeek Harness 支持：通过 dsh-acp 适配器接入，可在输入栏选择 DeepSeek，密钥取自 DEEPSEEK_API_KEY 或设置中已保存的 DeepSeek Provider Key；Agent 可在对话中插入提问卡片（User Q&A）供点选回答；主页输入 / 即可弹出该项目上次会话上报的斜杠命令推荐。本次仅提供 macOS universal 安装包；Windows x64/ARM64 因 GitHub Actions 账户付款限制未能构建。",
-    "en": "Added DeepSeek Harness support through the dsh-acp adapter: pick DeepSeek in the composer, with the key taken from DEEPSEEK_API_KEY or the DeepSeek provider key saved in Settings. Agents can now ask multiple-choice questions inline as User Q&A cards. On the home screen, typing / offers the slash commands the project's CLI reported last time. This release ships the macOS universal build only; the Windows x64/ARM64 installers could not be built because GitHub Actions jobs are blocked by the account payment limit."
+    "zh-CN": "DeepSeek Harness（dsh-acp）输入 / 也弹出命令推荐：该适配器不通过 ACP 上报命令，GrokX 使用其实际内置命令（compact / plan / goal / permission / feedback）兜底，其他 CLI 维持实时上报。本次仅提供 macOS universal 安装包；Windows x64/ARM64 因 GitHub Actions 账户付款限制未能构建。",
+    "en": "DeepSeek Harness (dsh-acp) now offers slash commands too: the adapter reports none over ACP, so GrokX falls back to its actual built-in commands (compact / plan / goal / permission / feedback); other CLIs keep using their live-reported lists. This release ships the macOS universal build only; the Windows x64/ARM64 installers could not be built because GitHub Actions jobs are blocked by the account payment limit."
   },
   "downloads": {
-    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.48.0/GrokX_0.48.0_universal.dmg"
+    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.48.1/GrokX_0.48.1_universal.dmg"
   },
   "site": "https://grokx.bel.org.cn"
 }
