@@ -1,16 +1,16 @@
 {
-  "version": "0.53.2",
+  "version": "0.53.3",
   "date": "2026-11-15",
   "notes": {
-    "zh-CN": "手机端「电脑会话」界面修复：正文按 Markdown 渲染（表格可横向滚动，代码块、列表、粗体正常显示）；会话详情改为独立滚动区、输入框固定在底部，长对话可正常滑动并继续发送；新内容到达时不会再把正在向上翻看的阅读位置拽回底部。macOS 为通用包；Windows 为未签名安装包；APK 调试签名，IPA 开发签名（仅限团队已注册设备）。",
-    "en": "Fixes the phone-side session view: transcripts render as Markdown (sideways-scrollable tables, code blocks, lists, emphasis), the detail screen scrolls independently with the composer pinned to the bottom so long conversations can be read and continued, and incoming updates no longer yank the view back down while you are scrolling up. macOS ships universal; Windows installers are unsigned; the APK is debug-signed and the IPA is development-signed."
+    "zh-CN": "手机端打开「电脑会话」时直接停在最新一条消息，长对话不再需要手动滑到最底部；切换会话和电脑端流式输出新内容时都会自动跟随到底部，只有当你向上翻看历史时才保持当前位置。macOS 为通用包；Windows 为未签名安装包；APK 调试签名，IPA 开发签名（仅限团队已注册设备）。",
+    "en": "Opening a mirrored conversation on the phone now lands on the newest message, so long transcripts no longer need a manual scroll to the bottom; switching sessions and streaming updates follow the tail automatically, and the position is kept only while you are reading back through history. macOS ships universal; Windows installers are unsigned; the APK is debug-signed and the IPA is development-signed."
   },
   "downloads": {
-    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.53.2/GrokX_0.53.2_universal.dmg",
-    "windowsX64": "https://github.com/onedou/grokx-releases/releases/download/v0.53.2/GrokX_0.53.2_x64-setup.exe",
-    "windowsArm64": "https://github.com/onedou/grokx-releases/releases/download/v0.53.2/GrokX_0.53.2_arm64-setup.exe",
-    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.53.2/GrokX-mobile-0.53.2.ipa",
-    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.53.2/GrokX-mobile-0.53.2-debug.apk"
+    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.53.3/GrokX_0.53.3_universal.dmg",
+    "windowsX64": "https://github.com/onedou/grokx-releases/releases/download/v0.53.3/GrokX_0.53.3_x64-setup.exe",
+    "windowsArm64": "https://github.com/onedou/grokx-releases/releases/download/v0.53.3/GrokX_0.53.3_arm64-setup.exe",
+    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.53.3/GrokX-mobile-0.53.3.ipa",
+    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.53.3/GrokX-mobile-0.53.3-debug.apk"
   },
   "site": "https://grokx.bel.org.cn"
 }
