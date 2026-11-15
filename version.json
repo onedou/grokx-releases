@@ -1,16 +1,16 @@
 {
-  "version": "0.54.0",
+  "version": "0.54.1",
   "date": "2026-11-15",
   "notes": {
-    "zh-CN": "新增 MiMo Code CLI（mimo）ACP 集成；任务完成通知在后台结束时通过飞书机器人推送至手机端；优化手机端会话同步与展示。macOS 为通用包；Windows 为未签名安装包；APK 为调试签名，IPA 为开发签名（仅限团队已注册设备）。",
-    "en": "Added MiMo Code CLI (mimo) ACP integration; task-completion notifications now also mirror to mobile via the connected Feishu bot when GrokX is in the background; improved mobile session sync and display. macOS ships universal; Windows installers are unsigned; the APK is debug-signed and the IPA is development-signed (registered team devices only)."
+    "zh-CN": "修复 macOS 通知中心横幅点击无法唤起窗口或跳转到对应会话/定时任务运行记录的问题；点击通知切换到折叠项目中的会话时自动展开侧边栏对应项目分组。macOS 为通用包；Windows 为未签名安装包；APK 为调试签名，IPA 为开发签名（仅限团队已注册设备）。",
+    "en": "Fixed clicking macOS Notification Center banners so GrokX comes to the front and opens the corresponding chat or scheduled task run history (including during startup and for legacy banners), and automatically expands a collapsed sidebar project group when switching to its session. macOS ships universal; Windows installers are unsigned; the APK is debug-signed and the IPA is development-signed (registered team devices only)."
   },
   "downloads": {
-    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.54.0/GrokX_0.54.0_universal.dmg",
-    "windowsX64": "https://github.com/onedou/grokx-releases/releases/download/v0.54.0/GrokX_0.54.0_x64-setup.exe",
-    "windowsArm64": "https://github.com/onedou/grokx-releases/releases/download/v0.54.0/GrokX_0.54.0_arm64-setup.exe",
-    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.54.0/GrokX-mobile-0.54.0.ipa",
-    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.54.0/GrokX-mobile-0.54.0-debug.apk"
+    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.54.1/GrokX_0.54.1_universal.dmg",
+    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.54.1/GrokX_0.54.1_x64-setup.exe",
+    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.54.1/GrokX_0.54.1_arm64-setup.exe",
+    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.54.1/GrokX-mobile-0.54.1.ipa",
+    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.54.1/GrokX-mobile-0.54.1-debug.apk"
   },
   "site": "https://grokx.bel.org.cn"
 }
