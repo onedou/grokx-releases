@@ -1,16 +1,16 @@
 {
-  "version": "0.54.2",
+  "version": "0.55.0",
   "date": "2026-11-15",
   "notes": {
-    "zh-CN": "手机版参考 Muse 的阅读风格，正文增至 17px，改用中性黑白灰与圆角气泡；Markdown 表格保持可读列宽并独立横向滑动，长回复不再在 4000 字符处截断。修复桌面持续输出时手机会话内容不更新，以及旧轮询误关刚打开会话的问题。电脑和手机需一起升级。macOS 为通用包；Windows 安装包未签名；APK 为调试签名，IPA 为开发签名（仅限团队已注册设备）。",
-    "en": "Refined mobile reading with Muse-inspired neutral colors, rounded bubbles, and 17px body text. Markdown tables retain readable columns and scroll horizontally; long replies are no longer cut off at 4,000 characters. Fixed desktop streaming updates being delayed until a quiet gap and stale polls closing newly opened sessions. Update both desktop and mobile. macOS is universal; Windows installers are unsigned; the APK is debug-signed and the IPA is development-signed for registered team devices only."
+    "zh-CN": "手机端新增安全保存登录状态，首次登录后最多保留 30 天，关闭或重启 App 后自动恢复并续期，不必每次重新进行飞书授权。断网保留登录，主动退出、移除电脑或授权失效时清除。凭据使用 iOS 钥匙串和 Android Keystore 加密存储。macOS 为通用包；Windows 安装包未签名；APK 为调试签名，IPA 为开发签名，仅限团队已注册设备。",
+    "en": "Mobile sign-in is securely saved for up to 30 days from the initial authorization, with automatic restore and token renewal after app restarts. Network failures preserve the saved login; signing out, removing the computer or revoked authorization clears it. Credentials use iOS Keychain and Android Keystore encryption. macOS is universal; Windows installers are unsigned; the APK is debug-signed and the IPA is development-signed for registered team devices only."
   },
   "downloads": {
-    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.54.2/GrokX_0.54.2_universal.dmg",
-    "windowsX64": "https://github.com/onedou/grokx-releases/releases/download/v0.54.2/GrokX_0.54.2_x64-setup.exe",
-    "windowsArm64": "https://github.com/onedou/grokx-releases/releases/download/v0.54.2/GrokX_0.54.2_arm64-setup.exe",
-    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.54.2/GrokX-mobile-0.54.2.ipa",
-    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.54.2/GrokX-mobile-0.54.2-debug.apk"
+    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.55.0/GrokX_0.55.0_universal.dmg",
+    "windowsX64": "https://github.com/onedou/grokx-releases/releases/download/v0.55.0/GrokX_0.55.0_x64-setup.exe",
+    "windowsArm64": "https://github.com/onedou/grokx-releases/releases/download/v0.55.0/GrokX_0.55.0_arm64-setup.exe",
+    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.55.0/GrokX-mobile-0.55.0.ipa",
+    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.55.0/GrokX-mobile-0.55.0-debug.apk"
   },
   "site": "https://grokx.bel.org.cn"
 }
