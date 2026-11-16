@@ -48,8 +48,14 @@
     <p data-en="See what changed in each public release of GrokX, from newest to oldest.">从新到旧查看 GrokX 各公开版本的改动和安装包。</p>
   </header>
   <ol class="releases">
+    <li id="v0.56.0">
+      <div class="release-version"><h2>v0.56.0</h2><span class="latest" data-en="Latest">最新发布</span></div>
+      <p data-en="Phone and desktop conversations now sync in real time over WebSocket, and phones can create a session in an existing project. Settings are grouped by agent. Antigravity background wakeup results are merged into their original turn, including when a follow-up is sent during replay. macOS is universal; Windows installers are unsigned; the APK is debug-signed with the previous release identity; the IPA is development-signed for registered team devices only. Self-hosted mobile sync services must be updated and forward WebSocket Upgrade headers.">手机与电脑会话改用 WebSocket 实时同步，支持从手机在已有项目中新建会话；设置页按 Agent 分组。Antigravity 后台唤醒结果自动并入原回合，并修复回收期间追问造成的结果错位。macOS 为 universal 包；Windows 安装包未签名；APK 为 debug 签名，沿用上版签名；IPA 为开发签名，仅限团队注册设备。自托管手机同步服务需同步更新，并透传 WebSocket Upgrade。</p>
+      <a class="release-link" href="https://github.com/onedou/grokx-releases/releases/tag/v0.56.0"><span data-en="Installers">安装包</span> <span class="sr-only">v0.56.0</span><span aria-hidden="true">↗</span></a>
+    </li>
+
     <li id="v0.55.2">
-      <div class="release-version"><h2>v0.55.2</h2><span class="latest" data-en="Latest">最新发布</span></div>
+      <div class="release-version"><h2>v0.55.2</h2></div>
       <p data-en="Removed the GrokX/MOBILE header after mobile sign-in, freeing about 65px for conversation content. Theme and language controls now live at the top right of the Computer page; the app name and version appear at its bottom. Sign-in controls and system safe-area spacing are retained, and settings wrap on narrow screens with enlarged text. macOS is universal; Windows installers are unsigned; the APK is debug-signed with the same identity as 0.55.1; the IPA is development-signed for registered team devices only.">手机已登录界面移除 GrokX/MOBILE 顶栏，主题与语言切换移至「电脑」页右上角，应用名称和版本显示在该页底部，让对话区再增加约 65px 阅读空间。保留登录页设置入口及系统状态栏安全区，窄屏和放大字号下设置控件可换行。macOS 为通用包；Windows 安装包未签名；APK 为调试签名，沿用 0.55.1 签名；IPA 为开发签名，仅限团队注册设备。</p>
       <a class="release-link" href="https://github.com/onedou/grokx-releases/releases/tag/v0.55.2"><span data-en="Installers">安装包</span> <span class="sr-only">v0.55.2</span><span aria-hidden="true">↗</span></a>
     </li>
