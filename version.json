@@ -1,16 +1,16 @@
 {
-  "version": "0.57.1",
+  "version": "0.58.0",
   "date": "2026-11-16",
   "notes": {
-    "zh-CN": "修复 Antigravity 等待后台任务时回复延迟出现、需要再发一条消息才能收到结果的问题：工具已完成后继续同步反应式唤醒输出，接收结果不再受自动续跑开关和三次额度限制；追问时先同步上一回合，停止后不再重启旧轮询。手机端可删除会话，输入区选项与会话导航布局更紧凑。macOS 为 universal 包，未公证；Windows 安装包未签名；APK 沿用历史 debug 签名；IPA 为开发签名，仅限团队注册设备。",
-    "en": "Fixed Antigravity replies arriving only after another message while waiting for background tasks. Reactive Wakeup output continues syncing after tools complete, independently of the automatic-resume setting and its three-prompt cap. Follow-up messages first sync the previous turn, and stopping invalidates old polling loops. Mobile sessions can be deleted, with more compact composer controls and session navigation. macOS is universal and not notarized. Windows installers are unsigned. The APK retains its previous debug signing identity. The IPA is development-signed for registered team devices only."
+    "zh-CN": "新增 Qwen Code 原生 ACP 支持：聊天、Bot、定时任务和飞书设置均可选择 Qwen Code；自动检测 CLI，提供安装及 /auth 登录指引；读取实际模型和推理强度，兼容图片能力与上下文窗口，沿用权限审批和会话恢复。Qwen Code 需 Node.js 22+，使用自身模型配置。macOS 为 universal 包，未公证；Windows 安装包未签名；APK 沿用历史 debug 签名；IPA 为开发签名，仅限团队注册设备。",
+    "en": "Added native Qwen Code ACP support in chats, Bots, scheduled tasks and Feishu settings, with CLI detection, installation and /auth setup guidance. Models and reasoning levels come from ACP, including Qwen image capabilities and context windows, with existing approvals and session recovery. Qwen Code requires Node.js 22+ and its own provider configuration. macOS is universal and not notarized. Windows installers are unsigned. The APK retains its previous debug signing identity. The IPA is development-signed for registered team devices only."
   },
   "downloads": {
-    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.57.1/GrokX_0.57.1_universal.dmg",
-    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.57.1/GrokX_0.57.1_x64-setup.exe",
-    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.57.1/GrokX_0.57.1_arm64-setup.exe",
-    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.57.1/GrokX-mobile-0.57.1.ipa",
-    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.57.1/GrokX-mobile-0.57.1-debug.apk"
+    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.58.0/GrokX_0.58.0_universal.dmg",
+    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.58.0/GrokX_0.58.0_x64-setup.exe",
+    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.58.0/GrokX_0.58.0_arm64-setup.exe",
+    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.58.0/GrokX-mobile-0.58.0.ipa",
+    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.58.0/GrokX-mobile-0.58.0-debug.apk"
   },
   "site": "https://grokx.bel.org.cn"
 }
