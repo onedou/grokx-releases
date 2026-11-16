@@ -1,16 +1,16 @@
 {
-  "version": "0.56.1",
+  "version": "0.56.2",
   "date": "2026-11-16",
   "notes": {
-    "zh-CN": "移除手机版「先体验界面」入口和演示模式，包括模拟回复、模拟定时任务与演示提示；连接电脑并登录后使用真实会话和任务。macOS 为 universal 包；Windows 安装包未签名；APK 为 debug 签名，沿用上版签名；IPA 为开发签名，仅限团队注册设备。",
-    "en": "Removed the mobile “Explore the interface” entry and demo mode, including simulated replies, sample schedules and demo notices. Connect your computer and sign in to use real sessions and tasks. macOS is universal; Windows installers are unsigned; the APK is debug-signed with the previous release identity; the IPA is development-signed for registered team devices only."
+    "zh-CN": "修复手机版登录后提示「网络连接失败」、电脑会话无法加载的问题，恢复被安全策略拦截的安全 WebSocket 实时同步。已验证 Android 0.56.1 覆盖升级至 0.56.2。macOS 为 universal 包；Windows 安装包未签名；APK 为 debug 签名，沿用上版签名；IPA 为开发签名，仅限团队注册设备。",
+    "en": "Fixed mobile sessions failing with a network error after sign-in by restoring secure WebSocket synchronization blocked by the page security policy. Verified an in-place Android upgrade from 0.56.1 to 0.56.2. macOS is universal; Windows installers are unsigned; the APK retains the previous debug signing identity; the IPA is development-signed for registered team devices only."
   },
   "downloads": {
-    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.56.1/GrokX_0.56.1_universal.dmg",
-    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.56.1/GrokX_0.56.1_x64-setup.exe",
-    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.56.1/GrokX_0.56.1_arm64-setup.exe",
-    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.56.1/GrokX-mobile-0.56.1.ipa",
-    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.56.1/GrokX-mobile-0.56.1-debug.apk"
+    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.56.2/GrokX_0.56.2_universal.dmg",
+    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.56.2/GrokX_0.56.2_x64-setup.exe",
+    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.56.2/GrokX_0.56.2_arm64-setup.exe",
+    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.56.2/GrokX-mobile-0.56.2.ipa",
+    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.56.2/GrokX-mobile-0.56.2-debug.apk"
   },
   "site": "https://grokx.bel.org.cn"
 }
