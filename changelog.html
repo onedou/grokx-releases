@@ -48,8 +48,14 @@
     <p data-en="See what changed in each public release of GrokX, from newest to oldest.">从新到旧查看 GrokX 各公开版本的改动和安装包。</p>
   </header>
   <ol class="releases">
+    <li id="v0.57.1">
+      <div class="release-version"><h2>v0.57.1</h2><span class="latest" data-en="Latest">最新发布</span></div>
+      <p data-en="Fixed Antigravity replies arriving only after another message while waiting for background tasks. Reactive Wakeup output continues syncing after tools complete, independently of the automatic-resume setting and its three-prompt cap. Follow-up messages first sync the previous turn, and stopping invalidates old polling loops. Mobile sessions can be deleted, with more compact composer controls and session navigation. macOS is universal and not notarized. Windows installers are unsigned. The APK retains its previous debug signing identity. The IPA is development-signed for registered team devices only.">修复 Antigravity 等待后台任务时回复延迟出现、需要再发一条消息才能收到结果的问题：工具已完成后继续同步反应式唤醒输出，接收结果不再受自动续跑开关和三次额度限制；追问时先同步上一回合，停止后不再重启旧轮询。手机端可删除会话，输入区选项与会话导航布局更紧凑。macOS 为 universal 包，未公证；Windows 安装包未签名；APK 沿用历史 debug 签名；IPA 为开发签名，仅限团队注册设备。</p>
+      <a class="release-link" href="https://github.com/onedou/grokx-releases/releases/tag/v0.57.1"><span data-en="Installers">安装包</span> <span class="sr-only">v0.57.1</span><span aria-hidden="true">↗</span></a>
+    </li>
+
     <li id="v0.56.4">
-      <div class="release-version"><h2>v0.56.4</h2><span class="latest" data-en="Latest">最新发布</span></div>
+      <div class="release-version"><h2>v0.56.4</h2></div>
       <p data-en="Trae can now send images to vision models whose provider can carry them, including MiMo V2.6 Flash and Pro. Providers that cannot forward images, such as Google, still refuse them. The changed-files panel can be resized from the bottom-left corner. The mobile app refreshes its sign-in and reconnects after the sync connection drops, and the conversation header shows online and in-progress state more clearly. macOS is a universal build and is not notarized. Windows installers are unsigned. The APK retains its previous debug signing identity. The IPA is development-signed for registered team devices only.">Trae 现在可以把图片发给支持识图、且提供商能接收图片的模型（如 MiMo V2.6 Flash/Pro）；Google 等无法转发图片的提供商仍会拒绝。文件变更面板可从左下角调整大小。手机端在同步断开后会刷新登录并重连，对话标题更清楚地显示在线与进行中状态。macOS 为 universal 包，未公证；Windows 安装包未签名；APK 沿用历史 debug 签名；IPA 为开发签名，仅限团队注册设备。</p>
       <a class="release-link" href="https://github.com/onedou/grokx-releases/releases/tag/v0.56.4"><span data-en="Installers">安装包</span> <span class="sr-only">v0.56.4</span><span aria-hidden="true">↗</span></a>
     </li>
