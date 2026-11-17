@@ -1,16 +1,16 @@
 {
-  "version": "0.66.2",
+  "version": "0.67.0",
   "date": "2026-11-18",
   "notes": {
-    "zh-CN": "302.AI 编程入口移到 Qwen Code 下方、302.AI 媒体上方，便于在编程和媒体能力间切换。包含自动加载、搜索和刷新聊天模型，以及独立媒体模型选择。macOS 为 universal 开发签名、未公证；Windows 未签名；APK 为 debug 签名；IPA 为开发签名，仅适用于团队已注册设备。",
-    "en": "302.AI Coding now appears below Qwen Code and directly above 302.AI Media. Includes automatic loading, search and refresh of chat models plus separate media-model selection. macOS is universal and development-signed, not notarized; Windows installers are unsigned; APK is debug-signed; IPA is development-signed for registered team devices only."
+    "zh-CN": "新增按命令行设置网络代理：每个 CLI 可跟随全局、使用独立 HTTP/SOCKS 代理或直连；保存后仅重连受影响的会话，并保留已有对话。安装、登录与模型查询使用对应代理；修复 Codex/Kimi 账号登录误用 OpenCode 代理的问题。macOS 为 universal 开发签名、未公证；Windows 安装包未签名；APK 为 debug 签名；IPA 为开发签名，仅限团队已注册设备，均非商店包。",
+    "en": "Configure network proxies per CLI: inherit the global setting, use a separate HTTP/SOCKS proxy, or connect directly. Saving reconnects only affected sessions and preserves conversation history. Install, login and model lookup use the corresponding proxy; fixed Codex/Kimi account login using the OpenCode proxy. macOS is universal and development-signed, not notarized; Windows installers are unsigned; APK is debug-signed; IPA is development-signed for registered team devices only. These are not store builds."
   },
   "downloads": {
-    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.66.2/GrokX_0.66.2_universal.dmg",
-    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.66.2/GrokX_0.66.2_x64-setup.exe",
-    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.66.2/GrokX_0.66.2_arm64-setup.exe",
-    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.66.2/GrokX-mobile-0.66.2.ipa",
-    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.66.2/GrokX-mobile-0.66.2-debug.apk"
+    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.67.0/GrokX_0.67.0_universal.dmg",
+    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.67.0/GrokX_0.67.0_x64-setup.exe",
+    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.67.0/GrokX_0.67.0_arm64-setup.exe",
+    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.67.0/GrokX-mobile-0.67.0.ipa",
+    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.67.0/GrokX-mobile-0.67.0-debug.apk"
   },
   "site": "https://grokx.bel.org.cn"
 }
