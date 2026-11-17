@@ -1,16 +1,16 @@
 {
-  "version": "0.59.0",
+  "version": "0.60.1",
   "date": "2026-11-17",
   "notes": {
-    "zh-CN": "手机端支持连接多台电脑并随时切换，登录状态按电脑分别保存（最多 8 台），旧的单电脑配置自动迁移；会话列表按所选电脑过滤并显示各自在线状态。桌面端向同步服务注册文件夹名，手机按名称识别自己的电脑。修复列表中图标大小不一致：图标改用字号缩放，不再依赖 CSS zoom。本地登录状态校验更严格。macOS 为 universal 包，未公证；Windows 安装包未签名；APK 沿用历史 debug 签名；IPA 为开发签名，仅限团队注册设备。",
-    "en": "The mobile app can now connect to and switch between multiple computers, keeping a separate sign-in for each (up to 8) with automatic migration of the old single-computer setting; session lists are filtered by the selected computer with per-computer online state. The desktop registers its folder label with the sync service so the phone can identify its own computer. Fixed inconsistent icon sizes in lists by scaling icons with the text size instead of CSS zoom. Stricter local sign-in validation. macOS is universal and not notarized. Windows installers are unsigned. The APK retains its previous debug signing identity. The IPA is development-signed for registered team devices only."
+    "zh-CN": "优化 Bot 设置中的 CLI 选择区：选项采用等宽网格，随窗口宽度和文字大小自动换行，MiMo、Qwen Code 等末尾选项不再被截断。保留直接切换和选中态，补充键盘焦点与辅助技术状态。macOS 为 universal 包，未公证；Windows 安装包未签名；APK 为 debug 签名；IPA 为开发签名，仅限团队注册设备。",
+    "en": "The CLI picker in Bot settings now uses an equal-width grid that wraps with the window and text size, keeping all choices including MiMo and Qwen Code visible. Direct switching and the selected state are preserved, with visible keyboard focus and accessible selection state. macOS is universal and not notarized. Windows installers are unsigned. The APK is debug-signed. The IPA is development-signed for registered team devices only."
   },
   "downloads": {
-    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.59.0/GrokX_0.59.0_universal.dmg",
-    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.59.0/GrokX_0.59.0_x64-setup.exe",
-    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.59.0/GrokX_0.59.0_arm64-setup.exe",
-    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.59.0/GrokX-mobile-0.59.0.ipa",
-    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.59.0/GrokX-mobile-0.59.0-debug.apk"
+    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.60.1/GrokX_0.60.1_universal.dmg",
+    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.60.1/GrokX_0.60.1_x64-setup.exe",
+    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.60.1/GrokX_0.60.1_arm64-setup.exe",
+    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.60.1/GrokX-mobile-0.60.1.ipa",
+    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.60.1/GrokX-mobile-0.60.1-debug.apk"
   },
   "site": "https://grokx.bel.org.cn"
 }
