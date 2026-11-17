@@ -48,8 +48,14 @@
     <p data-en="See what changed in each public release of GrokX, from newest to oldest.">从新到旧查看 GrokX 各公开版本的改动和安装包。</p>
   </header>
   <ol class="releases">
+    <li id="v0.63.0">
+      <div class="release-version"><h2>v0.63.0</h2><span class="latest" data-en="Latest">最新发布</span></div>
+      <p data-en="New network proxy setting: enter http://127.0.0.1:7890 or socks5://host:port and every CLI GrokX starts (including 302.AI Media Studio) uses it; running sessions reconnect after saving, and local addresses stay direct. Queued messages can be edited before sending and switched between queued and steer mode (sent when the current tool/thinking finishes). The mobile app resumes sync automatically on network return, foreground, or reconnect; session sync now carries the selected model and its list. macOS is universal and development-signed, not notarized. Windows installers are unsigned. The APK is debug-signed. The IPA is development-signed for registered team devices only.">新增网络代理设置：填写 http://127.0.0.1:7890 或 socks5://主机:端口，GrokX 启动的所有命令行（含 302.AI Media Studio）都使用该代理，保存后运行中的会话会重新连接，本机地址不走代理。排队消息发送前可编辑，并可在「排队」与「引导」（当前工具/思考结束后立即发送）间切换。手机端在网络恢复、回到前台或重连后自动恢复同步；会话同步携带所选模型与模型列表。macOS 为 universal，开发签名未公证；Windows 安装包未签名；APK 为 debug 签名；IPA 为开发签名，仅限团队注册设备。</p>
+      <a class="release-link" href="https://github.com/onedou/grokx-releases/releases/tag/v0.63.0"><span data-en="Installers">安装包</span> <span class="sr-only">v0.63.0</span><span aria-hidden="true">↗</span></a>
+    </li>
+
     <li id="v0.59.0">
-      <div class="release-version"><h2>v0.59.0</h2><span class="latest" data-en="Latest">最新发布</span></div>
+      <div class="release-version"><h2>v0.59.0</h2></div>
       <p data-en="The mobile app can now connect to and switch between multiple computers, keeping a separate sign-in for each (up to 8) with automatic migration of the old single-computer setting; session lists are filtered by the selected computer with per-computer online state. The desktop registers its folder label with the sync service so the phone can identify its own computer. Fixed inconsistent icon sizes in lists by scaling icons with the text size instead of CSS zoom. Stricter local sign-in validation. macOS is universal and not notarized. Windows installers are unsigned. The APK retains its previous debug signing identity. The IPA is development-signed for registered team devices only.">手机端支持连接多台电脑并随时切换，登录状态按电脑分别保存（最多 8 台），旧的单电脑配置自动迁移；会话列表按所选电脑过滤并显示各自在线状态。桌面端向同步服务注册文件夹名，手机按名称识别自己的电脑。修复列表中图标大小不一致：图标改用字号缩放，不再依赖 CSS zoom。本地登录状态校验更严格。macOS 为 universal 包，未公证；Windows 安装包未签名；APK 沿用历史 debug 签名；IPA 为开发签名，仅限团队注册设备。</p>
       <a class="release-link" href="https://github.com/onedou/grokx-releases/releases/tag/v0.59.0"><span data-en="Installers">安装包</span> <span class="sr-only">v0.59.0</span><span aria-hidden="true">↗</span></a>
     </li>

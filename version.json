@@ -1,16 +1,16 @@
 {
-  "version": "0.62.0",
+  "version": "0.63.0",
   "date": "2026-11-17",
   "notes": {
-    "zh-CN": "新增第三方提供商模型列表搜索：编辑提供商时，模型列表顶部新增搜索框，可按模型 ID 快速过滤勾选，中英文界面均支持。macOS 为 universal，开发签名未公证；Windows 安装包未签名；APK 为 debug 签名；IPA 为开发签名，仅限团队已注册设备。",
-    "en": "Add a filter box to the model list in the provider editor: type to narrow models by ID before ticking them. UI text is localized in both English and Simplified Chinese. macOS is universal and development-signed, not notarized; Windows installers are unsigned; APK is debug-signed; IPA is development-signed for registered team devices."
+    "zh-CN": "新增网络代理设置：填写 http://127.0.0.1:7890 或 socks5://主机:端口，GrokX 启动的所有命令行（含 302.AI Media Studio）都使用该代理，保存后运行中的会话会重新连接，本机地址不走代理。排队消息发送前可编辑，并可在「排队」与「引导」（当前工具/思考结束后立即发送）间切换。手机端在网络恢复、回到前台或重连后自动恢复同步；会话同步携带所选模型与模型列表。macOS 为 universal，开发签名未公证；Windows 安装包未签名；APK 为 debug 签名；IPA 为开发签名，仅限团队已注册设备，均非商店包。",
+    "en": "New network proxy setting: enter http://127.0.0.1:7890 or socks5://host:port and every CLI GrokX starts (including 302.AI Media Studio) uses it; running sessions reconnect after saving, and local addresses stay direct. Queued messages can be edited before sending and switched between queued and steer mode (sent when the current tool/thinking finishes). The mobile app resumes sync automatically on network return, foreground, or reconnect; session sync now carries the selected model and its list. macOS is universal and development-signed, not notarized; Windows installers are unsigned; APK is debug-signed; IPA is development-signed for registered team devices only (none are store builds)."
   },
   "downloads": {
-    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.62.0/GrokX_0.62.0_universal.dmg",
-    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.62.0/GrokX_0.62.0_x64-setup.exe",
-    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.62.0/GrokX_0.62.0_arm64-setup.exe",
-    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.62.0/GrokX-mobile-0.62.0.ipa",
-    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.62.0/GrokX-mobile-0.62.0-debug.apk"
+    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.63.0/GrokX_0.63.0_universal.dmg",
+    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.63.0/GrokX_0.63.0_x64-setup.exe",
+    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.63.0/GrokX_0.63.0_arm64-setup.exe",
+    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.63.0/GrokX-mobile-0.63.0.ipa",
+    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.63.0/GrokX-mobile-0.63.0-debug.apk"
   },
   "site": "https://grokx.bel.org.cn"
 }
