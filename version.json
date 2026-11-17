@@ -1,16 +1,16 @@
 {
-  "version": "0.60.4",
+  "version": "0.60.5",
   "date": "2026-11-17",
   "notes": {
-    "zh-CN": "修复 CLI 调用内置浏览器时网页错位覆盖聊天区、右侧面板空白的问题：消除视图创建与坐标上报之间的竞态，坐标有效后才显示网页，并一次性更新位置和尺寸。macOS 为 universal，未公证；Windows 安装包未签名；APK 沿用上一版 debug 签名；IPA 为开发签名，仅限团队注册设备。",
-    "en": "Fix CLI-driven built-in browser pages appearing over the chat while the browser pane stays blank. Reapply pane bounds after view creation, wait for valid coordinates before showing the page, and update position and size together. macOS is universal and not notarized; Windows installers are unsigned; the APK retains the previous debug signing identity; the IPA is development-signed for registered team devices only."
+    "zh-CN": "优化 Windows 切换 harness 和后台 CLI 探测时意外弹出终端的问题，标准 npm 启动器直接以隐藏窗口模式运行；补齐 OpenCode 认证探测等后台命令的窗口隐藏。保留登录和安装终端。macOS 为 universal，未公证；Windows 安装包未签名；APK 沿用上一版 debug 签名；IPA 为开发签名，仅限团队注册设备。",
+    "en": "Reduce unexpected terminal windows while switching harnesses and probing CLIs on Windows by launching standard npm Node entrypoints directly with no console window. Hide OpenCode credential probes and other background CLI commands. Keep requested login and installation terminals. macOS is universal and not notarized; Windows installers are unsigned; the APK retains the previous debug signing identity; the IPA is development-signed for registered team devices only."
   },
   "downloads": {
-    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.60.4/GrokX_0.60.4_universal.dmg",
-    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.60.4/GrokX_0.60.4_x64-setup.exe",
-    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.60.4/GrokX_0.60.4_arm64-setup.exe",
-    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.60.4/GrokX-mobile-0.60.4.ipa",
-    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.60.4/GrokX-mobile-0.60.4-debug.apk"
+    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.60.5/GrokX_0.60.5_universal.dmg",
+    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.60.5/GrokX_0.60.5_x64-setup.exe",
+    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.60.5/GrokX_0.60.5_arm64-setup.exe",
+    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.60.5/GrokX-mobile-0.60.5.ipa",
+    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.60.5/GrokX-mobile-0.60.5-debug.apk"
   },
   "site": "https://grokx.bel.org.cn"
 }
