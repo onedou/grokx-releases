@@ -1,16 +1,16 @@
 {
-  "version": "0.60.1",
+  "version": "0.60.2",
   "date": "2026-11-17",
   "notes": {
-    "zh-CN": "优化 Bot 设置中的 CLI 选择区：选项采用等宽网格，随窗口宽度和文字大小自动换行，MiMo、Qwen Code 等末尾选项不再被截断。保留直接切换和选中态，补充键盘焦点与辅助技术状态。macOS 为 universal 包，未公证；Windows 安装包未签名；APK 为 debug 签名；IPA 为开发签名，仅限团队注册设备。",
-    "en": "The CLI picker in Bot settings now uses an equal-width grid that wraps with the window and text size, keeping all choices including MiMo and Qwen Code visible. Direct switching and the selected state are preserved, with visible keyboard focus and accessible selection state. macOS is universal and not notarized. Windows installers are unsigned. The APK is debug-signed. The IPA is development-signed for registered team devices only."
+    "zh-CN": "修复 Windows 部分环境下 MiMo Code CLI 在终端可用但 GrokX 无法连接的问题：识别 npm 包内的原生程序并以临时副本启动，避免依赖 GUI 的 Node PATH，同时保留升级与卸载能力；版本检测增加超时，模型配置目录跟随 MiMo 环境变量，模型列表探测失败时显示错误。保留 0.60.1 的 Bot 设置布局优化。macOS 为 universal 包，未公证；Windows 安装包未签名；APK 为 debug 签名；IPA 为开发签名，仅限团队注册设备。Windows 已完成交叉构建与产物校验，尚未进行实机运行复测。",
+    "en": "Improved MiMo Code CLI connection on Windows: discover the native executable inside npm installations and run a temporary copy, removing the GUI Node PATH dependency while preserving upgrades and uninstallation. Version checks now time out, recent-model paths honor MiMo environment settings, and model-catalog failures are visible. Includes the Bot settings layout improvements from 0.60.1. macOS is universal and not notarized; Windows installers are unsigned; the APK is debug-signed; the IPA is development-signed for registered team devices. Windows builds and artifacts were verified, but runtime testing on a Windows machine remains outstanding."
   },
   "downloads": {
-    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.60.1/GrokX_0.60.1_universal.dmg",
-    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.60.1/GrokX_0.60.1_x64-setup.exe",
-    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.60.1/GrokX_0.60.1_arm64-setup.exe",
-    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.60.1/GrokX-mobile-0.60.1.ipa",
-    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.60.1/GrokX-mobile-0.60.1-debug.apk"
+    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.60.2/GrokX_0.60.2_universal.dmg",
+    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.60.2/GrokX_0.60.2_x64-setup.exe",
+    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.60.2/GrokX_0.60.2_arm64-setup.exe",
+    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.60.2/GrokX-mobile-0.60.2.ipa",
+    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.60.2/GrokX-mobile-0.60.2-debug.apk"
   },
   "site": "https://grokx.bel.org.cn"
 }
