@@ -48,8 +48,14 @@
     <p data-en="See what changed in each public release of GrokX, from newest to oldest.">从新到旧查看 GrokX 各公开版本的改动和安装包。</p>
   </header>
   <ol class="releases">
+    <li id="v0.59.0">
+      <div class="release-version"><h2>v0.59.0</h2><span class="latest" data-en="Latest">最新发布</span></div>
+      <p data-en="The mobile app can now connect to and switch between multiple computers, keeping a separate sign-in for each (up to 8) with automatic migration of the old single-computer setting; session lists are filtered by the selected computer with per-computer online state. The desktop registers its folder label with the sync service so the phone can identify its own computer. Fixed inconsistent icon sizes in lists by scaling icons with the text size instead of CSS zoom. Stricter local sign-in validation. macOS is universal and not notarized. Windows installers are unsigned. The APK retains its previous debug signing identity. The IPA is development-signed for registered team devices only.">手机端支持连接多台电脑并随时切换，登录状态按电脑分别保存（最多 8 台），旧的单电脑配置自动迁移；会话列表按所选电脑过滤并显示各自在线状态。桌面端向同步服务注册文件夹名，手机按名称识别自己的电脑。修复列表中图标大小不一致：图标改用字号缩放，不再依赖 CSS zoom。本地登录状态校验更严格。macOS 为 universal 包，未公证；Windows 安装包未签名；APK 沿用历史 debug 签名；IPA 为开发签名，仅限团队注册设备。</p>
+      <a class="release-link" href="https://github.com/onedou/grokx-releases/releases/tag/v0.59.0"><span data-en="Installers">安装包</span> <span class="sr-only">v0.59.0</span><span aria-hidden="true">↗</span></a>
+    </li>
+
     <li id="v0.57.1">
-      <div class="release-version"><h2>v0.57.1</h2><span class="latest" data-en="Latest">最新发布</span></div>
+      <div class="release-version"><h2>v0.57.1</h2></div>
       <p data-en="Fixed Antigravity replies arriving only after another message while waiting for background tasks. Reactive Wakeup output continues syncing after tools complete, independently of the automatic-resume setting and its three-prompt cap. Follow-up messages first sync the previous turn, and stopping invalidates old polling loops. Mobile sessions can be deleted, with more compact composer controls and session navigation. macOS is universal and not notarized. Windows installers are unsigned. The APK retains its previous debug signing identity. The IPA is development-signed for registered team devices only.">修复 Antigravity 等待后台任务时回复延迟出现、需要再发一条消息才能收到结果的问题：工具已完成后继续同步反应式唤醒输出，接收结果不再受自动续跑开关和三次额度限制；追问时先同步上一回合，停止后不再重启旧轮询。手机端可删除会话，输入区选项与会话导航布局更紧凑。macOS 为 universal 包，未公证；Windows 安装包未签名；APK 沿用历史 debug 签名；IPA 为开发签名，仅限团队注册设备。</p>
       <a class="release-link" href="https://github.com/onedou/grokx-releases/releases/tag/v0.57.1"><span data-en="Installers">安装包</span> <span class="sr-only">v0.57.1</span><span aria-hidden="true">↗</span></a>
     </li>
