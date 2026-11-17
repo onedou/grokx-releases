@@ -1,16 +1,16 @@
 {
-  "version": "0.61.0",
+  "version": "0.62.0",
   "date": "2026-11-17",
   "notes": {
-    "zh-CN": "新增 302.AI Media Studio CLI 支持：可在聊天、Bot、定时任务和飞书中选择 302.AI，支持登录引导、独立会话与恢复、图片和本地文件输入、媒体结果展示。发送任务前沿用 GrokX 权限审批；不自动重试生成。需要 Node.js 22+ 及已登录的 msc（已核对官方 CLI 0.1.8）。真实付费生成未执行。macOS 为 universal，开发签名未公证；Windows 安装包未签名；APK 沿用上一版 debug 签名；IPA 为开发签名，仅限团队已注册设备。",
-    "en": "Add 302.AI Media Studio CLI as a selectable agent for chats, Bots, schedules and Feishu. Includes terminal login guidance, isolated resumable sessions, image/local file input and media results. Tasks use GrokX approval and are never retried automatically. Requires Node.js 22+ and an authenticated msc installation; checked against official CLI 0.1.8. No paid generation was run. macOS is universal and development-signed, not notarized; Windows installers are unsigned; APK retains the prior debug signing identity; IPA is development-signed for registered team devices."
+    "zh-CN": "新增第三方提供商模型列表搜索：编辑提供商时，模型列表顶部新增搜索框，可按模型 ID 快速过滤勾选，中英文界面均支持。macOS 为 universal，开发签名未公证；Windows 安装包未签名；APK 为 debug 签名；IPA 为开发签名，仅限团队已注册设备。",
+    "en": "Add a filter box to the model list in the provider editor: type to narrow models by ID before ticking them. UI text is localized in both English and Simplified Chinese. macOS is universal and development-signed, not notarized; Windows installers are unsigned; APK is debug-signed; IPA is development-signed for registered team devices."
   },
   "downloads": {
-    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.61.0/GrokX_0.61.0_universal.dmg",
-    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.61.0/GrokX_0.61.0_x64-setup.exe",
-    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.61.0/GrokX_0.61.0_arm64-setup.exe",
-    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.61.0/GrokX-mobile-0.61.0.ipa",
-    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.61.0/GrokX-mobile-0.61.0-debug.apk"
+    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.62.0/GrokX_0.62.0_universal.dmg",
+    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.62.0/GrokX_0.62.0_x64-setup.exe",
+    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.62.0/GrokX_0.62.0_arm64-setup.exe",
+    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.62.0/GrokX-mobile-0.62.0.ipa",
+    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.62.0/GrokX-mobile-0.62.0-debug.apk"
   },
   "site": "https://grokx.bel.org.cn"
 }
