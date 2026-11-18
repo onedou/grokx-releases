@@ -1,16 +1,16 @@
 {
-  "version": "0.68.1",
+  "version": "0.69.0",
   "date": "2026-11-18",
   "notes": {
-    "zh-CN": "Antigravity 会话显示真实 token 用量（从本地 transcript.jsonl 汇总），额度查询支持代理并延长超时；grok 回合进行中实时累计本会话 token，不再等会话结束。作曲器改为两行布局：状态开关在左、模型与发送在右，模型菜单宽度按内容自适应；用量气泡数字与单位分离显示。macOS 为 universal 开发签名、未公证；Windows 安装包未签名；APK 为 debug 签名；IPA 为开发签名，仅限团队已注册设备，均非商店包。",
-    "en": "Antigravity sessions now show real token usage aggregated from the local transcript.jsonl, with usage limits honouring the proxy setting and a longer timeout. grok accumulates this session's tokens live during a turn instead of waiting for it to end. The composer uses a two-row layout (status left, model and send right) with content-sized model menus, and the usage bubble splits the number from its unit. macOS is universal and development-signed, not notarized; Windows installers are unsigned; APK is debug-signed; IPA is development-signed for registered team devices only. These are not store builds."
+    "zh-CN": "手机和电脑之间的消息不再经过飞书群，飞书只用来验证登录。会话、在线状态和定时任务都走自托管同步服务；旧连接码仍可导入，群 ID 与机器人 ID 会被忽略。使用手机定时任务需要把同步服务更新到本版本，未更新时仍可浏览和续聊。macOS 为 universal 开发签名、未公证；Windows 安装包未签名；APK 为 debug 签名；IPA 为开发签名，仅限团队已注册设备，均非商店包。",
+    "en": "Phone and computer no longer exchange messages through a Feishu group. Feishu only verifies sign-in. Sessions, presence, and scheduled tasks go through the self-hosted sync service. Older pairing codes still import; their group and bot ids are ignored. Scheduled tasks on the phone need the sync service updated to this version; browsing and continuing chats still work before that update. macOS is universal and development-signed, not notarized; Windows installers are unsigned; APK is debug-signed; IPA is development-signed for registered team devices only. These are not store builds."
   },
   "downloads": {
-    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.68.1/GrokX_0.68.1_universal.dmg",
-    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.68.1/GrokX_0.68.1_x64-setup.exe",
-    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.68.1/GrokX_0.68.1_arm64-setup.exe",
-    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.68.1/GrokX-mobile-0.68.1.ipa",
-    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.68.1/GrokX-mobile-0.68.1-debug.apk"
+    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.69.0/GrokX_0.69.0_universal.dmg",
+    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.69.0/GrokX_0.69.0_x64-setup.exe",
+    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.69.0/GrokX_0.69.0_arm64-setup.exe",
+    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.69.0/GrokX-mobile-0.69.0.ipa",
+    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.69.0/GrokX-mobile-0.69.0-debug.apk"
   },
   "site": "https://grokx.bel.org.cn"
 }
