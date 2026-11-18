@@ -1,16 +1,16 @@
 {
-  "version": "0.68.0",
+  "version": "0.68.1",
   "date": "2026-11-18",
   "notes": {
-    "zh-CN": "接入百度 Comate（comate-acp）。移除 302.AI Media Studio，以及作曲器里的 302.AI Coding 入口；302.AI 仍可作为普通 API 提供商或 Claude API 预设。手机端改为模型列表对话框，可刷新，并在列表失败或同步服务过旧时提示。目录探测失败不再把已经连上的对话标成断开。macOS 为 universal 开发签名、未公证；Windows 安装包未签名；APK 为 debug 签名；IPA 为开发签名，仅限团队已注册设备，均非商店包。",
-    "en": "Adds Baidu Comate (comate-acp). Removes 302.AI Media Studio and the 302.AI Coding composer entry; 302.AI remains available as a normal API provider or a Claude API preset. The mobile app uses a model-list dialog that can refresh, and reports when the list fails or the sync service is too old. A failed catalog probe no longer marks an already connected chat as disconnected. macOS is universal and development-signed, not notarized; Windows installers are unsigned; APK is debug-signed; IPA is development-signed for registered team devices only. These are not store builds."
+    "zh-CN": "Antigravity 会话显示真实 token 用量（从本地 transcript.jsonl 汇总），额度查询支持代理并延长超时；grok 回合进行中实时累计本会话 token，不再等会话结束。作曲器改为两行布局：状态开关在左、模型与发送在右，模型菜单宽度按内容自适应；用量气泡数字与单位分离显示。macOS 为 universal 开发签名、未公证；Windows 安装包未签名；APK 为 debug 签名；IPA 为开发签名，仅限团队已注册设备，均非商店包。",
+    "en": "Antigravity sessions now show real token usage aggregated from the local transcript.jsonl, with usage limits honouring the proxy setting and a longer timeout. grok accumulates this session's tokens live during a turn instead of waiting for it to end. The composer uses a two-row layout (status left, model and send right) with content-sized model menus, and the usage bubble splits the number from its unit. macOS is universal and development-signed, not notarized; Windows installers are unsigned; APK is debug-signed; IPA is development-signed for registered team devices only. These are not store builds."
   },
   "downloads": {
-    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.68.0/GrokX_0.68.0_universal.dmg",
-    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.68.0/GrokX_0.68.0_x64-setup.exe",
-    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.68.0/GrokX_0.68.0_arm64-setup.exe",
-    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.68.0/GrokX-mobile-0.68.0.ipa",
-    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.68.0/GrokX-mobile-0.68.0-debug.apk"
+    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.68.1/GrokX_0.68.1_universal.dmg",
+    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.68.1/GrokX_0.68.1_x64-setup.exe",
+    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.68.1/GrokX_0.68.1_arm64-setup.exe",
+    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.68.1/GrokX-mobile-0.68.1.ipa",
+    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.68.1/GrokX-mobile-0.68.1-debug.apk"
   },
   "site": "https://grokx.bel.org.cn"
 }
