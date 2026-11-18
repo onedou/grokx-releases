@@ -1,16 +1,16 @@
 {
-  "version": "0.70.0",
-  "date": "2026-11-18",
+  "version": "0.71.0",
+  "date": "2026-11-19",
   "notes": {
-    "zh-CN": "手机端可在会话里切换执行 Agent：Grok、OpenCode、CodeBuddy、Antigravity、Codex、Kimi、Claude、DeepSeek、Trae、MiMo、Qwen Code、Comate 之间可切换，指令经同步服务下发，电脑端会停掉旧 CLI、新开会话并带上此前转写。手机切换执行 Agent 需要把同步服务更新到本版本，未更新时仍可浏览、续聊和切换模型。错误提示保留原始详情：电脑端不再丢弃 JSON-RPC error.data 与 CLI 的 stderr，聊天里显示一句可翻译的摘要，点「查看详情」展开原文。macOS 为 universal 开发签名、未公证；Windows 安装包未签名；APK 为 debug 签名；IPA 为开发签名，仅限团队已注册设备，均非商店包。",
-    "en": "The phone can now switch a session's agent among Grok, OpenCode, CodeBuddy, Antigravity, Codex, Kimi, Claude, DeepSeek, Trae, MiMo, Qwen Code and Comate. The command goes through the sync service; the desktop stops the old CLI, opens a new session and carries the earlier transcript over. Switching agents on the phone needs the sync service updated to this version; browsing, replying and switching models still work before that update. Error notes keep the original details: the desktop no longer drops JSON-RPC error.data or the CLI stderr, showing a short translatable sentence with “Show details” for the raw text. macOS is universal and development-signed, not notarized; Windows installers are unsigned; APK is debug-signed; IPA is development-signed for registered team devices only. These are not store builds."
+    "zh-CN": "手机端可以查看当前会话的词元用量与上下文占用：会话标题下方显示本会话累计词元与上下文百分比，点开可看输入、输出、缓存、模型调用次数和上下文的已用/窗口；中文界面统一使用「词元」。数据由电脑端随会话镜像上报，回合进行中会持续增长，旧电脑或旧同步服务不上报时手机不显示该行，需要把同步服务更新到本版本。同版本还包括：手机端最多 3 张图片随消息发送、回合中发送可选排队或引导、任务页显示电脑上的全部定时任务。macOS 为 universal 开发签名、未公证；Windows 安装包未签名；APK 为 debug 签名；IPA 为开发签名，仅限团队已注册设备，均非商店包。",
+    "en": "Token usage on the phone: the conversation header shows this session's token total and context fill, with a sheet for input, output, cached, model calls and context used/window. The Chinese UI calls tokens 「词元」. The desktop reports these counts with the mirrored header, so they grow during a turn; older desktops or sync services show nothing instead of zeros, and the sync service needs this update. This version also adds up to 3 images per message from the phone, queue/steer sends during a running turn, and a task list mirroring every scheduled task on the computer. macOS is universal and development-signed, not notarized; Windows installers are unsigned; APK is debug-signed; IPA is development-signed for registered team devices only. These are not store builds."
   },
   "downloads": {
-    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.70.0/GrokX_0.70.0_universal.dmg",
-    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.70.0/GrokX_0.70.0_x64-setup.exe",
-    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.70.0/GrokX_0.70.0_arm64-setup.exe",
-    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.70.0/GrokX-mobile-0.70.0.ipa",
-    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.70.0/GrokX-mobile-0.70.0-debug.apk"
+    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.71.0/GrokX_0.71.0_universal.dmg",
+    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.71.0/GrokX_0.71.0_x64-setup.exe",
+    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.71.0/GrokX_0.71.0_arm64-setup.exe",
+    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.71.0/GrokX-mobile-0.71.0.ipa",
+    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.71.0/GrokX-mobile-0.71.0-debug.apk"
   },
   "site": "https://grokx.bel.org.cn"
 }
