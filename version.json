@@ -1,16 +1,16 @@
 {
-  "version": "0.75.1",
+  "version": "0.76.0",
   "date": "2026-11-19",
   "notes": {
-    "zh": "修复 Antigravity（包括 Neon）恢复会话和同步后台任务时重复显示历史消息的问题。",
-    "en": "Fixed duplicate history in Antigravity (including Neon) when reconnecting a session or syncing a background task."
+    "zh-CN": "输入框新增「优化提示词」：用已安装的 CLI 一键改写草稿，可取消、恢复原文或重试；输入框支持自定义撤销/重做（Cmd/Ctrl+Z）。APK 为 debug 签名；IPA 为开发签名，仅可安装到该团队已注册设备。",
+    "en": "New composer “Optimize prompt”: rewrite your draft with an installed CLI in one click, with cancel, restore, and retry. Custom undo/redo in the composer (Cmd/Ctrl+Z). APK is debug-signed; IPA is development-signed for registered team devices only."
   },
   "downloads": {
-    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.75.1/GrokX_0.75.1_universal.dmg",
-    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.75.1/GrokX_0.75.1_x64-setup.exe",
-    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.75.1/GrokX_0.75.1_arm64-setup.exe",
-    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.75.1/GrokX-mobile-0.75.1-debug.apk",
-    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.75.1/GrokX-mobile-0.75.1.ipa"
+    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.76.0/GrokX_0.76.0_universal.dmg",
+    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.76.0/GrokX_0.76.0_x64-setup.exe",
+    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.76.0/GrokX_0.76.0_arm64-setup.exe",
+    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.76.0/GrokX-mobile-0.76.0-debug.apk",
+    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.76.0/GrokX-mobile-0.76.0.ipa"
   },
   "site": "https://grokx.bel.org.cn"
 }
