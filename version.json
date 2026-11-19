@@ -1,16 +1,16 @@
 {
-  "version": "0.73.2",
+  "version": "0.74.0",
   "date": "2026-11-19",
   "notes": {
-    "zh-CN": "修复 Codex 重启后 6.2 模型消失的问题：使用独立安装的 Codex 运行时，按项目和账号恢复模型目录并自动重试刷新；已打开会话的旧列表不再遮住刷新发现的新模型。macOS 为 universal 开发签名、未公证；Windows 安装包未签名；APK 为 debug 签名；IPA 为开发签名，仅限团队已注册设备。",
-    "en": "Fix Codex 6.2 models disappearing after app restarts. Use the separately installed Codex runtime, restore model catalogs per project and account, and retry discovery automatically. Older options in an open session no longer hide models discovered by refresh. macOS is universal and development-signed, not notarized; Windows installers are unsigned; APK is debug-signed; IPA is development-signed for registered team devices only."
+    "zh-CN": "新增小米语音遥控：把已配对的遥控器连上电脑，麦克风语音即可转成文字输入，按钮可控制 GrokX；设置页新增「语音遥控」分区。侧边栏支持多选会话批量删除。macOS 为 universal 开发签名、未公证；Windows 安装包未签名；APK 为 debug 签名；IPA 为开发签名，仅限团队已注册设备。",
+    "en": "New Xiaomi voice remote: connect a paired remote to your computer, dictate with its microphone as text input, and control GrokX with its buttons. A new \"Voice remote\" section is added to Settings. The sidebar now supports multi-select batch deletion of sessions. macOS is universal and development-signed, not notarized; Windows installers are unsigned; APK is debug-signed; IPA is development-signed for registered team devices only."
   },
   "downloads": {
-    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.73.2/GrokX_0.73.2_universal.dmg",
-    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.73.2/GrokX_0.73.2_x64-setup.exe",
-    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.73.2/GrokX_0.73.2_arm64-setup.exe",
-    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.73.2/GrokX-mobile-0.73.2.ipa",
-    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.73.2/GrokX-mobile-0.73.2-debug.apk"
+    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.74.0/GrokX_0.74.0_universal.dmg",
+    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.74.0/GrokX_0.74.0_x64-setup.exe",
+    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.74.0/GrokX_0.74.0_arm64-setup.exe",
+    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.74.0/GrokX-mobile-0.74.0.ipa",
+    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.74.0/GrokX-mobile-0.74.0-debug.apk"
   },
   "site": "https://grokx.bel.org.cn"
 }
