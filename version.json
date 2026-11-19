@@ -1,16 +1,16 @@
 {
-  "version": "0.75.0",
+  "version": "0.75.1",
   "date": "2026-11-19",
   "notes": {
-    "zh-CN": "小米语音遥控器的听写改为在这台 Mac 上完成，音频不再上传。请在系统设置中允许语音识别，并下载离线听写语言。配对密钥失效时不再反复重连，会提示忽略遥控器后重新配对。手机可以从相册选择图片，包括 iOS 的 HEIC。macOS 为 universal 开发签名、未公证；Windows 安装包未签名；APK 为 debug 签名；IPA 为开发签名，仅限团队已注册设备。",
-    "en": "Xiaomi remote dictation now stays on this Mac and the audio is not uploaded. Allow Speech Recognition in System Settings and download an offline dictation language. A rejected Bluetooth bond stops reconnecting and asks you to forget the remote, then pair it again. The phone can attach album photos, including iOS HEIC. macOS is universal and development-signed, not notarized; Windows installers are unsigned; APK is debug-signed; IPA is development-signed for registered team devices only."
+    "zh": "修复 Antigravity（包括 Neon）恢复会话和同步后台任务时重复显示历史消息的问题。",
+    "en": "Fixed duplicate history in Antigravity (including Neon) when reconnecting a session or syncing a background task."
   },
   "downloads": {
-    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.75.0/GrokX_0.75.0_universal.dmg",
-    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.75.0/GrokX_0.75.0_x64-setup.exe",
-    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.75.0/GrokX_0.75.0_arm64-setup.exe",
-    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.75.0/GrokX-mobile-0.75.0.ipa",
-    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.75.0/GrokX-mobile-0.75.0-debug.apk"
+    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.75.1/GrokX_0.75.1_universal.dmg",
+    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.75.1/GrokX_0.75.1_x64-setup.exe",
+    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.75.1/GrokX_0.75.1_arm64-setup.exe",
+    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.75.1/GrokX-mobile-0.75.1-debug.apk",
+    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.75.1/GrokX-mobile-0.75.1.ipa"
   },
   "site": "https://grokx.bel.org.cn"
 }
