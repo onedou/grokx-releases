@@ -1,16 +1,16 @@
 {
-  "version": "0.72.0",
+  "version": "0.73.1",
   "date": "2026-11-19",
   "notes": {
-    "zh-CN": "手机通知栏提醒：回合结束、出现需要确认的操作时手机上会收到通知，点通知直接打开对应会话。Android 可在「电脑」页开启「后台保持连接」，用一条常驻通知保住与电脑的连接，锁屏也能收到；iOS 本次只启用前台本地通知，远程推送通道已实现但需要 Apple 侧开启 Push 能力后再发版。打开的会话不重复提醒，同一会话只保留一条，通知内容只含会话标题、电脑名与事件类型。需要同步更新自托管同步服务（含新增的 push.mjs），旧服务只能支持「回合结束」。macOS 为 universal 开发签名、未公证；Windows 安装包未签名；APK 为 debug 签名；IPA 为开发签名，仅限团队已注册设备，均非商店包。",
-    "en": "Notification alerts on the phone: a turn finishing or an action waiting for approval now raises a notification, and tapping it opens that conversation. On Android, the computer screen's settings offer \"Stay connected in the background\", which keeps one persistent notification and the connection alive so alerts arrive with the screen off; iOS uses local notifications only for now, because the remote path is implemented but needs Push enabled on the Apple side before it can ship. The conversation on screen is skipped, each conversation keeps a single alert, and alerts contain only the title, computer name and event kind. The self-hosted sync service must be updated (new push.mjs); an older service only supports \"turn finished\". macOS is universal and development-signed, not notarized; Windows installers are unsigned; APK is debug-signed; IPA is development-signed for registered team devices only."
+    "zh-CN": "修复手机图片发送时误用电脑当前会话能力的问题，按目标会话检查图片支持；图片读取完成前禁止发送，切换会话后不再加入旧图片。手机输入区改为单行起步、自动增高，并合并常用操作；斜杠菜单根据键盘上方空间限高、滚动，长描述不再挤压推荐项。macOS 为 universal 开发签名、未公证；Windows 安装包未签名；APK 为 debug 签名；IPA 为开发签名，仅限团队已注册设备。",
+    "en": "Fix phone image prompts being checked against the desktop foreground conversation instead of the target session. Wait for selected photos to finish loading and discard stale results after switching conversations. The phone composer starts at one line, grows with its contents and combines common controls in one row. Slash suggestions fit the space above the keyboard, scroll and keep long descriptions within each option. macOS is universal and development-signed, not notarized; Windows installers are unsigned; APK is debug-signed; IPA is development-signed for registered team devices only."
   },
   "downloads": {
-    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.72.0/GrokX_0.72.0_universal.dmg",
-    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.72.0/GrokX_0.72.0_x64-setup.exe",
-    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.72.0/GrokX_0.72.0_arm64-setup.exe",
-    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.72.0/GrokX-mobile-0.72.0.ipa",
-    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.72.0/GrokX-mobile-0.72.0-debug.apk"
+    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.73.1/GrokX_0.73.1_universal.dmg",
+    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.73.1/GrokX_0.73.1_x64-setup.exe",
+    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.73.1/GrokX_0.73.1_arm64-setup.exe",
+    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.73.1/GrokX-mobile-0.73.1.ipa",
+    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.73.1/GrokX-mobile-0.73.1-debug.apk"
   },
   "site": "https://grokx.bel.org.cn"
 }
