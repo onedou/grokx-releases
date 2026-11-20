@@ -1,16 +1,16 @@
 {
-  "version": "0.76.0",
-  "date": "2026-11-19",
+  "version": "0.76.4",
+  "date": "2026-11-20",
   "notes": {
-    "zh-CN": "输入框新增「优化提示词」：用已安装的 CLI 一键改写草稿，可取消、恢复原文或重试；输入框支持自定义撤销/重做（Cmd/Ctrl+Z）。APK 为 debug 签名；IPA 为开发签名，仅可安装到该团队已注册设备。",
-    "en": "New composer “Optimize prompt”: rewrite your draft with an installed CLI in one click, with cancel, restore, and retry. Custom undo/redo in the composer (Cmd/Ctrl+Z). APK is debug-signed; IPA is development-signed for registered team devices only."
+    "zh-CN": "从桌面输入框按 Enter 或点击发送后，对话自动滚动到底部，显示最新消息。手机端可实时逐字查看电脑发来的回复。 macOS 为 universal 开发签名，未公证。Windows 安装包未签名。Android APK 为调试签名。iOS IPA 为开发签名，仅供团队已注册设备安装。",
+    "en": "Sending from the desktop composer with Enter or the Send button scrolls the conversation to the latest message. The mobile app shows desktop replies as they stream. The universal macOS app is development-signed and unnotarized. Windows installers are unsigned. The Android APK is debug-signed. The development-signed iOS IPA installs on registered team devices."
   },
   "downloads": {
-    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.76.0/GrokX_0.76.0_universal.dmg",
-    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.76.0/GrokX_0.76.0_x64-setup.exe",
-    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.76.0/GrokX_0.76.0_arm64-setup.exe",
-    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.76.0/GrokX-mobile-0.76.0-debug.apk",
-    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.76.0/GrokX-mobile-0.76.0.ipa"
+    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.76.4/GrokX_0.76.4_universal.dmg",
+    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.76.4/GrokX_0.76.4_x64-setup.exe",
+    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.76.4/GrokX_0.76.4_arm64-setup.exe",
+    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.76.4/GrokX-mobile-0.76.4-debug.apk",
+    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.76.4/GrokX-mobile-0.76.4.ipa"
   },
   "site": "https://grokx.bel.org.cn"
 }
