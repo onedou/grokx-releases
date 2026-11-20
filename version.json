@@ -1,16 +1,16 @@
 {
-  "version": "0.80.0",
+  "version": "0.81.0",
   "date": "2026-11-20",
   "notes": {
-    "zh-CN": "手机端新增图片全屏查看：对话里你发过的照片和回复中出现的图片都能点开预览，支持放大缩小、原始尺寸、适应屏幕、双击和双指捏合；从手机发出的照片会在会话里保留缩略图，撤下的照片会自动关闭预览。桌面端右键菜单的「粘贴」改为调用 WebView 原生粘贴，截图和图片也能直接进入输入框，效果与键盘 Cmd+V 一致。侧栏项目标题新增一键收起按钮，展开的项目可立即收起会话列表。macOS 为 universal 开发签名，未公证。Windows 安装包未签名。Android APK 为调试签名。iOS IPA 为开发签名，仅供团队已注册设备安装。",
-    "en": "The mobile app now opens images full screen: photos you sent and pictures that appear in replies can be tapped to preview, with zoom in and out, actual size, fit to screen, double-tap and pinch. Photos sent from the phone keep a thumbnail in the conversation, and removing a staged photo closes its preview. The desktop context menu’s Paste now runs the WebView’s native paste, so screenshots and images land in the composer just like Cmd+V. Project headers in the sidebar gained a one-click collapse control. The universal macOS app has a development signature and is unnotarized. Windows installers are unsigned. The Android APK has a debug signature. The iOS IPA has a development signature and installs on registered team devices."
+    "zh-CN": "手机端会把电脑会话缓存在本机。未改过的会话直接打开缓存；有改动时同步服务只下发变化的中间一段，旧版同步服务仍返回完整会话。电脑暂时离线时，已缓存的会话列表和正文仍可查看。桌面端对话区域保持至少 560px，停靠浏览器先变窄，侧栏拖动停在同一下限。macOS 为 universal 开发签名，未公证。Windows 安装包未签名。Android APK 为调试签名。iOS IPA 为开发签名，仅供团队已注册设备安装。",
+    "en": "The phone now caches computer conversations. An unchanged transcript opens from that cache; when it changes, the sync service sends only the changed middle, and older services still return the full transcript. Cached sessions and messages stay readable while the computer is offline. On the desktop, the conversation column stays at least 560px wide: the docked browser narrows first, and the sidebar drag stops at the same floor. The universal macOS app has a development signature and is unnotarized. Windows installers are unsigned. The Android APK has a debug signature. The iOS IPA has a development signature and installs on registered team devices."
   },
   "downloads": {
-    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.80.0/GrokX_0.80.0_universal.dmg",
-    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.80.0/GrokX_0.80.0_x64-setup.exe",
-    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.80.0/GrokX_0.80.0_arm64-setup.exe",
-    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.80.0/GrokX-mobile-0.80.0-debug.apk",
-    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.80.0/GrokX-mobile-0.80.0.ipa"
+    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.81.0/GrokX_0.81.0_universal.dmg",
+    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.81.0/GrokX_0.81.0_x64-setup.exe",
+    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.81.0/GrokX_0.81.0_arm64-setup.exe",
+    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.81.0/GrokX-mobile-0.81.0-debug.apk",
+    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.81.0/GrokX-mobile-0.81.0.ipa"
   },
   "site": "https://grokx.bel.org.cn"
 }
