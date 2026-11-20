@@ -1,16 +1,16 @@
 {
-  "version": "0.78.2",
+  "version": "0.79.0",
   "date": "2026-11-20",
   "notes": {
-    "zh-CN": "修复桌面首页的开场建议偶尔显示 DSML 工具调用标签或命令参数的问题。无法提取有效建议时，首页会显示当前语言的默认建议。macOS 为 universal 开发签名，未公证。Windows 安装包未签名。Android APK 为调试签名。iOS IPA 为开发签名，仅供团队已注册设备安装。",
-    "en": "Fix an issue where desktop starter suggestions could show DSML tool-call tags or command arguments. The welcome screen shows localized defaults when no valid suggestions are available. The universal macOS app is development-signed and unnotarized. Windows installers are unsigned. The Android APK is debug-signed. The development-signed iOS IPA installs on registered team devices."
+    "zh-CN": "桌面输入框「转为英文」默认通过 DeepSeek Harness 使用 DeepSeek V4.1 Flash。可在「设置 → 模型 → 翻译模型」切换到 DeepSeek V4 Pro。macOS 为 universal 开发签名，未公证。Windows 安装包未签名。Android APK 为调试签名。iOS IPA 为开发签名，仅供团队已注册设备安装。",
+    "en": "The desktop composer translates drafts with DeepSeek V4.1 Flash through DeepSeek Harness by default. Choose DeepSeek V4 Pro under Settings → Models → Translation model. The universal macOS app has a development signature and is unnotarized. Windows installers are unsigned. The Android APK has a debug signature. The iOS IPA has a development signature and installs on registered team devices."
   },
   "downloads": {
-    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.78.2/GrokX_0.78.2_universal.dmg",
-    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.78.2/GrokX_0.78.2_x64-setup.exe",
-    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.78.2/GrokX_0.78.2_arm64-setup.exe",
-    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.78.2/GrokX-mobile-0.78.2-debug.apk",
-    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.78.2/GrokX-mobile-0.78.2.ipa"
+    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.79.0/GrokX_0.79.0_universal.dmg",
+    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.79.0/GrokX_0.79.0_x64-setup.exe",
+    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.79.0/GrokX_0.79.0_arm64-setup.exe",
+    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.79.0/GrokX-mobile-0.79.0-debug.apk",
+    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.79.0/GrokX-mobile-0.79.0.ipa"
   },
   "site": "https://grokx.bel.org.cn"
 }
