@@ -1,16 +1,16 @@
 {
-  "version": "0.78.1",
+  "version": "0.78.2",
   "date": "2026-11-20",
   "notes": {
-    "zh-CN": "修复首页开场建议偶发泄露 DSML/XML 工具调用标记或 JSON 片段的问题，并收紧各 CLI 一次性建议参数；修复启动阶段代理与环境隔离初始化竞态导致的误报断连及无效代理配置阻塞自动连接问题；修复回合结束后仍有未完成工具调用时输入框和侧边栏进度指示提前消失的问题。macOS 为 universal 开发签名，未公证。Windows 安装包未签名。Android APK 为调试签名。iOS IPA 为开发签名，仅供团队已注册设备安装。",
-    "en": "Fix starter prompt suggestions occasionally leaking raw DSML/XML tool-call markup or JSON fragments and tighten one-shot CLI flags; fix a startup race between proxy/isolation setup and initial agent launch that could show a false disconnect or block auto-connect when a saved proxy is invalid; keep composer and sidebar progress indicators spinning after a turn ends while tools remain pending or in progress. The universal macOS app is development-signed and unnotarized. Windows installers are unsigned. The Android APK is debug-signed. The development-signed iOS IPA installs on registered team devices."
+    "zh-CN": "修复桌面首页的开场建议偶尔显示 DSML 工具调用标签或命令参数的问题。无法提取有效建议时，首页会显示当前语言的默认建议。macOS 为 universal 开发签名，未公证。Windows 安装包未签名。Android APK 为调试签名。iOS IPA 为开发签名，仅供团队已注册设备安装。",
+    "en": "Fix an issue where desktop starter suggestions could show DSML tool-call tags or command arguments. The welcome screen shows localized defaults when no valid suggestions are available. The universal macOS app is development-signed and unnotarized. Windows installers are unsigned. The Android APK is debug-signed. The development-signed iOS IPA installs on registered team devices."
   },
   "downloads": {
-    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.78.1/GrokX_0.78.1_universal.dmg",
-    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.78.1/GrokX_0.78.1_x64-setup.exe",
-    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.78.1/GrokX_0.78.1_arm64-setup.exe",
-    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.78.1/GrokX-mobile-0.78.1-debug.apk",
-    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.78.1/GrokX-mobile-0.78.1.ipa"
+    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.78.2/GrokX_0.78.2_universal.dmg",
+    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.78.2/GrokX_0.78.2_x64-setup.exe",
+    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.78.2/GrokX_0.78.2_arm64-setup.exe",
+    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.78.2/GrokX-mobile-0.78.2-debug.apk",
+    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.78.2/GrokX-mobile-0.78.2.ipa"
   },
   "site": "https://grokx.bel.org.cn"
 }
