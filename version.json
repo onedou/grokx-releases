@@ -1,16 +1,16 @@
 {
-  "version": "0.77.0",
+  "version": "0.78.0",
   "date": "2026-11-20",
   "notes": {
-    "zh-CN": "会话与消息改为 SQLite 存储。升级后首次启动会把原 state.json 一次性迁移，并保留为 state.json.pre-sqlite-<时间戳> 备份；此后流式回复只写变更行，不再整份重写数百 MB 的状态文件。macOS 为 universal 开发签名，未公证。Windows 安装包未签名。Android APK 为调试签名。iOS IPA 为开发签名，仅供团队已注册设备安装。",
-    "en": "Sessions and messages now live in SQLite. The first launch after upgrading imports the existing state.json once and keeps it as a state.json.pre-sqlite-<timestamp> backup; streaming turns then update only changed rows instead of rewriting a multi-hundred-MB file. The universal macOS app is development-signed and unnotarized. Windows installers are unsigned. The Android APK is debug-signed. The development-signed iOS IPA installs on registered team devices."
+    "zh-CN": "桌面输入框新增「转为英文」按钮，点击后将草稿翻译成英文并回填，确认后再发送。支持取消、重试、恢复原文和撤销/重做；继续输入、切换会话或发送时会取消翻译，丢弃过期结果。原有「优化」按钮保持可用。macOS 为 universal 开发签名，未公证。Windows 安装包未签名。Android APK 为调试签名。iOS IPA 为开发签名，仅供团队已注册设备安装。",
+    "en": "The desktop composer now has a “To English” button that translates your draft in place for review before sending. Supports cancel, retry, restore original, and undo/redo. Typing, switching conversations, or sending cancels translation and discards stale results. The existing Optimize button remains available. The universal macOS app is development-signed and unnotarized. Windows installers are unsigned. The Android APK is debug-signed. The development-signed iOS IPA installs on registered team devices."
   },
   "downloads": {
-    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.77.0/GrokX_0.77.0_universal.dmg",
-    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.77.0/GrokX_0.77.0_x64-setup.exe",
-    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.77.0/GrokX_0.77.0_arm64-setup.exe",
-    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.77.0/GrokX-mobile-0.77.0-debug.apk",
-    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.77.0/GrokX-mobile-0.77.0.ipa"
+    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.78.0/GrokX_0.78.0_universal.dmg",
+    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.78.0/GrokX_0.78.0_x64-setup.exe",
+    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.78.0/GrokX_0.78.0_arm64-setup.exe",
+    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.78.0/GrokX-mobile-0.78.0-debug.apk",
+    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.78.0/GrokX-mobile-0.78.0.ipa"
   },
   "site": "https://grokx.bel.org.cn"
 }
