@@ -1,16 +1,16 @@
 {
-  "version": "0.78.0",
+  "version": "0.78.1",
   "date": "2026-11-20",
   "notes": {
-    "zh-CN": "桌面输入框新增「转为英文」按钮，点击后将草稿翻译成英文并回填，确认后再发送。支持取消、重试、恢复原文和撤销/重做；继续输入、切换会话或发送时会取消翻译，丢弃过期结果。原有「优化」按钮保持可用。macOS 为 universal 开发签名，未公证。Windows 安装包未签名。Android APK 为调试签名。iOS IPA 为开发签名，仅供团队已注册设备安装。",
-    "en": "The desktop composer now has a “To English” button that translates your draft in place for review before sending. Supports cancel, retry, restore original, and undo/redo. Typing, switching conversations, or sending cancels translation and discards stale results. The existing Optimize button remains available. The universal macOS app is development-signed and unnotarized. Windows installers are unsigned. The Android APK is debug-signed. The development-signed iOS IPA installs on registered team devices."
+    "zh-CN": "修复首页开场建议偶发泄露 DSML/XML 工具调用标记或 JSON 片段的问题，并收紧各 CLI 一次性建议参数；修复启动阶段代理与环境隔离初始化竞态导致的误报断连及无效代理配置阻塞自动连接问题；修复回合结束后仍有未完成工具调用时输入框和侧边栏进度指示提前消失的问题。macOS 为 universal 开发签名，未公证。Windows 安装包未签名。Android APK 为调试签名。iOS IPA 为开发签名，仅供团队已注册设备安装。",
+    "en": "Fix starter prompt suggestions occasionally leaking raw DSML/XML tool-call markup or JSON fragments and tighten one-shot CLI flags; fix a startup race between proxy/isolation setup and initial agent launch that could show a false disconnect or block auto-connect when a saved proxy is invalid; keep composer and sidebar progress indicators spinning after a turn ends while tools remain pending or in progress. The universal macOS app is development-signed and unnotarized. Windows installers are unsigned. The Android APK is debug-signed. The development-signed iOS IPA installs on registered team devices."
   },
   "downloads": {
-    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.78.0/GrokX_0.78.0_universal.dmg",
-    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.78.0/GrokX_0.78.0_x64-setup.exe",
-    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.78.0/GrokX_0.78.0_arm64-setup.exe",
-    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.78.0/GrokX-mobile-0.78.0-debug.apk",
-    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.78.0/GrokX-mobile-0.78.0.ipa"
+    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.78.1/GrokX_0.78.1_universal.dmg",
+    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.78.1/GrokX_0.78.1_x64-setup.exe",
+    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.78.1/GrokX_0.78.1_arm64-setup.exe",
+    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.78.1/GrokX-mobile-0.78.1-debug.apk",
+    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.78.1/GrokX-mobile-0.78.1.ipa"
   },
   "site": "https://grokx.bel.org.cn"
 }
