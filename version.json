@@ -1,16 +1,16 @@
 {
-  "version": "0.82.0",
+  "version": "0.82.1",
   "date": "2026-11-21",
   "notes": {
-    "zh-CN": "手机端可以查看电脑会话的套餐额度，包括 Grok、Codex、Antigravity 的每周、每月或小时窗口及重置时间，也能看到上下文占用；电脑上排队中的消息现在会显示在手机里，可按条移除或整队取消。打开会话里的图片时，桌面端会把原图缩成手机可加载的预览图。桌面端 Codex 在 CLI 提供时默认优先使用 gpt-6.2-sol，出错提示行可以一键移除。macOS 为 universal 开发签名，未公证。Windows 安装包未签名。Android APK 为调试签名。iOS IPA 为开发签名，仅供团队已注册设备安装。",
-    "en": "The phone now shows each session’s plan allowance — Grok, Codex and Antigravity weekly, monthly or hourly windows with reset times — plus context fill. Messages queued on the computer are listed on the phone and can be removed one at a time or all at once. Opening a picture in a mirrored conversation makes the desktop shrink the original into a preview the phone can load. On desktop, Codex prefers gpt-6.2-sol when the CLI advertises it, and error lines can be dismissed. The universal macOS app is development-signed and unnotarized. Windows installers are unsigned. The Android APK is debug-signed. The development-signed iOS IPA installs on registered team devices."
+    "zh-CN": "修复使用 Gemini（Antigravity）时偶发产生大量重复消息的问题：延长活跃回放流的排空上限避免长会话被提前截断，在非活跃回合及迟到回放期间拦截多余的 session/load 回放块，并修复回合合并中的游标越界、乱序、权限/提示拆分与失败回合错配。macOS 为 universal 开发签名，未公证。Windows 安装包未签名。Android APK 为调试签名。iOS IPA 为开发签名，仅供团队已注册设备安装。",
+    "en": "Fixed occasional duplicate message floods when using Gemini (Antigravity): raised the active replay drain ceiling so long session histories are not cut off mid-stream, guarded idle and active turns against late session/load replay chunks, and made turn replay merging order-tolerant, split-tolerant, and turn-aligned. The universal macOS app is development-signed and unnotarized. Windows installers are unsigned. The Android APK is debug-signed. The development-signed iOS IPA installs on registered team devices."
   },
   "downloads": {
-    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.82.0/GrokX_0.82.0_universal.dmg",
-    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.82.0/GrokX_0.82.0_x64-setup.exe",
-    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.82.0/GrokX_0.82.0_arm64-setup.exe",
-    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.82.0/GrokX-mobile-0.82.0-debug.apk",
-    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.82.0/GrokX-mobile-0.82.0.ipa"
+    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.82.1/GrokX_0.82.1_universal.dmg",
+    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.82.1/GrokX_0.82.1_x64-setup.exe",
+    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.82.1/GrokX_0.82.1_arm64-setup.exe",
+    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.82.1/GrokX-mobile-0.82.1-debug.apk",
+    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.82.1/GrokX-mobile-0.82.1.ipa"
   },
   "site": "https://grokx.bel.org.cn"
 }
