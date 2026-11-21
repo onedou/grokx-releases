@@ -1,16 +1,16 @@
 {
-  "version": "0.81.0",
-  "date": "2026-11-20",
+  "version": "0.82.0",
+  "date": "2026-11-21",
   "notes": {
-    "zh-CN": "手机端会把电脑会话缓存在本机。未改过的会话直接打开缓存；有改动时同步服务只下发变化的中间一段，旧版同步服务仍返回完整会话。电脑暂时离线时，已缓存的会话列表和正文仍可查看。桌面端对话区域保持至少 560px，停靠浏览器先变窄，侧栏拖动停在同一下限。macOS 为 universal 开发签名，未公证。Windows 安装包未签名。Android APK 为调试签名。iOS IPA 为开发签名，仅供团队已注册设备安装。",
-    "en": "The phone now caches computer conversations. An unchanged transcript opens from that cache; when it changes, the sync service sends only the changed middle, and older services still return the full transcript. Cached sessions and messages stay readable while the computer is offline. On the desktop, the conversation column stays at least 560px wide: the docked browser narrows first, and the sidebar drag stops at the same floor. The universal macOS app has a development signature and is unnotarized. Windows installers are unsigned. The Android APK has a debug signature. The iOS IPA has a development signature and installs on registered team devices."
+    "zh-CN": "手机端可以查看电脑会话的套餐额度，包括 Grok、Codex、Antigravity 的每周、每月或小时窗口及重置时间，也能看到上下文占用；电脑上排队中的消息现在会显示在手机里，可按条移除或整队取消。打开会话里的图片时，桌面端会把原图缩成手机可加载的预览图。桌面端 Codex 在 CLI 提供时默认优先使用 gpt-6.2-sol，出错提示行可以一键移除。macOS 为 universal 开发签名，未公证。Windows 安装包未签名。Android APK 为调试签名。iOS IPA 为开发签名，仅供团队已注册设备安装。",
+    "en": "The phone now shows each session’s plan allowance — Grok, Codex and Antigravity weekly, monthly or hourly windows with reset times — plus context fill. Messages queued on the computer are listed on the phone and can be removed one at a time or all at once. Opening a picture in a mirrored conversation makes the desktop shrink the original into a preview the phone can load. On desktop, Codex prefers gpt-6.2-sol when the CLI advertises it, and error lines can be dismissed. The universal macOS app is development-signed and unnotarized. Windows installers are unsigned. The Android APK is debug-signed. The development-signed iOS IPA installs on registered team devices."
   },
   "downloads": {
-    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.81.0/GrokX_0.81.0_universal.dmg",
-    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.81.0/GrokX_0.81.0_x64-setup.exe",
-    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.81.0/GrokX_0.81.0_arm64-setup.exe",
-    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.81.0/GrokX-mobile-0.81.0-debug.apk",
-    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.81.0/GrokX-mobile-0.81.0.ipa"
+    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.82.0/GrokX_0.82.0_universal.dmg",
+    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.82.0/GrokX_0.82.0_x64-setup.exe",
+    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.82.0/GrokX_0.82.0_arm64-setup.exe",
+    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.82.0/GrokX-mobile-0.82.0-debug.apk",
+    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.82.0/GrokX-mobile-0.82.0.ipa"
   },
   "site": "https://grokx.bel.org.cn"
 }
