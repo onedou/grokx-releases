@@ -1,16 +1,16 @@
 {
-  "version": "0.83.1",
+  "version": "0.83.2",
   "date": "2026-11-22",
   "notes": {
-    "zh-CN": "修复图片预览缩放：放大后不再常驻滚动条，改为按住图片拖动平移；滚轮缩放时保持画面中心，不再跳到左上角。macOS 为 universal 开发签名，未公证。Windows 安装包未签名。Android APK 为调试签名。iOS IPA 为开发签名，仅供团队已注册设备安装。",
-    "en": "Fixes image preview zooming: enlarged pictures no longer show scrollbars and are panned by dragging instead; wheel zoom now keeps the centre of the view instead of jumping to the top-left corner. The universal macOS app is development-signed and unnotarized. Windows installers are unsigned. The Android APK is debug-signed. The development-signed iOS IPA installs on registered team devices."
+    "zh-CN": "修复手机输入栏「选择图片」图标未与时钟、发送按钮垂直居中的问题。macOS 为 universal 开发签名，未公证。Windows 安装包未签名。Android APK 为调试签名。iOS IPA 为开发签名，仅供团队已注册设备安装。",
+    "en": "Fixes vertical alignment of the image picker icon in the mobile composer so it lines up with the timer and send buttons. The universal macOS app is development-signed and unnotarized. Windows installers are unsigned. The Android APK is debug-signed. The development-signed iOS IPA installs on registered team devices."
   },
   "downloads": {
-    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.83.1/GrokX_0.83.1_universal.dmg",
-    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.83.1/GrokX_0.83.1_x64-setup.exe",
-    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.83.1/GrokX_0.83.1_arm64-setup.exe",
-    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.83.1/GrokX-mobile-0.83.1-debug.apk",
-    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.83.1/GrokX-mobile-0.83.1.ipa"
+    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.83.2/GrokX_0.83.2_universal.dmg",
+    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.83.2/GrokX_0.83.2_x64-setup.exe",
+    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.83.2/GrokX_0.83.2_arm64-setup.exe",
+    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.83.2/GrokX-mobile-0.83.2-debug.apk",
+    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.83.2/GrokX-mobile-0.83.2.ipa"
   },
   "site": "https://grokx.bel.org.cn"
 }
