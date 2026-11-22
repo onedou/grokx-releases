@@ -1,16 +1,16 @@
 {
-  "version": "0.83.0",
+  "version": "0.83.1",
   "date": "2026-11-22",
   "notes": {
-    "zh-CN": "Antigravity（Gemini）改为原生轨迹文件事件监听（macOS kqueue / Windows FindFirstChangeNotificationW）与迟到工具终态即时同步，彻底移除 2s/10s 空闲轮询与 45s 盲等续跑，后台工具结束后如未自唤醒则在短延迟后自动继续问答；同时包含 macOS 电脑操控首版、内置浏览器文件下载与图片预览滚轮缩放。macOS 为 universal 开发签名，未公证。Windows 安装包未签名。Android APK 为调试签名。iOS IPA 为开发签名，仅供团队已注册设备安装。",
-    "en": "Replaced Antigravity (Gemini) periodic session/load polling and the blind 45 s resume timer with native OS transcript file watching (macOS kqueue / Windows FindFirstChangeNotificationW) plus immediate handling for late ACP tool_call_update completions, automatically continuing after a brief grace window only when a finished background tool does not self-wake. Also includes macOS Computer Use v1, built-in browser downloads, and scroll-wheel image zoom. The universal macOS app is development-signed and unnotarized. Windows installers are unsigned. The Android APK is debug-signed. The development-signed iOS IPA installs on registered team devices."
+    "zh-CN": "修复图片预览缩放：放大后不再常驻滚动条，改为按住图片拖动平移；滚轮缩放时保持画面中心，不再跳到左上角。macOS 为 universal 开发签名，未公证。Windows 安装包未签名。Android APK 为调试签名。iOS IPA 为开发签名，仅供团队已注册设备安装。",
+    "en": "Fixes image preview zooming: enlarged pictures no longer show scrollbars and are panned by dragging instead; wheel zoom now keeps the centre of the view instead of jumping to the top-left corner. The universal macOS app is development-signed and unnotarized. Windows installers are unsigned. The Android APK is debug-signed. The development-signed iOS IPA installs on registered team devices."
   },
   "downloads": {
-    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.83.0/GrokX_0.83.0_universal.dmg",
-    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.83.0/GrokX_0.83.0_x64-setup.exe",
-    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.83.0/GrokX_0.83.0_arm64-setup.exe",
-    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.83.0/GrokX-mobile-0.83.0-debug.apk",
-    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.83.0/GrokX-mobile-0.83.0.ipa"
+    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.83.1/GrokX_0.83.1_universal.dmg",
+    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.83.1/GrokX_0.83.1_x64-setup.exe",
+    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.83.1/GrokX_0.83.1_arm64-setup.exe",
+    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.83.1/GrokX-mobile-0.83.1-debug.apk",
+    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.83.1/GrokX-mobile-0.83.1.ipa"
   },
   "site": "https://grokx.bel.org.cn"
 }
