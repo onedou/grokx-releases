@@ -1,16 +1,16 @@
 {
-  "version": "0.84.0",
+  "version": "0.84.1",
   "date": "2026-11-22",
   "notes": {
-    "zh-CN": "停止改为两段式：第一次停止本轮回合，若仍在转圈再按一次立即强制结束会话。Bot 不再绑定默认目录，可以读写任意绝对路径（含会话起始目录之外），写入仍遵守当前审批模式。未手动选择模型时，Kimi 在 CLI 提供 K3.1 Pro 的情况下默认使用该模型。Antigravity 在后台任务进程结束且没有结果时会在短暂等待后继续。macOS 为 universal 开发签名，未公证。Windows 安装包未签名。Android APK 为调试签名。iOS IPA 为开发签名，仅供团队已注册设备安装。",
-    "en": "Stop is now two-step: the first press stops the current turn, and a second press force-ends the session if it keeps spinning. Bots no longer have a default folder and may read or edit any absolute path, including paths outside the session's starting directory; writes still follow the current approval mode. When no model is chosen, Kimi prefers K3.1 Pro if the CLI advertises it. Antigravity continues after a background task process ends without a result. The universal macOS app is development-signed and unnotarized. Windows installers are unsigned. The Android APK is debug-signed. The development-signed iOS IPA installs on registered team devices."
+    "zh-CN": "移除 Grok 输入框中的「多 Agent」开关及附加提示词，发送内容保持原样；Grok CLI 原生的子 Agent 能力不受影响。macOS 为 universal 开发签名，未公证。Windows 安装包未签名。Android APK 为调试签名。iOS IPA 为开发签名，仅供团队已注册设备安装。",
+    "en": "Removes the Grok composer's Multi-agent toggle and its injected instructions so prompts are sent unchanged. Grok CLI's native subagent support is unaffected. The universal macOS app is development-signed and unnotarized. Windows installers are unsigned. The Android APK is debug-signed. The development-signed iOS IPA installs on registered team devices."
   },
   "downloads": {
-    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.84.0/GrokX_0.84.0_universal.dmg",
-    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.84.0/GrokX_0.84.0_x64-setup.exe",
-    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.84.0/GrokX_0.84.0_arm64-setup.exe",
-    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.84.0/GrokX-mobile-0.84.0-debug.apk",
-    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.84.0/GrokX-mobile-0.84.0.ipa"
+    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.84.1/GrokX_0.84.1_universal.dmg",
+    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.84.1/GrokX_0.84.1_x64-setup.exe",
+    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.84.1/GrokX_0.84.1_arm64-setup.exe",
+    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.84.1/GrokX-mobile-0.84.1-debug.apk",
+    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.84.1/GrokX-mobile-0.84.1.ipa"
   },
   "site": "https://grokx.bel.org.cn"
 }
