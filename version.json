@@ -1,16 +1,16 @@
 {
-  "version": "0.88.1",
-  "date": "2026-11-23",
+  "version": "0.89.0",
+  "date": "2026-11-24",
   "notes": {
-    "zh-CN": "新增 Bot 自有技能（跨项目生效的 SKILL.md 导入）、排队消息主输入框整条编辑与草稿恢复、Bot 头像视线跟随；新装默认项目目录改为用户主目录。macOS 为 universal 开发签名、未公证；Windows 安装包未签名；Android APK 为调试签名；iOS IPA 为开发签名，仅供团队已注册设备安装。",
-    "en": "Adds Bot-owned skills (import SKILL.md that apply in every project), full-composer editing of queued messages with draft restore, and pointer-following Bot avatar eyes; a fresh install now defaults the project folder to the user home. The universal macOS app is development-signed and unnotarized. Windows installers are unsigned. The Android APK is debug-signed. The development-signed iOS IPA installs on registered team devices."
+    "zh-CN": "新增 Claude 并行上限（设置中限制同时运行的工具/子代理，429 时可填 1），以及网关 429 限流自动等待 30 秒重试一次（已有输出则改为继续指令）。macOS 为 universal 开发签名、未公证；Windows 安装包未签名；Android APK 为调试签名；iOS IPA 为开发签名，仅供团队已注册设备安装。",
+    "en": "Adds a Claude parallel cap (limit concurrent tools/subagents in Settings; use 1 when the API returns 429) and a one-shot 30s retry after gateway rate limits (sends a continue prompt if the turn already streamed). The universal macOS app is development-signed and unnotarized. Windows installers are unsigned. The Android APK is debug-signed. The development-signed iOS IPA installs on registered team devices."
   },
   "downloads": {
-    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.88.1/GrokX_0.88.1_universal.dmg",
-    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.88.1/GrokX_0.88.1_x64-setup.exe",
-    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.88.1/GrokX_0.88.1_arm64-setup.exe",
-    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.88.1/GrokX-mobile-0.88.1-debug.apk",
-    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.88.1/GrokX-mobile-0.88.1.ipa"
+    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.89.0/GrokX_0.89.0_universal.dmg",
+    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.89.0/GrokX_0.89.0_x64-setup.exe",
+    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.89.0/GrokX_0.89.0_arm64-setup.exe",
+    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.89.0/GrokX-mobile-0.89.0-debug.apk",
+    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.89.0/GrokX-mobile-0.89.0.ipa"
   },
   "site": "https://grokx.bel.org.cn"
 }
