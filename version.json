@@ -1,16 +1,16 @@
 {
-  "version": "0.84.1",
-  "date": "2026-11-22",
+  "version": "0.86.0",
+  "date": "2026-11-23",
   "notes": {
-    "zh-CN": "移除 Grok 输入框中的「多 Agent」开关及附加提示词，发送内容保持原样；Grok CLI 原生的子 Agent 能力不受影响。macOS 为 universal 开发签名，未公证。Windows 安装包未签名。Android APK 为调试签名。iOS IPA 为开发签名，仅供团队已注册设备安装。",
-    "en": "Removes the Grok composer's Multi-agent toggle and its injected instructions so prompts are sent unchanged. Grok CLI's native subagent support is unaffected. The universal macOS app is development-signed and unnotarized. Windows installers are unsigned. The Android APK is debug-signed. The development-signed iOS IPA installs on registered team devices."
+    "zh-CN": "新增 Claude 用量统计与套餐额度、消息英文转中文翻译、Kimi 套餐额度展示；系统通知点击回会话、终端登录/安装动作与按 Agent 账号管理等能力增强。macOS 为 universal 开发签名、未公证；Windows 安装包未签名；Android APK 为调试签名；iOS IPA 为开发签名，仅供团队已注册设备安装。",
+    "en": "Adds Claude usage and plan limits, English-to-Chinese message translation, and Kimi plan quota display; improves system notifications that open the conversation, terminal login/install actions, and per-agent account management. The universal macOS app is development-signed and unnotarized. Windows installers are unsigned. The Android APK is debug-signed. The development-signed iOS IPA installs on registered team devices."
   },
   "downloads": {
-    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.84.1/GrokX_0.84.1_universal.dmg",
-    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.84.1/GrokX_0.84.1_x64-setup.exe",
-    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.84.1/GrokX_0.84.1_arm64-setup.exe",
-    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.84.1/GrokX-mobile-0.84.1-debug.apk",
-    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.84.1/GrokX-mobile-0.84.1.ipa"
+    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.86.0/GrokX_0.86.0_universal.dmg",
+    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.86.0/GrokX_0.86.0_x64-setup.exe",
+    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.86.0/GrokX_0.86.0_arm64-setup.exe",
+    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.86.0/GrokX-mobile-0.86.0-debug.apk",
+    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.86.0/GrokX-mobile-0.86.0.ipa"
   },
   "site": "https://grokx.bel.org.cn"
 }
