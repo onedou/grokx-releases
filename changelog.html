@@ -48,8 +48,13 @@
     <p data-en="See what changed in each public release of GrokX, from newest to oldest.">从新到旧查看 GrokX 各公开版本的改动和安装包。</p>
   </header>
   <ol class="releases">
+    <li id="v0.89.1">
+      <div class="release-version"><h2>v0.89.1</h2><span class="latest" data-en="Latest">最新发布</span></div>
+      <p data-en="Adds per-account Claude API runtime settings (auto-compact window, request timeout, disable nonessential traffic, disable telemetry, simple system prompt), written and applied when switching accounts, with an empty value removing that key; restores model and reasoning-level switching in a Bot's composer, plus CLI switching there (a thread with messages is kept while a fresh one starts, an empty thread changes in place). The universal macOS app is development-signed and unnotarized. Windows installers are unsigned. The Android APK is debug-signed. The development-signed iOS IPA installs on registered team devices.">Claude API 新增每个账号独立的运行参数（自动压缩窗口、请求超时、关闭非必要网络、关闭遥测、精简系统提示），切换账号时写入对应账号的参数并重启 Claude，留空即删除该键使用默认值；Bot 对话输入区恢复模型与思考强度切换，CLI 也可在输入区切换（有消息的线程保留旧会话并新建，空线程原地切换）。macOS 为 universal 开发签名、未公证；Windows 安装包未签名；Android APK 为调试签名；iOS IPA 为开发签名，仅供团队已注册设备安装。</p>
+      <a class="release-link" href="https://github.com/onedou/grokx-releases/releases/tag/v0.89.1"><span data-en="Installers">安装包</span> <span class="sr-only">v0.89.1</span><span aria-hidden="true">↗</span></a>
+    </li>
     <li id="v0.89.0">
-      <div class="release-version"><h2>v0.89.0</h2><span class="latest" data-en="Latest">最新发布</span></div>
+      <div class="release-version"><h2>v0.89.0</h2></div>
       <p data-en="Adds a Claude parallel cap (limit concurrent tools and subagents in Settings; use 1 when the API returns 429) and a one-shot 30s retry after gateway rate limits, sending a continue prompt if the turn already streamed. Rate-limit errors are recognized first as “too many requests” while keeping the upstream detail. The universal macOS app is development-signed and unnotarized. Windows installers are unsigned. The Android APK is debug-signed. The development-signed iOS IPA installs on registered team devices.">新增 Claude 并行上限（可在设置中限制同时运行的工具与子代理数量，接口 429 时可填 1）；网关 429 限流自动等待 30 秒重试一次，若本轮已有输出则改为继续指令避免重复发送；限流错误优先显示为「请求过于频繁」并保留上游详情。macOS 为 universal 开发签名、未公证；Windows 安装包未签名；Android APK 为调试签名；iOS IPA 为开发签名，仅供团队已注册设备安装。</p>
       <a class="release-link" href="https://github.com/onedou/grokx-releases/releases/tag/v0.89.0"><span data-en="Installers">安装包</span> <span class="sr-only">v0.89.0</span><span aria-hidden="true">↗</span></a>
     </li>

@@ -1,16 +1,16 @@
 {
-  "version": "0.89.0",
+  "version": "0.89.1",
   "date": "2026-11-24",
   "notes": {
-    "zh-CN": "新增 Claude 并行上限（设置中限制同时运行的工具/子代理，429 时可填 1），以及网关 429 限流自动等待 30 秒重试一次（已有输出则改为继续指令）。macOS 为 universal 开发签名、未公证；Windows 安装包未签名；Android APK 为调试签名；iOS IPA 为开发签名，仅供团队已注册设备安装。",
-    "en": "Adds a Claude parallel cap (limit concurrent tools/subagents in Settings; use 1 when the API returns 429) and a one-shot 30s retry after gateway rate limits (sends a continue prompt if the turn already streamed). The universal macOS app is development-signed and unnotarized. Windows installers are unsigned. The Android APK is debug-signed. The development-signed iOS IPA installs on registered team devices."
+    "zh-CN": "Claude API 新增每个账号独立的运行参数（自动压缩窗口、请求超时、关闭非必要网络、关闭遥测、精简系统提示），切换账号时写入对应账号的参数并重启 Claude，留空即删除该键使用默认值；Bot 对话输入区恢复模型与思考强度切换，CLI 也可在输入区切换（有消息的线程保留旧会话并新建，空线程原地切换）。macOS 为 universal 开发签名、未公证；Windows 安装包未签名；Android APK 为调试签名；iOS IPA 为开发签名，仅供团队已注册设备安装。",
+    "en": "Adds per-account Claude API runtime settings (auto-compact window, request timeout, disable nonessential traffic, disable telemetry, simple system prompt), written and applied when switching accounts, with an empty value removing that key; restores model and reasoning-level switching in a Bot's composer, plus CLI switching there (a thread with messages is kept while a fresh one starts, an empty thread changes in place). The universal macOS app is development-signed and unnotarized. Windows installers are unsigned. The Android APK is debug-signed. The development-signed iOS IPA installs on registered team devices."
   },
   "downloads": {
-    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.89.0/GrokX_0.89.0_universal.dmg",
-    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.89.0/GrokX_0.89.0_x64-setup.exe",
-    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.89.0/GrokX_0.89.0_arm64-setup.exe",
-    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.89.0/GrokX-mobile-0.89.0-debug.apk",
-    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.89.0/GrokX-mobile-0.89.0.ipa"
+    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.89.1/GrokX_0.89.1_universal.dmg",
+    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.89.1/GrokX_0.89.1_x64-setup.exe",
+    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.89.1/GrokX_0.89.1_arm64-setup.exe",
+    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.89.1/GrokX-mobile-0.89.1-debug.apk",
+    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.89.1/GrokX-mobile-0.89.1.ipa"
   },
   "site": "https://grokx.bel.org.cn"
 }
