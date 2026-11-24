@@ -1,16 +1,16 @@
 {
-  "version": "0.90.0",
+  "version": "0.90.2",
   "date": "2026-11-24",
   "notes": {
-    "zh-CN": "项目切换器支持直接移除主文件夹已失效的项目，并清理相关会话、最近目录与视图引用。macOS 为 universal 开发签名、未公证；Windows 安装包未签名；Android APK 为调试签名；iOS IPA 为开发签名，仅供团队已注册设备安装。",
-    "en": "Adds the ability to remove a project whose main folder is missing from the project switcher, cleaning up its saved sessions, recents, and view references. The universal macOS app is development-signed and unnotarized. Windows installers are unsigned. The Android APK is debug-signed. The development-signed iOS IPA installs on registered team devices."
+    "zh-CN": "修复侧栏项目标题的双箭头按钮。点击收起会话列表时保留项目文件夹的展开状态，再次点击可恢复列表。macOS universal 为开发签名且未公证。Windows 安装包未签名。Android APK 为调试签名。iOS IPA 为开发签名，仅供团队已注册设备安装。",
+    "en": "Fixes the double-chevron button in sidebar project headers. It collapses the session list while keeping the project folder open. Click again to restore the list. The universal macOS app is development-signed and unnotarized. Windows installers are unsigned. The Android APK is debug-signed. The development-signed iOS IPA installs on registered team devices."
   },
   "downloads": {
-    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.90.0/GrokX_0.90.0_universal.dmg",
-    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.90.0/GrokX_0.90.0_x64-setup.exe",
-    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.90.0/GrokX_0.90.0_arm64-setup.exe",
-    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.90.0/GrokX-mobile-0.90.0-debug.apk",
-    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.90.0/GrokX-mobile-0.90.0.ipa"
+    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.90.2/GrokX_0.90.2_universal.dmg",
+    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.90.2/GrokX_0.90.2_x64-setup.exe",
+    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.90.2/GrokX_0.90.2_arm64-setup.exe",
+    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.90.2/GrokX-mobile-0.90.2-debug.apk",
+    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.90.2/GrokX-mobile-0.90.2.ipa"
   },
   "site": "https://grokx.bel.org.cn"
 }
