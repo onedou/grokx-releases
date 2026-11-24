@@ -1,16 +1,16 @@
 {
-  "version": "0.92.0",
+  "version": "0.92.2",
   "date": "2026-11-24",
   "notes": {
-    "zh-CN": "聊天顶栏「已工作」耗时旁与用量弹窗内新增词元输出速率（t/s）展示：流式阶段实时估算并排除工具调用、权限审批与限流等待时间，回合结束后按各 CLI 真实输出词元自动校准。macOS universal 为开发签名且未公证。Windows 安装包未签名。Android APK 为调试签名。iOS IPA 为开发签名，仅供团队已注册设备安装。",
-    "en": "Adds token output speed (t/s) beside the header turn clock and inside the usage popover: estimates live during streaming while excluding tool calls, permission waits, and rate-limit backoffs, then calibrates with exact CLI output tokens when the turn finishes. The universal macOS app is development-signed and unnotarized. Windows installers are unsigned. The Android APK is debug-signed. The development-signed iOS IPA installs on registered team devices."
+    "zh-CN": "聊天输入区的用量浮层现在会随内容展开。按钮上下空间不足时，浮层会调整位置以完整显示，只有内容超过整个窗口可用高度时才需要滚动。macOS universal 为开发签名，未公证。Windows 安装包未签名。Android APK 为调试签名。iOS IPA 为开发签名，仅供团队已注册设备安装。",
+    "en": "The usage popover grows to fit its contents and moves into view when space around the button is tight. It scrolls only when its contents exceed the available window height. The universal macOS app is development-signed and unnotarized. Windows installers are unsigned. The Android APK is debug-signed. The development-signed iOS IPA installs on registered team devices."
   },
   "downloads": {
-    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.92.0/GrokX_0.92.0_universal.dmg",
-    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.92.0/GrokX_0.92.0_x64-setup.exe",
-    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.92.0/GrokX_0.92.0_arm64-setup.exe",
-    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.92.0/GrokX-mobile-0.92.0.ipa",
-    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.92.0/GrokX-mobile-0.92.0-debug.apk"
+    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.92.2/GrokX_0.92.2_universal.dmg",
+    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.92.2/GrokX_0.92.2_x64-setup.exe",
+    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.92.2/GrokX_0.92.2_arm64-setup.exe",
+    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.92.2/GrokX-mobile-0.92.2.ipa",
+    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.92.2/GrokX-mobile-0.92.2-debug.apk"
   },
   "site": "https://grokx.bel.org.cn"
 }
