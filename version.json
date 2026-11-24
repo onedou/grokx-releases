@@ -1,16 +1,16 @@
 {
-  "version": "0.89.2",
+  "version": "0.89.4",
   "date": "2026-11-24",
   "notes": {
-    "zh-CN": "修正 Bot 技能作用范围：Bot 只携带自己的技能，并在它工作的每个项目中生效，不再混入项目技能；Bot 设置页移除「项目技能」选择区，此前已选择的项目技能会在加载时迁移为 Bot 自有技能；普通对话仍按项目使用已启用的技能。macOS 为 universal 开发签名、未公证；Windows 安装包未签名；Android APK 为调试签名；iOS IPA 为开发签名，仅供团队已注册设备安装。",
-    "en": "Fixes Bot skill scoping: a Bot carries only its own skills, applied in every project it works in, and no longer mixes in project skills. The Bot settings page drops the project-skill opt-in, and skills a Bot had previously opted into are migrated into its own skills on load. Regular chats keep using the project's enabled skills. The universal macOS app is development-signed and unnotarized. Windows installers are unsigned. The Android APK is debug-signed. The development-signed iOS IPA installs on registered team devices."
+    "zh-CN": "修复内置浏览器布局：打开浏览器时窗口向右扩展，不再挤压对话区域；切换对话时按各对话独立记忆的浏览器显隐状态恢复窗口宽度，双方均打开浏览器时保持扩展。macOS 为 universal 开发签名、未公证；Windows 安装包未签名；Android APK 为调试签名；iOS IPA 为开发签名，仅供团队已注册设备安装。",
+    "en": "Fixes the built-in browser layout: opening the browser expands the window to the right instead of squeezing the conversation. Switching conversations restores the window width from each conversation's independently remembered browser visibility, and stays expanded when both conversations have the browser open. The universal macOS app is development-signed and unnotarized. Windows installers are unsigned. The Android APK is debug-signed. The development-signed iOS IPA installs on registered team devices."
   },
   "downloads": {
-    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.89.2/GrokX_0.89.2_universal.dmg",
-    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.89.2/GrokX_0.89.2_x64-setup.exe",
-    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.89.2/GrokX_0.89.2_arm64-setup.exe",
-    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.89.2/GrokX-mobile-0.89.2-debug.apk",
-    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.89.2/GrokX-mobile-0.89.2.ipa"
+    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.89.4/GrokX_0.89.4_universal.dmg",
+    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.89.4/GrokX_0.89.4_x64-setup.exe",
+    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.89.4/GrokX_0.89.4_arm64-setup.exe",
+    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.89.4/GrokX-mobile-0.89.4-debug.apk",
+    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.89.4/GrokX-mobile-0.89.4.ipa"
   },
   "site": "https://grokx.bel.org.cn"
 }
