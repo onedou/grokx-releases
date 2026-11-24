@@ -1,16 +1,16 @@
 {
-  "version": "0.89.4",
+  "version": "0.90.0",
   "date": "2026-11-24",
   "notes": {
-    "zh-CN": "修复内置浏览器布局：打开浏览器时窗口向右扩展，不再挤压对话区域；切换对话时按各对话独立记忆的浏览器显隐状态恢复窗口宽度，双方均打开浏览器时保持扩展。macOS 为 universal 开发签名、未公证；Windows 安装包未签名；Android APK 为调试签名；iOS IPA 为开发签名，仅供团队已注册设备安装。",
-    "en": "Fixes the built-in browser layout: opening the browser expands the window to the right instead of squeezing the conversation. Switching conversations restores the window width from each conversation's independently remembered browser visibility, and stays expanded when both conversations have the browser open. The universal macOS app is development-signed and unnotarized. Windows installers are unsigned. The Android APK is debug-signed. The development-signed iOS IPA installs on registered team devices."
+    "zh-CN": "项目切换器支持直接移除主文件夹已失效的项目，并清理相关会话、最近目录与视图引用。macOS 为 universal 开发签名、未公证；Windows 安装包未签名；Android APK 为调试签名；iOS IPA 为开发签名，仅供团队已注册设备安装。",
+    "en": "Adds the ability to remove a project whose main folder is missing from the project switcher, cleaning up its saved sessions, recents, and view references. The universal macOS app is development-signed and unnotarized. Windows installers are unsigned. The Android APK is debug-signed. The development-signed iOS IPA installs on registered team devices."
   },
   "downloads": {
-    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.89.4/GrokX_0.89.4_universal.dmg",
-    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.89.4/GrokX_0.89.4_x64-setup.exe",
-    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.89.4/GrokX_0.89.4_arm64-setup.exe",
-    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.89.4/GrokX-mobile-0.89.4-debug.apk",
-    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.89.4/GrokX-mobile-0.89.4.ipa"
+    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.90.0/GrokX_0.90.0_universal.dmg",
+    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.90.0/GrokX_0.90.0_x64-setup.exe",
+    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.90.0/GrokX_0.90.0_arm64-setup.exe",
+    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.90.0/GrokX-mobile-0.90.0-debug.apk",
+    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.90.0/GrokX-mobile-0.90.0.ipa"
   },
   "site": "https://grokx.bel.org.cn"
 }
