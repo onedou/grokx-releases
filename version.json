@@ -1,16 +1,16 @@
 {
-  "version": "0.93.0",
+  "version": "0.93.2",
   "date": "2026-11-25",
   "notes": {
-    "zh-CN": "Claude API 选择现在按会话保存，不同会话可同时使用不同接口和模型；切换当前会话只重启当前会话，默认 API 只影响新会话。macOS universal 为开发签名，未公证。Windows 安装包未签名。Android APK 为调试签名。iOS IPA 为开发签名，仅供团队已注册设备安装。",
-    "en": "Claude API selection is now saved per session, so different sessions can use different endpoints and models at the same time. Switching the current session restarts only that session, while the default API affects new sessions. The universal macOS app is development-signed and unnotarized. Windows installers are unsigned. The Android APK is debug-signed. The development-signed iOS IPA installs on registered team devices."
+    "zh-CN": "Claude 切换厂商后立即更新模型并刷新列表，已有对话会自动恢复到新厂商。macOS universal 为开发签名，未公证。Windows 安装包未签名。Android APK 为调试签名。iOS IPA 为开发签名，可在团队已注册设备上安装。",
+    "en": "Claude provider switches update the displayed model and refresh the model list immediately, and existing conversations reload on the selected provider. macOS universal is development-signed and unnotarized. Windows installers are unsigned. Android APK is debug-signed. The development-signed iOS IPA installs on registered team devices."
   },
   "downloads": {
-    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.93.0/GrokX_0.93.0_universal.dmg",
-    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.93.0/GrokX_0.93.0_x64-setup.exe",
-    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.93.0/GrokX_0.93.0_arm64-setup.exe",
-    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.93.0/GrokX-mobile-0.93.0.ipa",
-    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.93.0/GrokX-mobile-0.93.0-debug.apk"
+    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.93.2/GrokX_0.93.2_universal.dmg",
+    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.93.2/GrokX_0.93.2_x64-setup.exe",
+    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.93.2/GrokX_0.93.2_arm64-setup.exe",
+    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.93.2/GrokX-mobile-0.93.2.ipa",
+    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.93.2/GrokX-mobile-0.93.2-debug.apk"
   },
   "site": "https://grokx.bel.org.cn"
 }
