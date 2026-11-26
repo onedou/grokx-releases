@@ -1,16 +1,16 @@
 {
-  "version": "0.93.2",
-  "date": "2026-11-25",
+  "version": "0.94.0",
+  "date": "2026-11-26",
   "notes": {
-    "zh-CN": "Claude 切换厂商后立即更新模型并刷新列表，已有对话会自动恢复到新厂商。macOS universal 为开发签名，未公证。Windows 安装包未签名。Android APK 为调试签名。iOS IPA 为开发签名，可在团队已注册设备上安装。",
-    "en": "Claude provider switches update the displayed model and refresh the model list immediately, and existing conversations reload on the selected provider. macOS universal is development-signed and unnotarized. Windows installers are unsigned. Android APK is debug-signed. The development-signed iOS IPA installs on registered team devices."
+    "zh-CN": "macOS 输入框新增截图按钮：拖拽框选屏幕区域，截图作为图片加入输入框。同时修复打开会话时对话刻度先高亮旧消息、再跳到最新一条的问题。macOS universal 为开发签名，未公证。Windows 安装包未签名。Android APK 为调试签名。iOS IPA 为开发签名，可在团队已注册设备上安装。",
+    "en": "New screenshot button in the macOS composer: drag over an area of the frozen screen to attach it as a picture. Also fixes the conversation rail highlighting an older message before jumping to the newest when a conversation opens. macOS universal is development-signed and unnotarized. Windows installers are unsigned. Android APK is debug-signed. The development-signed iOS IPA installs on registered team devices."
   },
   "downloads": {
-    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.93.2/GrokX_0.93.2_universal.dmg",
-    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.93.2/GrokX_0.93.2_x64-setup.exe",
-    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.93.2/GrokX_0.93.2_arm64-setup.exe",
-    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.93.2/GrokX-mobile-0.93.2.ipa",
-    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.93.2/GrokX-mobile-0.93.2-debug.apk"
+    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.94.0/GrokX_0.94.0_universal.dmg",
+    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.94.0/GrokX_0.94.0_x64-setup.exe",
+    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.94.0/GrokX_0.94.0_arm64-setup.exe",
+    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.94.0/GrokX-mobile-0.94.0.ipa",
+    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.94.0/GrokX-mobile-0.94.0-debug.apk"
   },
   "site": "https://grokx.bel.org.cn"
 }
