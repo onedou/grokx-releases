@@ -1,30 +1,30 @@
 {
-  "version": "0.96.0",
-  "date": "2026-11-26",
+  "version": "0.96.1",
+  "date": "2026-11-28",
   "notes": {
-    "zh-CN": "输入框支持拖入与粘贴 PDF 文件（无论当前模型是否支持视觉），支持图片与 PDF 混合拖入，文件标签展示 PDF 图标，并在发送给代理的 ACP resource_link 中附带 application/pdf 类型。macOS Universal 为开发签名，未公证。Windows NSIS 安装包没有 Authenticode 签名。Android APK 为调试签名。iOS IPA 为开发签名，可在团队已注册设备上安装。",
-    "en": "The composer now accepts dragged and pasted PDF files (with or without vision support), supports mixed image + PDF drops, displays a PDF icon on file chips, and sets mimeType application/pdf on ACP resource_link blocks. The macOS Universal bundle is development-signed and unnotarized. The Windows NSIS installers have no Authenticode signature. The Android APK is debug-signed. The iOS IPA is development-signed and installs on registered team devices."
+    "zh-CN": "登录钥匙串锁定时，GrokX 不再反复探测 Claude 凭证和 Antigravity 限额，因此不会再把钥匙串密码框反复弹到前面。钥匙串已解锁时，用量读取与以前相同；锁定时保留上一次的显示。macOS Universal 为开发签名，未公证。Windows NSIS 安装包没有 Authenticode 签名。Android APK 为调试签名。iOS IPA 为开发签名，可在团队已注册设备上安装。",
+    "en": "While the login keychain is locked, GrokX no longer retries Claude credential and Antigravity limit probes, so it no longer keeps raising the keychain password dialog. When the keychain is unlocked, usage reads behave as before; while it is locked, the last reading stays on screen. The macOS Universal bundle is development-signed and unnotarized. The Windows NSIS installers have no Authenticode signature. The Android APK is debug-signed. The iOS IPA is development-signed and installs on registered team devices."
   },
   "downloads": {
-    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.96.0/GrokX_0.96.0_universal.dmg",
-    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.96.0/GrokX_0.96.0_x64-setup.exe",
-    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.96.0/GrokX_0.96.0_arm64-setup.exe",
-    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.96.0/GrokX-mobile-0.96.0.ipa",
-    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.96.0/GrokX-mobile-0.96.0-debug.apk"
+    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.96.1/GrokX_0.96.1_universal.dmg",
+    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.96.1/GrokX_0.96.1_x64-setup.exe",
+    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.96.1/GrokX_0.96.1_arm64-setup.exe",
+    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.96.1/GrokX-mobile-0.96.1.ipa",
+    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.96.1/GrokX-mobile-0.96.1-debug.apk"
   },
   "site": "https://grokx.bel.org.cn",
   "platforms": {
     "darwin-universal": {
-      "url": "https://github.com/onedou/grokx-releases/releases/download/v0.96.0/GrokX_0.96.0_universal.app.tar.gz",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTMXpLYVZ2bGhkYU1UNDlIeWsvdk5wZm1KRUVIaUVDbjQvWlhPbjk3YzdOZFgxaG40WlIrQ3ZSQXBlRi9JTy9PZi93YVJYMzJXcjAvMTlsRXFzbzZQbEVmRnpBL0Rja1FjPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1NjgyMDcyCWZpbGU6R3Jva1guYXBwLnRhci5negl2ZXJzaW9uOjAuOTYuMAorWGFlc3docUlaK0cxMFBRRG1rMEVrMVRBQXBiNC9BQWJwUmNEN2I1bGlxclNUaE9UU1JjZ3pkeGxYUkl6bnZaVnVXWUZLb0VWSlpYQlh5RFlsV09EQT09Cg=="
+      "url": "https://github.com/onedou/grokx-releases/releases/download/v0.96.1/GrokX_0.96.1_universal.app.tar.gz",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTMXpLYVZ2bGhkYUpOZlQ4RjVmalBCb1lZdDRlVm9wdHNCd25WYkxRb1k1OTRxcThsMnZvZEpJWEQ0ZUF1c2hueVNhMWZnTnBNbDVSSGFOUHJ4NWFzVXFhNWhrV3dCTWdvPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1ODM0MDYyCWZpbGU6R3Jva1guYXBwLnRhci5negl2ZXJzaW9uOjAuOTYuMQpEVVRWNmNBZDIvT2UyQUVqMGdzMjE5UXQvbmxIc3V1U0dJUFkySkxuR0lyT0p6S1g3Y0NucTl0VGg4RGdqYjRybkpjSlRZVTNzNlZOeWd3WGhQeUJDUT09Cg=="
     },
     "windows-x86_64": {
-      "url": "https://github.com/onedou/grokx-releases/releases/download/v0.96.0/GrokX_0.96.0_x64-setup.exe",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTMXpLYVZ2bGhkYUtsSVR0a3owZWkrZmg1UFltTlkwSndtM01ZWlpqTlUrUGd3UXdSUzRnNjJFSWs4QWU5YS9hL3hvNlB6MXByMWJldmZPS2F5SUV4a0ZtYUI4MStzK3dzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1NjgyMDkyCWZpbGU6R3Jva1hfMC45Ni4wX3g2NC1zZXR1cC5leGUJdmVyc2lvbjowLjk2LjAKTEVVaWRlaUtlanlUeGp0ZmdjNUxTQjhpbm02NmlmdVRxM0JnRUtKSlA0dnFUN2N3cFArY3lteHdMOTlBdlNPY0VsVlMzRFp0cWdhRHp4SDFMQTcrQ0E9PQo="
+      "url": "https://github.com/onedou/grokx-releases/releases/download/v0.96.1/GrokX_0.96.1_x64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTMXpLYVZ2bGhkYUpmT2xEUVFJQnkzMm1LWWd5UnZCMTZUeGVwWERnditKVWt3eUVLWEx2Vk0wcUhBbmhId2QwNDJDMWRqaXBjcTB4OU5zZllka0k3cEtzZ0pZZEg3dmdZPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1ODM0NzM1CWZpbGU6R3Jva1hfMC45Ni4xX3g2NC1zZXR1cC5leGUJdmVyc2lvbjowLjk2LjEKZ2QveDZmdlM4WHlIZUxQV2JoUFg4c1U4SUVleG9SNUxCV21McUxqREtnM0RqYkFCa0kvS3BIRVBkK2NwWS82SEtxSkFxT0oyaG5XT3Z4ckxVUENZQVE9PQo="
     },
     "windows-aarch64": {
-      "url": "https://github.com/onedou/grokx-releases/releases/download/v0.96.0/GrokX_0.96.0_arm64-setup.exe",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTMXpLYVZ2bGhkYUtsNnFiSFRCQ1dnNlo5SjF4M3ljZFhGa1pnb05DamtoS2NJTG1SS0xyUENNbXROWS8xSmJiQ2VkVVFUejdqdGtpcUtGZDRZM1IyMUo2QmFJSFB2NEE0PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1NjgyMTA5CWZpbGU6R3Jva1hfMC45Ni4wX2FybTY0LXNldHVwLmV4ZQl2ZXJzaW9uOjAuOTYuMApFdjE2YndZOEpuRnBHVlhJRzU2T21zZ0prQ3JnK2d2MkNlUU5GNktrNEZHamtkQlFGaTdUSjJnQ0NMSk5TT0d5T2xmdGxienRsa0dkYk10MnFIUmZCZz09Cg=="
+      "url": "https://github.com/onedou/grokx-releases/releases/download/v0.96.1/GrokX_0.96.1_arm64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTMXpLYVZ2bGhkYUNUblZSUUw3c1BGdGFtL2Mrako1YzRwR09YcHpETFd0czV5enI5T0dKUG9NV1o4ZGIxVS9sRCt0bk1qRGFyYWlYR21RdWg3MWtwSFFZak03U0ZQemdnPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1ODM1NzQ5CWZpbGU6R3Jva1hfMC45Ni4xX2FybTY0LXNldHVwLmV4ZQl2ZXJzaW9uOjAuOTYuMQpsR05UbXVCZ29maU5ZVjFURE50YnFGekgzODJjQ2w0U3RhdnFTSVQvaWdtd2VnVzlaSHY2eEp4SkQxWHRhQng4Szg2U3lPNlNWcjFFVWhrWFcwN3hDdz09Cg=="
     }
   }
 }
