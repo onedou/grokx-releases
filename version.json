@@ -1,30 +1,30 @@
 {
-  "version": "0.97.0",
+  "version": "0.98.0",
   "date": "2026-11-28",
   "notes": {
-    "zh-CN": "Bot 技能面板新增三步引导，以及代码审查、发版检查和周报助手模板，支持一键添加或复制为 SKILL.md。技能卡片可直接调整名称、启用状态、回复语言和回答详略。macOS Universal 为开发签名，未公证。Windows 安装包未签 Authenticode。Android APK 为调试签名。iOS IPA 为开发签名，仅可安装到团队已注册设备。",
-    "en": "The Bot Skills panel adds a three-step guide and starter templates for code review, release checks, and weekly reports. Add a template in one click or copy it as SKILL.md. Skill settings let you edit the name, enabled state, response language, and level of detail. The macOS Universal bundle is development-signed and unnotarized. The Windows installers have no Authenticode signature. The Android APK is debug-signed. The iOS IPA is development-signed and installs on registered team devices."
+    "zh-CN": "新增 GitHub Copilot CLI。可从聊天、Bot、定时任务和飞书设置选择 Copilot，使用它的模型、权限审批和会话恢复。Android 为调试签名，iOS 为开发签名，仅可安装到团队已注册设备。",
+    "en": "Added GitHub Copilot CLI to chat, Bots, schedules, and Feishu settings, with Copilot model selection, approvals, and session resumption. Android uses debug signing. The iOS development build installs on registered team devices."
   },
   "downloads": {
-    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.97.0/GrokX_0.97.0_universal.dmg",
-    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.97.0/GrokX_0.97.0_x64-setup.exe",
-    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.97.0/GrokX_0.97.0_arm64-setup.exe",
-    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.97.0/GrokX-mobile-0.97.0.ipa",
-    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.97.0/GrokX-mobile-0.97.0-debug.apk"
+    "macos": "https://github.com/onedou/grokx-releases/releases/download/v0.98.0/GrokX_0.98.0_universal.dmg",
+    "windowsx64": "https://github.com/onedou/grokx-releases/releases/download/v0.98.0/GrokX_0.98.0_x64-setup.exe",
+    "windowsarm64": "https://github.com/onedou/grokx-releases/releases/download/v0.98.0/GrokX_0.98.0_arm64-setup.exe",
+    "ios": "https://github.com/onedou/grokx-releases/releases/download/v0.98.0/GrokX-mobile-0.98.0.ipa",
+    "android": "https://github.com/onedou/grokx-releases/releases/download/v0.98.0/GrokX-mobile-0.98.0-debug.apk"
   },
   "site": "https://grokx.bel.org.cn",
   "platforms": {
     "darwin-universal": {
-      "url": "https://github.com/onedou/grokx-releases/releases/download/v0.97.0/GrokX_0.97.0_universal.app.tar.gz",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTMXpLYVZ2bGhkYUZreVBoSkFYa1V0eC80bnlHQlowRFJKL3kxTzJRRVFGOVg4MEZGcTlsazlvSXpFQnpzQXdPSWhFYTBIV1RkZjNOb3lwaDRRdEt2enY4RjlHVWduYndrPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1ODU1NDczCWZpbGU6R3Jva1guYXBwLnRhci5negl2ZXJzaW9uOjAuOTcuMApzTWZvS0dxUEtoMFVmWFlpQVk4ejdZUDM1dmRTakF0Q2l4ZUVIZzlsdjU3Z1VGNG1IZ1lHT2Q2aEdIK3lBTHVqaTVCQnBkczQvOTg2T1NCN01lQ3JEUT09Cg=="
+      "url": "https://github.com/onedou/grokx-releases/releases/download/v0.98.0/GrokX_0.98.0_universal.app.tar.gz",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTMXpLYVZ2bGhkYUZSWjYvM3ZoNUNyOW5mcEt3Ly9lOU9yZGF0aDI0VnBKNmNDVFZXdlFaSk05SEpDNHd6UkZ4cndMZHVRenhSeUNFL0JJYkl0VXlIRkowbE5Wem5sT0E4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1ODU4NTk0CWZpbGU6R3Jva1guYXBwLnRhci5negl2ZXJzaW9uOjAuOTguMApkNEM5MUxIUFMvL01neUVZaXJKSjBjbHhubEg0NkdSM0dFM0ViendyYlpiaTNhb1N4VkpxUFRRaS9JWnJIZU1hamFTQnVoQlpmaGdxcC9UM3hVbjZCUT09Cg=="
     },
     "windows-x86_64": {
-      "url": "https://github.com/onedou/grokx-releases/releases/download/v0.97.0/GrokX_0.97.0_x64-setup.exe",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTMXpLYVZ2bGhkYUhxYVR1bVBRT2J1NFBLR2F1K09VUXNXaE96SjRKQ2doUDIrUWRCUC9zb2xGVElOd0tQRTd0eml0dXdQRi9sK2ZBTmdyMko2L29tRTVOQWVWbVlNNVFFPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1ODU1MDgyCWZpbGU6R3Jva1hfMC45Ny4wX3g2NC1zZXR1cC5leGUJdmVyc2lvbjowLjk3LjAKa1JBSWpqUWFnTEt0YkZUbkUyV2g4b1pYNE9YYVcvQlRCYnQ1VE9iUWdsblM1RUIwLzV6YXg1U1NGdDl2a1VCQ1djM3VPcnJUVlhHcEJsdGowNWFPREE9PQo="
+      "url": "https://github.com/onedou/grokx-releases/releases/download/v0.98.0/GrokX_0.98.0_x64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTMXpLYVZ2bGhkYUpTYUhNQW95NXN3Yk85bHkveUsyM1N2UkJ0NjFnZjFRNG1WSG5VRk9xNnRaOEd1TEZCeDRWdm94Vjd1dnlDb0VqQ3BTRWJLNmVMM1pGNm9LWHRoYXc4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1ODU4NTkzCWZpbGU6R3Jva1hfMC45OC4wX3g2NC1zZXR1cC5leGUJdmVyc2lvbjowLjk4LjAKOFczNFhQUXR4MXN5TStaQ2NFRlhnelQzN09rSnhpWS9qYVVLQk11S094MklSQmUxL3FzMWx1Y0xGNWF4ZUdLQ0RCbmNmZElxaXgyRmtCaUR4YmYyQ2c9PQo="
     },
     "windows-aarch64": {
-      "url": "https://github.com/onedou/grokx-releases/releases/download/v0.97.0/GrokX_0.97.0_arm64-setup.exe",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTMXpLYVZ2bGhkYUNVQ2ExMmY0cGFmUmFvVXJRVm1YTldwWXJoYVBDMkFEL1NpTCtFaTd2KzY2MHd2MTk2a2w5ejFxQms0T1IvdFlVdTM2bmR0TmRHUkFLQk9JMEQzSmdNPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1ODU1MzMxCWZpbGU6R3Jva1hfMC45Ny4wX2FybTY0LXNldHVwLmV4ZQl2ZXJzaW9uOjAuOTcuMAp0L2FYY0x2VXBEVjY3ZDJwRjZiVTBhSkhkWm5NbzFwWVBNbHRYYXlQWHMrZThQbVEzMDdMcHlvZ2xqdHFNKzBEZXpuOGJUYkxZTFhjdU1QV3hoeXBEZz09Cg=="
+      "url": "https://github.com/onedou/grokx-releases/releases/download/v0.98.0/GrokX_0.98.0_arm64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTMXpLYVZ2bGhkYUppTzBaaTdtNVhuenpDREZiZmRnNHVTZ0FwQlpzQVI5WldCUjRpTDFEWXg4ejhGQVhaZ21NUjBBSXMxSi91NmN1MWxDK0dBSHhsSFlpdUdVR3MyMEEwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1ODU4NjYxCWZpbGU6R3Jva1hfMC45OC4wX2FybTY0LXNldHVwLmV4ZQl2ZXJzaW9uOjAuOTguMApKQUxETlc1RDVTWjdRc0g1d3N4TkMwRHFhQ1IxOWR2Qlh1Y0k2UGFLT05pbmtDR0orNUZ6V1ExQWRIWjRtajRvMmlPQXBzdnZVb3grd1hNcmlJTzlBdz09Cg=="
     }
   }
 }
